@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "Vcelz3ITa2c=",
+  "success": true,
+  "projectFilePath": "C:\\Abdulmajeed_Project\\ASP.NETCore\\MotorInquirySystem\\Motor.Inquiry.Application\\Motor.Inquiry.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\aalhasani\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.28\\microsoft.windowsdesktop.app.ref.8.0.28.nupkg.sha512",
+    "C:\\Users\\aalhasani\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.28\\microsoft.netcore.app.ref.8.0.28.nupkg.sha512",
+    "C:\\Users\\aalhasani\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.28\\microsoft.aspnetcore.app.ref.8.0.28.nupkg.sha512"
+  ],
+  "logs": []
+}
