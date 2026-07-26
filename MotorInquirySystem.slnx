@@ -1,1 +1,10 @@
-<Solution />
+<Solution>
+  <Project Path="Motor.Inquiry.API/Motor.Inquiry.API.csproj" />
+  <Project Path="Motor.Inquiry.Application/Motor.Inquiry.Application.csproj" />
+  <Project Path="Motor.Inquiry.Domain/Motor.Inquiry.Domain.csproj" />
+  <Project Path="Motor.Inquiry.Infrastructure/Motor.Inquiry.Infrastructure.csproj" />
+  <Project Path="Yaqeen.API/Yaqeen.API.csproj" />
+  <Project Path="Yaqeen.Application/Yaqeen.Application.csproj" />
+  <Project Path="Yaqeen.Domain/Yaqeen.Domain.csproj" />
+  <Project Path="Yaqeen.Infrastructure/Yaqeen.Infrastructure.csproj" />
+</Solution>

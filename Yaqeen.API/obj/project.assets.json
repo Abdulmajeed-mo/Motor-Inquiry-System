@@ -88,6 +88,29 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "Yaqeen.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Yaqeen.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Yaqeen.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Yaqeen.Application.dll": {}
+        }
+      },
+      "Yaqeen.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Yaqeen.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Yaqeen.Domain.dll": {}
+        }
       }
     }
   },
@@ -439,11 +462,22 @@
         "swashbuckle.aspnetcore.swaggerui.6.6.2.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "Yaqeen.Application/1.0.0": {
+      "type": "project",
+      "path": "../Yaqeen.Application/Yaqeen.Application.csproj",
+      "msbuildProject": "../Yaqeen.Application/Yaqeen.Application.csproj"
+    },
+    "Yaqeen.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Yaqeen.Domain/Yaqeen.Domain.csproj",
+      "msbuildProject": "../Yaqeen.Domain/Yaqeen.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "Swashbuckle.AspNetCore >= 6.6.2"
+      "Swashbuckle.AspNetCore >= 6.6.2",
+      "Yaqeen.Application >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -478,7 +512,11 @@
         "net8.0": {
           "framework": "net8.0",
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Abdulmajeed_Project\\ASP.NETCore\\MotorInquirySystem\\Yaqeen.Application\\Yaqeen.Application.csproj": {
+              "projectPath": "C:\\Abdulmajeed_Project\\ASP.NETCore\\MotorInquirySystem\\Yaqeen.Application\\Yaqeen.Application.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
