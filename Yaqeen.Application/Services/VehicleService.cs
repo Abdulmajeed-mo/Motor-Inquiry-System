@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Yaqeen.Application.Interfaces
+namespace Yaqeen.Application.Services
 {
-    public interface IVehicleService
+    internal class VehicleService
     {
     }
 }

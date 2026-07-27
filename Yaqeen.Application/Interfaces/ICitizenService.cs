@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Yaqeen.Application.Interfaces
 {
-    internal interface ICitizenService
+    public interface ICitizenService
     {
     }
 }

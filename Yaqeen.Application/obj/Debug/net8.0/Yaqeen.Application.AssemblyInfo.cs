@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Yaqeen.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f97332b7ba12297a2418f2c4295d012f06908fc6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d668bbf668170a782c24f9bfc96304f6386e3cee")]
 [assembly: System.Reflection.AssemblyProductAttribute("Yaqeen.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Yaqeen.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
