@@ -1,0 +1,16 @@
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Yaqeen.Infrastructure\bin\Debug\net8.0\Yaqeen.Infrastructure.deps.json
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Yaqeen.Infrastructure\bin\Debug\net8.0\Yaqeen.Infrastructure.dll
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Yaqeen.Infrastructure\bin\Debug\net8.0\Yaqeen.Infrastructure.pdb
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Yaqeen.Infrastructure\bin\Debug\net8.0\Yaqeen.Domain.dll
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Yaqeen.Infrastructure\bin\Debug\net8.0\Yaqeen.Domain.pdb
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Yaqeen.Infrastructure\obj\Debug\net8.0\Yaqeen.Infrastructure.csproj.AssemblyReference.cache
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Yaqeen.Infrastructure\obj\Debug\net8.0\Yaqeen.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Yaqeen.Infrastructure\obj\Debug\net8.0\Yaqeen.Infrastructure.AssemblyInfoInputs.cache
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Yaqeen.Infrastructure\obj\Debug\net8.0\Yaqeen.Infrastructure.AssemblyInfo.cs
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Yaqeen.Infrastructure\obj\Debug\net8.0\Yaqeen.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Yaqeen.Infrastructure\obj\Debug\net8.0\Yaqeen.Infrastructure.sourcelink.json
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Yaqeen.Infrastructure\obj\Debug\net8.0\Yaqeen.I.420D7999.Up2Date
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Yaqeen.Infrastructure\obj\Debug\net8.0\Yaqeen.Infrastructure.dll
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Yaqeen.Infrastructure\obj\Debug\net8.0\refint\Yaqeen.Infrastructure.dll
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Yaqeen.Infrastructure\obj\Debug\net8.0\Yaqeen.Infrastructure.pdb
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Yaqeen.Infrastructure\obj\Debug\net8.0\ref\Yaqeen.Infrastructure.dll

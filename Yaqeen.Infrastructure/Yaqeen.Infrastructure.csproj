@@ -10,8 +10,4 @@
     <ProjectReference Include="..\Yaqeen.Domain\Yaqeen.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Data\" />
-  </ItemGroup>
-
 </Project>

@@ -1,12 +1,43 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Yaqeen.Domain.Entities;
+using Yaqeen.Application.Interfaces;
 
 namespace Yaqeen.API.Controllers
 {
-    public class CitizenController : Controller
+
+    [ApiController]
+    [Route("api/yaqeen/citizen")]
+    public class CitizenController : ControllerBase
     {
-        public IActionResult Index()
+
+        //private Field
+        private readonly ICitizenService _citizenService;
+        //Constructor
+        public CitizenController(ICitizenService citizenService)
         {
-            return View();
+            _citizenService = citizenService;
         }
+
+
+
+        //Actions(Endpoints)
+        [HttpPost("validate")]
+        public IActionResult ValidateCitizen([FromBody] string nationalId)
+        {
+          var isValid = _citizenService.ValidateCitizen(nationalId);
+           
+            
+            if (!isValid)
+            {
+                return BadRequest("Invalid national ID.");
+            }
+
+
+
+
+            return Ok("Citizen is valid.");
+
+        }
+
     }
 }

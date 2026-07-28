@@ -1,0 +1,92 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Yaqeen.API",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/yaqeen/citizen/validate": {
+      "post": {
+        "tags": [
+          "Citizen"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "string"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "string"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/yaqeen/vehicle/sequence/{sequenceNumber}": {
+      "get": {
+        "tags": [
+          "Vehicle"
+        ],
+        "parameters": [
+          {
+            "name": "sequenceNumber",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/yaqeen/vehicle/plate": {
+      "get": {
+        "tags": [
+          "Vehicle"
+        ],
+        "parameters": [
+          {
+            "name": "plateNumber",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "plateLetters",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": { }
+}

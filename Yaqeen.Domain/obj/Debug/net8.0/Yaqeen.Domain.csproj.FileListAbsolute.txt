@@ -1,0 +1,12 @@
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Yaqeen.Domain\bin\Debug\net8.0\Yaqeen.Domain.deps.json
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Yaqeen.Domain\bin\Debug\net8.0\Yaqeen.Domain.dll
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Yaqeen.Domain\bin\Debug\net8.0\Yaqeen.Domain.pdb
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Yaqeen.Domain\obj\Debug\net8.0\Yaqeen.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Yaqeen.Domain\obj\Debug\net8.0\Yaqeen.Domain.AssemblyInfoInputs.cache
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Yaqeen.Domain\obj\Debug\net8.0\Yaqeen.Domain.AssemblyInfo.cs
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Yaqeen.Domain\obj\Debug\net8.0\Yaqeen.Domain.csproj.CoreCompileInputs.cache
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Yaqeen.Domain\obj\Debug\net8.0\Yaqeen.Domain.sourcelink.json
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Yaqeen.Domain\obj\Debug\net8.0\Yaqeen.Domain.dll
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Yaqeen.Domain\obj\Debug\net8.0\refint\Yaqeen.Domain.dll
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Yaqeen.Domain\obj\Debug\net8.0\Yaqeen.Domain.pdb
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Yaqeen.Domain\obj\Debug\net8.0\ref\Yaqeen.Domain.dll

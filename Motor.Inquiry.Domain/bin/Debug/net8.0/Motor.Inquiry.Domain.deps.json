@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Motor.Inquiry.Domain/1.0.0": {
+        "runtime": {
+          "Motor.Inquiry.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Motor.Inquiry.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

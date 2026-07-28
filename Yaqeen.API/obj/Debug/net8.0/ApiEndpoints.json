@@ -1,0 +1,55 @@
+[
+  {
+    "ContainingType": "Yaqeen.API.Controllers.CitizenController",
+    "Method": "ValidateCitizen",
+    "RelativePath": "api/yaqeen/citizen/validate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nationalId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Yaqeen.API.Controllers.VehicleController",
+    "Method": "GetVehicleByPlate",
+    "RelativePath": "api/yaqeen/vehicle/plate",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "plateNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "plateLetters",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Yaqeen.API.Controllers.VehicleController",
+    "Method": "GetVehicleBySequenceNumber",
+    "RelativePath": "api/yaqeen/vehicle/sequence/{sequenceNumber}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sequenceNumber",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

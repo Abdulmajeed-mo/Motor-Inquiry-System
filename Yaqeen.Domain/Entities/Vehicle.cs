@@ -8,7 +8,7 @@ namespace Yaqeen.Domain.Entities
 {
     public class Vehicle
     {
-        public string SequenceNumber { get; set; }
+        public int SequenceNumber { get; set; }
         public string PlateNumber { get; set; }
         public string PlateLetters { get; set; }
 

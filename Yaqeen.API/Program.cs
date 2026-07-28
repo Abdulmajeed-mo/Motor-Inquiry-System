@@ -1,4 +1,13 @@
+using System.ComponentModel;
+using Yaqeen.Application.Interfaces;
+using Yaqeen.Application.Services;
+
 var builder = WebApplication.CreateBuilder(args);
+
+// Service Registration for Dependency Injectionما
+builder.Services.AddScoped<ICitizenService, CitizenService>();
+builder.Services.AddScoped<IVehicleService, VehicleService>();
+
 
 // Add services to the container.
 

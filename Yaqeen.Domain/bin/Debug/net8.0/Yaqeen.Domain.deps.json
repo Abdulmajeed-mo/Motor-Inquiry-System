@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Yaqeen.Domain/1.0.0": {
+        "runtime": {
+          "Yaqeen.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Yaqeen.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

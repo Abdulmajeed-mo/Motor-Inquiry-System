@@ -8,10 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Yaqeen.Domain\Yaqeen.Domain.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Services\" />
+    <ProjectReference Include="..\Yaqeen.Infrastructure\Yaqeen.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

@@ -11,6 +11,19 @@
         "runtime": {
           "bin/placeholder/Yaqeen.Domain.dll": {}
         }
+      },
+      "Yaqeen.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Yaqeen.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Yaqeen.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Yaqeen.Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -19,11 +32,17 @@
       "type": "project",
       "path": "../Yaqeen.Domain/Yaqeen.Domain.csproj",
       "msbuildProject": "../Yaqeen.Domain/Yaqeen.Domain.csproj"
+    },
+    "Yaqeen.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../Yaqeen.Infrastructure/Yaqeen.Infrastructure.csproj",
+      "msbuildProject": "../Yaqeen.Infrastructure/Yaqeen.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "Yaqeen.Domain >= 1.0.0"
+      "Yaqeen.Domain >= 1.0.0",
+      "Yaqeen.Infrastructure >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -61,6 +80,9 @@
           "projectReferences": {
             "C:\\Abdulmajeed_Project\\ASP.NETCore\\MotorInquirySystem\\Yaqeen.Domain\\Yaqeen.Domain.csproj": {
               "projectPath": "C:\\Abdulmajeed_Project\\ASP.NETCore\\MotorInquirySystem\\Yaqeen.Domain\\Yaqeen.Domain.csproj"
+            },
+            "C:\\Abdulmajeed_Project\\ASP.NETCore\\MotorInquirySystem\\Yaqeen.Infrastructure\\Yaqeen.Infrastructure.csproj": {
+              "projectPath": "C:\\Abdulmajeed_Project\\ASP.NETCore\\MotorInquirySystem\\Yaqeen.Infrastructure\\Yaqeen.Infrastructure.csproj"
             }
           }
         }

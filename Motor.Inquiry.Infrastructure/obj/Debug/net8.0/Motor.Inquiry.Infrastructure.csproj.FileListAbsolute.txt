@@ -1,0 +1,12 @@
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.Infrastructure\bin\Debug\net8.0\Motor.Inquiry.Infrastructure.deps.json
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.Infrastructure\bin\Debug\net8.0\Motor.Inquiry.Infrastructure.dll
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.Infrastructure\bin\Debug\net8.0\Motor.Inquiry.Infrastructure.pdb
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.Infrastructure\obj\Debug\net8.0\Motor.Inquiry.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.Infrastructure\obj\Debug\net8.0\Motor.Inquiry.Infrastructure.AssemblyInfoInputs.cache
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.Infrastructure\obj\Debug\net8.0\Motor.Inquiry.Infrastructure.AssemblyInfo.cs
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.Infrastructure\obj\Debug\net8.0\Motor.Inquiry.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.Infrastructure\obj\Debug\net8.0\Motor.Inquiry.Infrastructure.sourcelink.json
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.Infrastructure\obj\Debug\net8.0\Motor.Inquiry.Infrastructure.dll
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.Infrastructure\obj\Debug\net8.0\refint\Motor.Inquiry.Infrastructure.dll
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.Infrastructure\obj\Debug\net8.0\Motor.Inquiry.Infrastructure.pdb
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.Infrastructure\obj\Debug\net8.0\ref\Motor.Inquiry.Infrastructure.dll
