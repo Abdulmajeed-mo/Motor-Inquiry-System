@@ -1,5 +1,14 @@
+using Motor.Inquiry.Application.Interfaces;
+using Motor.Inquiry.Application.Services;
+
+
 var builder = WebApplication.CreateBuilder(args);
 
+
+
+
+
+builder.Services.AddScoped<IInquiryService , InquiryService >();
 // Add services to the container.
 
 builder.Services.AddControllers();

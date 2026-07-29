@@ -10,3 +10,7 @@ C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.Application\
 C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.Application\obj\Debug\net8.0\refint\Motor.Inquiry.Application.dll
 C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.Application\obj\Debug\net8.0\Motor.Inquiry.Application.pdb
 C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.Application\obj\Debug\net8.0\ref\Motor.Inquiry.Application.dll
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.Application\bin\Debug\net8.0\Motor.Inquiry.Domain.dll
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.Application\bin\Debug\net8.0\Motor.Inquiry.Domain.pdb
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.Application\obj\Debug\net8.0\Motor.Inquiry.Application.csproj.AssemblyReference.cache
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.Application\obj\Debug\net8.0\Motor.In.1577D753.Up2Date

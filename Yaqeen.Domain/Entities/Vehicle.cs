@@ -5,7 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Yaqeen.Domain.Entities
-{
+{ 
+
     public class Vehicle
     {
         public int SequenceNumber { get; set; }
@@ -23,7 +24,6 @@ namespace Yaqeen.Domain.Entities
         public string ChassisNumber { get; set; }
 
         public string OwnerNationalId { get; set; }
-
 
     }
 }

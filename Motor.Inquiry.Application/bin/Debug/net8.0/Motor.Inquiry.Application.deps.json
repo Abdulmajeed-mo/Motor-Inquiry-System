@@ -7,14 +7,30 @@
   "targets": {
     ".NETCoreApp,Version=v8.0": {
       "Motor.Inquiry.Application/1.0.0": {
+        "dependencies": {
+          "Motor.Inquiry.Domain": "1.0.0"
+        },
         "runtime": {
           "Motor.Inquiry.Application.dll": {}
+        }
+      },
+      "Motor.Inquiry.Domain/1.0.0": {
+        "runtime": {
+          "Motor.Inquiry.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
   },
   "libraries": {
     "Motor.Inquiry.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Motor.Inquiry.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

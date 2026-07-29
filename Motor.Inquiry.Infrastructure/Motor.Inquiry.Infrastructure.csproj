@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Motor.Inquiry.Application\Motor.Inquiry.Application.csproj" />
+    <ProjectReference Include="..\Motor.Inquiry.Domain\Motor.Inquiry.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

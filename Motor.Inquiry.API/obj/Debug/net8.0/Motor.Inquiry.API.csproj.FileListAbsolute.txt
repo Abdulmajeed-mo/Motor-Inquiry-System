@@ -35,3 +35,7 @@ C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API\obj\Debu
 C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API\obj\Debug\net8.0\Motor.Inquiry.API.pdb
 C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API\obj\Debug\net8.0\Motor.Inquiry.API.genruntimeconfig.cache
 C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API\obj\Debug\net8.0\ref\Motor.Inquiry.API.dll
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API\bin\Debug\net8.0\Motor.Inquiry.Application.dll
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API\bin\Debug\net8.0\Motor.Inquiry.Domain.dll
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API\bin\Debug\net8.0\Motor.Inquiry.Application.pdb
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API\bin\Debug\net8.0\Motor.Inquiry.Domain.pdb

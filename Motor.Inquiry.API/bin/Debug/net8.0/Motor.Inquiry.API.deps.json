@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v8.0": {
       "Motor.Inquiry.API/1.0.0": {
         "dependencies": {
+          "Motor.Inquiry.Application": "1.0.0",
           "Swashbuckle.AspNetCore": "6.6.2"
         },
         "runtime": {
@@ -58,6 +59,25 @@
             "fileVersion": "6.6.2.401"
           }
         }
+      },
+      "Motor.Inquiry.Application/1.0.0": {
+        "dependencies": {
+          "Motor.Inquiry.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Motor.Inquiry.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Motor.Inquiry.Domain/1.0.0": {
+        "runtime": {
+          "Motor.Inquiry.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -101,6 +121,16 @@
       "sha512": "sha512-mBBb+/8Hm2Q3Wygag+hu2jj69tZW5psuv0vMRXY07Wy+Rrj40vRP8ZTbKBhs91r45/HXT4aY4z0iSBYx1h6JvA==",
       "path": "swashbuckle.aspnetcore.swaggerui/6.6.2",
       "hashPath": "swashbuckle.aspnetcore.swaggerui.6.6.2.nupkg.sha512"
+    },
+    "Motor.Inquiry.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Motor.Inquiry.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

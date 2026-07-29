@@ -1,11 +1,49 @@
 {
   "version": 4,
   "targets": {
-    "net8.0": {}
+    "net8.0": {
+      "Motor.Inquiry.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Motor.Inquiry.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Motor.Inquiry.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Motor.Inquiry.Application.dll": {}
+        }
+      },
+      "Motor.Inquiry.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Motor.Inquiry.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Motor.Inquiry.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Motor.Inquiry.Application/1.0.0": {
+      "type": "project",
+      "path": "../Motor.Inquiry.Application/Motor.Inquiry.Application.csproj",
+      "msbuildProject": "../Motor.Inquiry.Application/Motor.Inquiry.Application.csproj"
+    },
+    "Motor.Inquiry.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Motor.Inquiry.Domain/Motor.Inquiry.Domain.csproj",
+      "msbuildProject": "../Motor.Inquiry.Domain/Motor.Inquiry.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0": []
+    "net8.0": [
+      "Motor.Inquiry.Application >= 1.0.0",
+      "Motor.Inquiry.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\aalhasani\\.nuget\\packages\\": {},
@@ -39,7 +77,14 @@
         "net8.0": {
           "framework": "net8.0",
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Abdulmajeed_Project\\ASP.NETCore\\MotorInquirySystem\\Motor.Inquiry.Application\\Motor.Inquiry.Application.csproj": {
+              "projectPath": "C:\\Abdulmajeed_Project\\ASP.NETCore\\MotorInquirySystem\\Motor.Inquiry.Application\\Motor.Inquiry.Application.csproj"
+            },
+            "C:\\Abdulmajeed_Project\\ASP.NETCore\\MotorInquirySystem\\Motor.Inquiry.Domain\\Motor.Inquiry.Domain.csproj": {
+              "projectPath": "C:\\Abdulmajeed_Project\\ASP.NETCore\\MotorInquirySystem\\Motor.Inquiry.Domain\\Motor.Inquiry.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

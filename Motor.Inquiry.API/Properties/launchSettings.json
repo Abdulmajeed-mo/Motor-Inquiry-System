@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "http": {
+    "MotorInquiryAPI": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
@@ -19,7 +19,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "https": {
+    "MotorInquiryAPIs": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
