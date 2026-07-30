@@ -10,3 +10,11 @@ C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.Infrastructu
 C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.Infrastructure\obj\Debug\net8.0\refint\Motor.Inquiry.Infrastructure.dll
 C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.Infrastructure\obj\Debug\net8.0\Motor.Inquiry.Infrastructure.pdb
 C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.Infrastructure\obj\Debug\net8.0\ref\Motor.Inquiry.Infrastructure.dll
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.Infrastructure\obj\Debug\net8.0\Motor.Inquiry.Infrastructure.csproj.AssemblyReference.cache
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.Infrastructure\bin\Debug\net8.0\Motor.Inquiry.Infrastructure.runtimeconfig.json
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.Infrastructure\bin\Debug\net8.0\Motor.Inquiry.Application.dll
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.Infrastructure\bin\Debug\net8.0\Motor.Inquiry.Domain.dll
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.Infrastructure\bin\Debug\net8.0\Motor.Inquiry.Application.pdb
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.Infrastructure\bin\Debug\net8.0\Motor.Inquiry.Domain.pdb
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.Infrastructure\obj\Debug\net8.0\Motor.In.4ED40F1D.Up2Date
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.Infrastructure\obj\Debug\net8.0\Motor.Inquiry.Infrastructure.genruntimeconfig.cache
