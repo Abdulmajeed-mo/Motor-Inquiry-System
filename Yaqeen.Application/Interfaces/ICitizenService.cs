@@ -5,11 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using Yaqeen.Domain.Entities;
 using Yaqeen.Application.Interfaces;
+using Yaqeen.Application.DTOs;
 namespace Yaqeen.Application.Interfaces
 {
-    public interface ICitizenService 
+    public interface ICitizenService
     {
-        bool ValidateCitizen(string nationalId);
+        bool ValidateCitizen(CitizenValidationRequest request);
     
     }
 }

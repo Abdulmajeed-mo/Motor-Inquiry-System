@@ -11,38 +11,53 @@ namespace Motor.Inquiry.Application.Services
 {
     public class InquiryService : IInquiryService
     {
-        public InquiryResponse GetInquiryByPlateNumber(InquiryByPlateRequest request)
+        //حقن الانترفيس مع سيرفس الانكويري 
+        private readonly IYaqeenHttpClient _yaqeenHttpClient;
+
+        public InquiryService(IYaqeenHttpClient yaqeenHttpClient)
         {
-            return new InquiryResponse
+            _yaqeenHttpClient = yaqeenHttpClient;
+        }
+
+
+        public  async Task<InquiryResponse> GetInquiryByPlateNumber(InquiryByPlateRequest request)
+        {
+            var citizenRequest = new CitizenValidationRequest
             {
-
-                PlateNumber = request.PlateNumber,
-                PlateLetters = request.PlateLetters,
-                Make = "Hyundai",
-                Model = "Elantra",
-                ModelYear = 2024,
-                Color = "Black",
-                ChassisNumber = "TEST987654321"
-
+                NationalId = request.NationalId,
+                DateOfBirth = request.DateOfBirth
             };
+
+            var isCitizenValid = await _yaqeenHttpClient.ValidateCitizenAsync(citizenRequest);
+
+            if (!isCitizenValid)
+            {
+                throw new Exception("Invalid citizen.");
+            }
+            var vehicle = await _yaqeenHttpClient.GetVehicleByPlateAsync( request.PlateNumber,request.PlateLetters);
+            return vehicle;
 
         }    
                 
                 
 
-        public InquiryResponse GetInquiryBySequenceNumber(InquiryBySequenceRequest request)
+        public async Task<InquiryResponse> GetInquiryBySequenceNumber(InquiryBySequenceRequest request)
         {
-            return new InquiryResponse
+            var citizenRequest = new CitizenValidationRequest
             {
-                SequenceNumber = request.SequenceNumber,
-                PlateNumber = "1234",
-                PlateLetters = "ABC",
-                Make = "Toyota",
-                Model = "Camry",
-                ModelYear = 2023,
-                Color = "White",
-                ChassisNumber = "TEST123456789"
+                NationalId = request.NationalId,
+                DateOfBirth = request.DateOfBirth
             };
+
+            var isCitizenValid = await _yaqeenHttpClient.ValidateCitizenAsync(citizenRequest);
+
+            if (!isCitizenValid)
+            {
+                throw new Exception("Invalid citizen.");
+            }
+            var vehicle = await _yaqeenHttpClient.GetVehicleBySequenceAsync(request.SequenceNumber);
+
+            return vehicle;
         }
     }
 }

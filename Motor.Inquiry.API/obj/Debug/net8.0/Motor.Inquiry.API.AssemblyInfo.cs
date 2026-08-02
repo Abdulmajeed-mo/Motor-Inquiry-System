@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Motor.Inquiry.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0ab54a1695d6ebc75fc30aa7c63c286db1dd8bc6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+caf58984ffd3b179b613aa58ce39e45b812c6838")]
 [assembly: System.Reflection.AssemblyProductAttribute("Motor.Inquiry.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Motor.Inquiry.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

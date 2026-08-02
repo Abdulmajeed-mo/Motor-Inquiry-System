@@ -14,17 +14,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "string"
+                "$ref": "#/components/schemas/CitizenValidationRequest"
               }
             },
             "text/json": {
               "schema": {
-                "type": "string"
+                "$ref": "#/components/schemas/CitizenValidationRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "type": "string"
+                "$ref": "#/components/schemas/CitizenValidationRequest"
               }
             }
           }
@@ -88,5 +88,22 @@
       }
     }
   },
-  "components": { }
+  "components": {
+    "schemas": {
+      "CitizenValidationRequest": {
+        "type": "object",
+        "properties": {
+          "nationalId": {
+            "type": "string",
+            "nullable": true
+          },
+          "dateOfBirth": {
+            "type": "string",
+            "format": "date"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
 }

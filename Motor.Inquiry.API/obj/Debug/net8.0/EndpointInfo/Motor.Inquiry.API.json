@@ -80,6 +80,14 @@
           "plateLetters": {
             "type": "string",
             "nullable": true
+          },
+          "nationalId": {
+            "type": "string",
+            "nullable": true
+          },
+          "dateOfBirth": {
+            "type": "string",
+            "format": "date"
           }
         },
         "additionalProperties": false
@@ -90,6 +98,14 @@
           "sequenceNumber": {
             "type": "integer",
             "format": "int32"
+          },
+          "nationalId": {
+            "type": "string",
+            "nullable": true
+          },
+          "dateOfBirth": {
+            "type": "string",
+            "format": "date"
           }
         },
         "additionalProperties": false

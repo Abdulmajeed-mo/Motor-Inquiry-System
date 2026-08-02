@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Motor.Inquiry.Application.DTOs
+namespace Yaqeen.Application.DTOs
 {
-    public class InquiryBySequenceRequest
+    public class CitizenValidationRequest
     {
-        public int SequenceNumber { get; set; }
         public string NationalId { get; set; }
         public DateOnly DateOfBirth { get; set; }
     }

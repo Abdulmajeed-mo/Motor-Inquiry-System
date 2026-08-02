@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "Motor.Inquiry.API\\Motor.Inquiry.API.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "Yaqeen.API\\Yaqeen.API.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

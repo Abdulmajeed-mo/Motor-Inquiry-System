@@ -26,18 +26,18 @@ namespace Motor.Inquiry.API.Controllers
 
         //Action Methods
         [HttpPost("sequence")]
-        public IActionResult InquiryBySequenceNumber([FromBody] InquiryBySequenceRequest request)
+        public async Task<IActionResult> InquiryBySequenceNumber([FromBody] InquiryBySequenceRequest request)
         {
-            var result = _inquiryService.GetInquiryBySequenceNumber(request);
+            var result = await _inquiryService.GetInquiryBySequenceNumber(request);
 
             return Ok(result);
         }
 
 
         [HttpPost("plate")]
-        public IActionResult InquiryByPlateNumber([FromBody] InquiryByPlateRequest request)
+        public async Task<IActionResult> InquiryByPlateNumber([FromBody] InquiryByPlateRequest request)
         {
-            var result = _inquiryService.GetInquiryByPlateNumber(request);
+            var result = await _inquiryService.GetInquiryByPlateNumber(request);
             return Ok(result);
         }
 

@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Yaqeen.Domain.Entities;
 using Yaqeen.Application.Interfaces;
-
+using Yaqeen.Application.DTOs;
 namespace Yaqeen.API.Controllers
 {
 
@@ -22,9 +22,9 @@ namespace Yaqeen.API.Controllers
 
         //Actions(Endpoints)
         [HttpPost("validate")]
-        public IActionResult ValidateCitizen([FromBody] string nationalId)
+        public IActionResult ValidateCitizen([FromBody] CitizenValidationRequest request)
         {
-          var isValid = _citizenService.ValidateCitizen(nationalId);
+          var isValid = _citizenService.ValidateCitizen(request);
            
             
             if (!isValid)

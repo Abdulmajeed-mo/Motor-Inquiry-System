@@ -10,8 +10,8 @@ namespace Motor.Inquiry.Application.Interfaces
     public interface IInquiryService
     {
 
-        InquiryResponse GetInquiryBySequenceNumber(InquiryBySequenceRequest request);
-        InquiryResponse GetInquiryByPlateNumber(InquiryByPlateRequest request);   
+       Task< InquiryResponse> GetInquiryBySequenceNumber(InquiryBySequenceRequest request);
+       Task <InquiryResponse> GetInquiryByPlateNumber(InquiryByPlateRequest request);   
 
     }
 }
