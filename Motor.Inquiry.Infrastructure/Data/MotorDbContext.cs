@@ -11,7 +11,7 @@ namespace Motor.Inquiry.Infrastructure.Data
         {
 
         }
-        public DbSet<Motor.Inquiry.Domain.Entities.Inquiry> Inquiries { get; set; }
+        public DbSet<InquiryHistory> InquiryHistories { get; set; }
     }
     
 }

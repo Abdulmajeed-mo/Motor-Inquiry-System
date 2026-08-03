@@ -1,9 +1,4 @@
 ﻿using Motor.Inquiry.Application.DTOs;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Motor.Inquiry.Application.Interfaces
 {
@@ -11,7 +6,7 @@ namespace Motor.Inquiry.Application.Interfaces
     {
 
         Task<bool> ValidateCitizenAsync(CitizenValidationRequest request);
-        Task<InquiryResponse> GetVehicleBySequenceAsync(int sequenceNumber);
-        Task<InquiryResponse> GetVehicleByPlateAsync(string plateNumber,string plateLetters);
+        Task<VehicleInquiryDto> GetVehicleBySequenceAsync(int sequenceNumber);
+        Task<VehicleInquiryDto> GetVehicleByPlateAsync(string plateNumber,string plateLetters);
     }
 }

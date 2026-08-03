@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Yaqeen.Domain.Entities;
 using Yaqeen.Application.Interfaces;
 using Yaqeen.Application.DTOs;
 namespace Yaqeen.API.Controllers

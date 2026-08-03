@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.Net;
 using Yaqeen.Application.Interfaces;
 
 namespace Yaqeen.API.Controllers
