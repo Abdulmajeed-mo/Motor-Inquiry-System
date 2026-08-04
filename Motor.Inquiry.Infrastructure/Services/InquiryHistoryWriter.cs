@@ -1,30 +1,23 @@
-﻿using Motor.Inquiry.Application.Interfaces;
+﻿using Microsoft.EntityFrameworkCore;
+using Motor.Inquiry.Application.Interfaces;
 using Motor.Inquiry.Domain.Entities;
 using Motor.Inquiry.Infrastructure.Data;
-
 
 namespace Motor.Inquiry.Infrastructure.Services
 {
     public class InquiryHistoryWriter : IInquiryHistoryWriter
     {
-        private readonly MotorDbContext _context;
+        private readonly MotorDbContext _dbContext;
 
-        public InquiryHistoryWriter(MotorDbContext context)
+        public InquiryHistoryWriter(MotorDbContext dbContext)
         {
-            _context = context;
+            _dbContext = dbContext;
         }
 
         public async Task WriteAsync(InquiryHistory history)
         {
-            Console.WriteLine("========== HISTORY SAVED ==========");
-
-            _context.InquiryHistories.Add(history);
-
-            await _context.SaveChangesAsync();
-
-            Console.WriteLine($"NationalId: {history.NationalId}");
-            Console.WriteLine($"Type: {history.InquiryType}");
-            Console.WriteLine($"Sequence: {history.SequenceNumber}");
+            _dbContext.InquiryHistories.Add(history);
+            await _dbContext.SaveChangesAsync();
         }
     }
 }

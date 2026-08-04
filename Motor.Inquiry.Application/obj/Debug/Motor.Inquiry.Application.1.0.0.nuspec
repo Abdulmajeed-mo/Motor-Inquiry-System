@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Motor.Inquiry.Application</id>
+    <version>1.0.0</version>
+    <authors>Motor.Inquiry.Application</authors>
+    <description>Package Description</description>
+    <repository type="git" commit="19fdf21bd65f01d5917b1f9c1aeffd1e64c50f1a" />
+    <dependencies>
+      <group targetFramework="net8.0">
+        <dependency id="Motor.Inquiry.Domain" version="1.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.Application\bin\Debug\net8.0\Motor.Inquiry.Application.dll" target="lib\net8.0\Motor.Inquiry.Application.dll" />
+  </files>
+</package>
