@@ -1,13 +1,13 @@
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
+using Motor.Inquiry.API.Middleware;
 using Motor.Inquiry.Application.Interfaces;
 using Motor.Inquiry.Application.Services;
 using Motor.Inquiry.Application.Validators;
 using Motor.Inquiry.Infrastructure.Clients;
 using Motor.Inquiry.Infrastructure.Data;
 using Motor.Inquiry.Infrastructure.Services;
-
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -38,6 +38,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+app.UseMiddleware<ExceptionMiddleware>();
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

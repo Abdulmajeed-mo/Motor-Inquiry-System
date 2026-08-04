@@ -1,6 +1,7 @@
 ﻿using Motor.Inquiry.Application.DTOs;
 using Motor.Inquiry.Application.Interfaces;
 using Motor.Inquiry.Domain.Entities;
+using Motor.Inquiry.Domain.Exceptions;
 
 
 namespace Motor.Inquiry.Application.Services
@@ -30,8 +31,8 @@ namespace Motor.Inquiry.Application.Services
             var isCitizenValid = await _yaqeenHttpClient.ValidateCitizenAsync(citizenRequest);
 
             if (!isCitizenValid)
-            { 
-                throw new Exception("Invalid citizen.");
+            {
+                throw new InvalidCitizenException("Invalid citizen.");
             }
             var vehicle = await _yaqeenHttpClient.GetVehicleByPlateAsync(request.PlateNumber, request.PlateLetters);
 
@@ -39,7 +40,7 @@ namespace Motor.Inquiry.Application.Services
 
             if (vehicle.OwnerNationalId != request.NationalId)
             {
-                throw new Exception("Vehicle ownership mismatch.");
+                throw new OwnershipMismatchException("Vehicle ownership mismatch.");
             }
 
 
@@ -73,7 +74,7 @@ namespace Motor.Inquiry.Application.Services
             var isCitizenValid = await _yaqeenHttpClient.ValidateCitizenAsync(citizenRequest);
             if (!isCitizenValid)
             {
-                throw new Exception("Invalid citizen.");
+                throw new InvalidCitizenException("Invalid citizen.");
             }
 
             var vehicle =
@@ -82,7 +83,7 @@ namespace Motor.Inquiry.Application.Services
 
             if (vehicle.OwnerNationalId != request.NationalId)
             {
-                throw new Exception("Vehicle ownership mismatch.");
+                throw new OwnershipMismatchException("Vehicle ownership mismatch.");
             }
 
 
