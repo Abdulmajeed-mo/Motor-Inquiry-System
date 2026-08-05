@@ -8,9 +8,10 @@ using Motor.Inquiry.Application.Validators;
 using Motor.Inquiry.Infrastructure.Clients;
 using Motor.Inquiry.Infrastructure.Data;
 using Motor.Inquiry.Infrastructure.Services;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
-
+builder.Host.UseSerilog((context, configuration) =>configuration.ReadFrom.Configuration(context.Configuration));
 
 builder.Services.AddScoped<IInquiryService , InquiryService >();
 

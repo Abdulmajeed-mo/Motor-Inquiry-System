@@ -15,14 +15,14 @@ namespace Yaqeen.Application.Data
             Nationality = "Saudi"} ,
 
            new Citizen{
-            NationalId = "1028365298",
+            NationalId = "1028339274",
             DateOfBirth = new DateOnly(1990, 11, 15),
             FullName = "Alhasan Mustafa Alharbi",
             Gender = "Male",
             Nationality= "Saudi" } ,
 
             new Citizen{
-            NationalId = "302456789123",
+            NationalId = "1920009789",
             DateOfBirth = new DateOnly(2005, 2, 28),
             FullName = "Hamad Ahmed Al Sabah",
             Gender = "Male",
@@ -53,7 +53,7 @@ namespace Yaqeen.Application.Data
                 ModelYear = 2019,
                 Color = "Blue",
                 ChassisNumber = "XYZ0987654321",
-                OwnerNationalId = "1028365298"
+                OwnerNationalId = "1028339274"
             },
             new Vehicle{
                 SequenceNumber = 3,
@@ -64,7 +64,7 @@ namespace Yaqeen.Application.Data
                 ModelYear = 2020,
                 Color = "Black",
                 ChassisNumber = "XYZ5678901234",
-                OwnerNationalId = "302456789123"
+                OwnerNationalId = "1920009789"
             }
         };
     }

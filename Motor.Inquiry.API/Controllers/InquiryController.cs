@@ -30,7 +30,14 @@ namespace Motor.Inquiry.API.Controllers
         {
             var result = await _inquiryService.GetInquiryBySequenceNumber(request);
 
-            return Ok(result);
+            return Ok(new ApiResponse<InquiryResponse>
+            {
+                Success = true,
+
+
+                Message = "Inquiry completed successfully.",
+                Data = result
+            });
         }
 
 
@@ -38,7 +45,13 @@ namespace Motor.Inquiry.API.Controllers
         public async Task<IActionResult> InquiryByPlateNumber([FromBody] InquiryByPlateRequest request)
         {
             var result = await _inquiryService.GetInquiryByPlateNumber(request);
-            return Ok(result);
+           
+            return Ok(new ApiResponse<InquiryResponse>
+            {
+                Success = true,
+                Message = "Inquiry completed successfully.",
+                Data = result
+            });
         }
 
     }

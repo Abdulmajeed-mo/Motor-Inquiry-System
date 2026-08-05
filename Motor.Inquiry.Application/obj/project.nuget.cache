@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "e6Ni6XLmzOk=",
+  "dgSpecHash": "HJQgJ83lqjw=",
   "success": true,
   "projectFilePath": "C:\\Abdulmajeed_Project\\ASP.NETCore\\MotorInquirySystem\\Motor.Inquiry.Application\\Motor.Inquiry.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\aalhasani\\.nuget\\packages\\fluentvalidation\\12.1.1\\fluentvalidation.12.1.1.nupkg.sha512",
+    "C:\\Users\\aalhasani\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.10\\microsoft.extensions.dependencyinjection.abstractions.10.0.10.nupkg.sha512",
+    "C:\\Users\\aalhasani\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\10.0.10\\microsoft.extensions.logging.abstractions.10.0.10.nupkg.sha512",
+    "C:\\Users\\aalhasani\\.nuget\\packages\\system.diagnostics.diagnosticsource\\10.0.10\\system.diagnostics.diagnosticsource.10.0.10.nupkg.sha512",
     "C:\\Users\\aalhasani\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.28\\microsoft.windowsdesktop.app.ref.8.0.28.nupkg.sha512",
     "C:\\Users\\aalhasani\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.28\\microsoft.netcore.app.ref.8.0.28.nupkg.sha512",
     "C:\\Users\\aalhasani\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.28\\microsoft.aspnetcore.app.ref.8.0.28.nupkg.sha512"

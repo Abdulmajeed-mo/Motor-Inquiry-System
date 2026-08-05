@@ -1,4 +1,5 @@
-﻿using Motor.Inquiry.Application.DTOs;
+﻿using Microsoft.Extensions.Logging;
+using Motor.Inquiry.Application.DTOs;
 using Motor.Inquiry.Application.Interfaces;
 using Motor.Inquiry.Domain.Exceptions;
 using System.Net;
@@ -12,22 +13,28 @@ namespace Motor.Inquiry.Infrastructure.Clients
 
 
        //private field
-
+       private readonly ILogger<YaqeenHttpClient> _logger;
         private readonly HttpClient _httpClient;
 
         //constructor
-        public YaqeenHttpClient(HttpClient httpClient)
+        public YaqeenHttpClient(HttpClient httpClient, ILogger<YaqeenHttpClient> logger)
         {
             _httpClient = httpClient;
-
+            _logger = logger;
         }
 
 
 
+        //Action Method
 
         public async Task<bool> ValidateCitizenAsync(CitizenValidationRequest request)
         {
-            var response = await _httpClient.PostAsJsonAsync("/api/yaqeen/citizen/validate",request);
+            _logger.LogInformation("Calling Yaqeen API for citizen validation ");
+
+            var response = await _httpClient.PostAsJsonAsync("/api/yaqeen/citizen/validate",request  );
+
+            _logger.LogInformation( "Yaqeen API response: {StatusCode}, Success: {Success}", response.StatusCode , response.IsSuccessStatusCode);
+
             return response.IsSuccessStatusCode;
         }
 
@@ -69,8 +76,5 @@ namespace Motor.Inquiry.Infrastructure.Clients
 
             return await response.Content.ReadFromJsonAsync<VehicleInquiryDto>();
         }
-
-
-
     }
 }

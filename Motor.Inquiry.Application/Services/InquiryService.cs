@@ -2,22 +2,26 @@
 using Motor.Inquiry.Application.Interfaces;
 using Motor.Inquiry.Domain.Entities;
 using Motor.Inquiry.Domain.Exceptions;
-
+using Microsoft.Extensions.Logging;
 
 namespace Motor.Inquiry.Application.Services
 {
     public class InquiryService : IInquiryService
     {
         //حقن الانترفيس مع سيرفس الانكويري 
+        //private field
+        private readonly ILogger<InquiryService> _logger;
         private readonly IYaqeenHttpClient _yaqeenHttpClient;
-
         private readonly IInquiryHistoryWriter _inquiryHistoryWriter;
 
-        public InquiryService(IYaqeenHttpClient yaqeenHttpClient, IInquiryHistoryWriter inquiryHistoryWriter)
+
+        //constructor
+        public InquiryService(IYaqeenHttpClient yaqeenHttpClient, IInquiryHistoryWriter inquiryHistoryWriter, ILogger<InquiryService> logger)
         {
             _yaqeenHttpClient = yaqeenHttpClient;
             _inquiryHistoryWriter = inquiryHistoryWriter;
-            }
+            _logger = logger;
+        }
 
 
         public async Task<InquiryResponse> GetInquiryByPlateNumber(InquiryByPlateRequest request)
@@ -52,6 +56,10 @@ namespace Motor.Inquiry.Application.Services
                 PlateLetters = vehicle.PlateLetters,
                 CreatedAt = DateTime.UtcNow
             });
+
+            _logger.LogInformation("Inquiry by plate number completed successfully for PlateNumber: {PlateNumber}, PlateLetters: {PlateLetters}",  request.PlateNumber, request.PlateLetters);
+
+
             return new InquiryResponse
             {
                 SequenceNumber = vehicle.SequenceNumber,
@@ -96,6 +104,9 @@ namespace Motor.Inquiry.Application.Services
                 CreatedAt = DateTime.UtcNow
             });
 
+
+
+            _logger.LogInformation("Inquiry by sequence number completed successfully: {SequenceNumber}" ,  request.SequenceNumber);
 
 
             return new InquiryResponse
