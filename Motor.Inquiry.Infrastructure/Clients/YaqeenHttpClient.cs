@@ -4,7 +4,7 @@ using Motor.Inquiry.Application.Interfaces;
 using Motor.Inquiry.Domain.Exceptions;
 using System.Net;
 using System.Net.Http.Json;
-
+using Microsoft.Extensions.Caching.Memory;
 
 namespace Motor.Inquiry.Infrastructure.Clients
 {
@@ -12,15 +12,17 @@ namespace Motor.Inquiry.Infrastructure.Clients
     {
 
 
-       //private field
-       private readonly ILogger<YaqeenHttpClient> _logger;
+        //private field
+        private readonly IMemoryCache _memoryCache;
+        private readonly ILogger<YaqeenHttpClient> _logger;
         private readonly HttpClient _httpClient;
 
         //constructor
-        public YaqeenHttpClient(HttpClient httpClient, ILogger<YaqeenHttpClient> logger)
+        public YaqeenHttpClient(HttpClient httpClient, ILogger<YaqeenHttpClient> logger, IMemoryCache memoryCache)
         {
             _httpClient = httpClient;
             _logger = logger;
+            _memoryCache = memoryCache;
         }
 
 
@@ -45,27 +47,18 @@ namespace Motor.Inquiry.Infrastructure.Clients
 
         public async Task<VehicleInquiryDto> GetVehicleBySequenceAsync(int sequenceNumber)
         {
-            var response = await _httpClient.GetAsync( $"/api/yaqeen/vehicle/sequence/{sequenceNumber}");
+            var cacheKey = $"vehicle:sequence:{sequenceNumber}";
 
-            if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+            if (_memoryCache.TryGetValue(cacheKey, out VehicleInquiryDto? cachedVehicle))
             {
-                throw new VehicleNotFoundException("Vehicle not found.");
+                _logger.LogInformation("Vehicle found in cache for sequence number: {SequenceNumber}",sequenceNumber);
+
+                return cachedVehicle!;
             }
 
-            response.EnsureSuccessStatusCode();
+            _logger.LogInformation("Vehicle not found in cache. Calling Yaqeen API for sequence number: {SequenceNumber}",sequenceNumber);
 
-            return await response.Content.ReadFromJsonAsync<VehicleInquiryDto>();
-        }
-
-
-
-
-
-
-
-        public async Task<VehicleInquiryDto> GetVehicleByPlateAsync( string plateNumber,string plateLetters)
-        {
-            var response = await _httpClient.GetAsync($"/api/yaqeen/vehicle/plate?plateNumber={plateNumber}&plateLetters={plateLetters}");
+            var response = await _httpClient.GetAsync($"/api/yaqeen/vehicle/sequence/{sequenceNumber}");
 
             if (response.StatusCode == HttpStatusCode.NotFound)
             {
@@ -74,7 +67,61 @@ namespace Motor.Inquiry.Infrastructure.Clients
 
             response.EnsureSuccessStatusCode();
 
-            return await response.Content.ReadFromJsonAsync<VehicleInquiryDto>();
+            var vehicle =await response.Content.ReadFromJsonAsync<VehicleInquiryDto>();
+
+            if (vehicle is null)
+            {
+                throw new VehicleNotFoundException("Vehicle not found.");
+            }
+
+            _memoryCache.Set(cacheKey,vehicle,TimeSpan.FromMinutes(5));
+
+            _logger.LogInformation("Vehicle response cached for sequence number: {SequenceNumber}", sequenceNumber);
+
+            return vehicle;
+        }
+
+
+
+
+
+
+
+        public async Task<VehicleInquiryDto> GetVehicleByPlateAsync(
+         string plateNumber,string plateLetters)
+        {
+            var cacheKey = $"vehicle:plate:{plateNumber}:{plateLetters}";
+
+            if (_memoryCache.TryGetValue(cacheKey, out VehicleInquiryDto? cachedVehicle))
+                 {
+                _logger.LogInformation("Vehicle found in cache for plate: {PlateNumber}-{PlateLetters}",plateNumber,plateLetters);
+                return cachedVehicle!;
+            }
+
+            _logger.LogInformation("Vehicle not found in cache. Calling Yaqeen API for plate: {PlateNumber}-{PlateLetters}",plateNumber,plateLetters);
+
+            var response = await _httpClient.GetAsync(
+                $"/api/yaqeen/vehicle/plate?plateNumber={plateNumber}&plateLetters={plateLetters}");
+
+            if (response.StatusCode == HttpStatusCode.NotFound)
+            {
+                throw new VehicleNotFoundException("Vehicle not found.");
+            }
+
+            response.EnsureSuccessStatusCode();
+
+            var vehicle =await response.Content.ReadFromJsonAsync<VehicleInquiryDto>();
+
+            if (vehicle is null)
+            {
+                throw new VehicleNotFoundException("Vehicle not found.");
+            }
+
+            _memoryCache.Set(cacheKey,vehicle,TimeSpan.FromMinutes(5));
+
+            _logger.LogInformation("Vehicle response cached for plate: {PlateNumber}-{PlateLetters}",plateNumber,plateLetters);
+
+            return vehicle;
         }
     }
 }

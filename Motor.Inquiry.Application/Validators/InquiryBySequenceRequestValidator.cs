@@ -15,7 +15,7 @@ namespace Motor.Inquiry.Application.Validators
 
             RuleFor(x => x.DateOfBirth)  .LessThanOrEqualTo(DateOnly.FromDateTime(DateTime.Today))     .WithMessage("Date Of Birth cannot be in the future.");
              
-            RuleFor(x => x.SequenceNumber)   .NotEmpty()    .WithMessage("Sequence Number is required.");
+            RuleFor(x => x.SequenceNumber)    .GreaterThan(0)        .WithMessage("Sequence Number must be greater than 0.");
         }
 
     }

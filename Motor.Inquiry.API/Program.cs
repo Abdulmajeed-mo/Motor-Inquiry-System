@@ -25,7 +25,8 @@ builder.Services.AddDbContext<MotorDbContext>(options => options.UseSqlServer( b
 
 builder.Services.AddHttpClient<IYaqeenHttpClient, YaqeenHttpClient>( client => { client.BaseAddress = new Uri(builder.Configuration["YaqeenApi:BaseUrl"]!);  });
 
-// Add services to the container.
+
+builder.Services.AddMemoryCache();
 
 builder.Services.AddControllers();
 

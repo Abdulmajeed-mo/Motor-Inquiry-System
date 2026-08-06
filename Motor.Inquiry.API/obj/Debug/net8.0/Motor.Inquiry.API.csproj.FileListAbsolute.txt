@@ -177,3 +177,4 @@ C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API\bin\Debu
 C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API\bin\Debug\net8.0\AutoMapper.dll
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API\bin\Debug\net8.0\Microsoft.Extensions.Caching.Abstractions.dll
