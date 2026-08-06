@@ -11,6 +11,7 @@ namespace Yaqeen.API.Controllers
     {
         //private Field
         private readonly IVehicleService _vehicleService;
+
         //Constructor
         public VehicleController(IVehicleService vehicleService)
         {

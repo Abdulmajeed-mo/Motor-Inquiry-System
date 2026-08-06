@@ -23,8 +23,7 @@ builder.Services.AddScoped<IInquiryHistoryWriter, InquiryHistoryWriter>();
 builder.Services.AddDbContext<MotorDbContext>(options => options.UseSqlServer( builder.Configuration.GetConnectionString("DefaultConnection")  ));
 
 
-builder.Services.AddHttpClient<IYaqeenHttpClient, YaqeenHttpClient>( client => { client.BaseAddress = new Uri(builder.Configuration["YaqeenApi:BaseUrl"]!);  });
-
+builder.Services.AddHttpClient<IYaqeenHttpClient, YaqeenHttpClient>( client => { client.BaseAddress = new Uri(builder.Configuration["YaqeenApi:BaseUrl"]!);  }) .AddStandardResilienceHandler();
 
 builder.Services.AddMemoryCache();
 
