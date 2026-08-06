@@ -26,7 +26,7 @@ namespace Yaqeen.Application.Data
             DateOfBirth = new DateOnly(2005, 2, 28),
             FullName = "Hamad Ahmed Al Sabah",
             Gender = "Male",
-            Nationality= "Kuwaiti"}
+            Nationality= "Saudi"}
 
         };
 

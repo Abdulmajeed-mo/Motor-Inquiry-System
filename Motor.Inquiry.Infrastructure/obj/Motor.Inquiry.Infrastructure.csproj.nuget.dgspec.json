@@ -56,6 +56,10 @@
           "framework": "net8.0",
           "targetAlias": "net8.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[16.2.0, )"
+            },
             "FluentValidation": {
               "target": "Package",
               "version": "[12.1.1, )"

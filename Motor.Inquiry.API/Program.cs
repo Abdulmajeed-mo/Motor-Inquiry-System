@@ -9,6 +9,9 @@ using Motor.Inquiry.Infrastructure.Clients;
 using Motor.Inquiry.Infrastructure.Data;
 using Motor.Inquiry.Infrastructure.Services;
 using Serilog;
+using Motor.Inquiry.Application.Mapping;
+
+
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Host.UseSerilog((context, configuration) =>configuration.ReadFrom.Configuration(context.Configuration));
@@ -28,6 +31,8 @@ builder.Services.AddControllers();
 
 
 builder.Services.AddFluentValidationAutoValidation();
+builder.Services.AddAutoMapper(cfg =>{  cfg.AddProfile<InquiryMappingProfile>();   });
+
 
 //ليس معناها أننا نسجل الـ Sequence Validator فقط.
 //كنقطة مرجعية للـ Assembly

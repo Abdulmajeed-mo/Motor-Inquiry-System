@@ -3,6 +3,7 @@ using Motor.Inquiry.Application.Interfaces;
 using Motor.Inquiry.Domain.Entities;
 using Motor.Inquiry.Domain.Exceptions;
 using Microsoft.Extensions.Logging;
+using AutoMapper;
 
 namespace Motor.Inquiry.Application.Services
 {
@@ -13,14 +14,16 @@ namespace Motor.Inquiry.Application.Services
         private readonly ILogger<InquiryService> _logger;
         private readonly IYaqeenHttpClient _yaqeenHttpClient;
         private readonly IInquiryHistoryWriter _inquiryHistoryWriter;
+        private readonly IMapper _mapper;
 
 
         //constructor
-        public InquiryService(IYaqeenHttpClient yaqeenHttpClient, IInquiryHistoryWriter inquiryHistoryWriter, ILogger<InquiryService> logger)
+        public InquiryService(IYaqeenHttpClient yaqeenHttpClient, IInquiryHistoryWriter inquiryHistoryWriter, ILogger<InquiryService> logger, IMapper mapper)
         {
             _yaqeenHttpClient = yaqeenHttpClient;
             _inquiryHistoryWriter = inquiryHistoryWriter;
             _logger = logger;
+            _mapper = mapper;
         }
 
 
@@ -59,18 +62,7 @@ namespace Motor.Inquiry.Application.Services
 
             _logger.LogInformation("Inquiry by plate number completed successfully for PlateNumber: {PlateNumber}, PlateLetters: {PlateLetters}",  request.PlateNumber, request.PlateLetters);
 
-
-            return new InquiryResponse
-            {
-                SequenceNumber = vehicle.SequenceNumber,
-                PlateNumber = vehicle.PlateNumber,
-                PlateLetters = vehicle.PlateLetters,
-                Make = vehicle.Make,
-                Model = vehicle.Model,
-                ModelYear = vehicle.ModelYear,
-                Color = vehicle.Color,
-                ChassisNumber = vehicle.ChassisNumber
-            };
+            return _mapper.Map<InquiryResponse>(vehicle);
         }
 
 
@@ -108,18 +100,7 @@ namespace Motor.Inquiry.Application.Services
 
             _logger.LogInformation("Inquiry by sequence number completed successfully: {SequenceNumber}" ,  request.SequenceNumber);
 
-
-            return new InquiryResponse
-            {
-                SequenceNumber = vehicle.SequenceNumber,
-                PlateNumber = vehicle.PlateNumber,
-                PlateLetters = vehicle.PlateLetters,
-                Make = vehicle.Make,
-                Model = vehicle.Model,
-                ModelYear = vehicle.ModelYear,
-                Color = vehicle.Color,
-                ChassisNumber = vehicle.ChassisNumber
-            };
+            return _mapper.Map<InquiryResponse>(vehicle);
         }
     }
 }
