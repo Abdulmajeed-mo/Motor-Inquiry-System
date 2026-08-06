@@ -31,13 +31,28 @@ namespace Motor.Inquiry.Infrastructure.Clients
 
         public async Task<bool> ValidateCitizenAsync(CitizenValidationRequest request)
         {
-            _logger.LogInformation("Calling Yaqeen API for citizen validation ");
+            var cacheKey = $"citizen:{request.NationalId}:{request.DateOfBirth}";
 
-            var response = await _httpClient.PostAsJsonAsync("/api/yaqeen/citizen/validate",request  );
+            if (_memoryCache.TryGetValue(cacheKey, out bool cachedResult))
+            {
+                _logger.LogInformation("Citizen validation found in cache for NationalId: {NationalId}",request.NationalId);
 
-            _logger.LogInformation( "Yaqeen API response: {StatusCode}, Success: {Success}", response.StatusCode , response.IsSuccessStatusCode);
+                return cachedResult;
+            }
 
-            return response.IsSuccessStatusCode;
+            _logger.LogInformation("Citizen validation not found in cache. Calling Yaqeen API for NationalId: {NationalId}",request.NationalId);
+
+            var response = await _httpClient.PostAsJsonAsync("/api/yaqeen/citizen/validate",request);
+
+            _logger.LogInformation("Yaqeen API response: {StatusCode}, Success: {Success}",response.StatusCode,response.IsSuccessStatusCode);
+
+            var result = response.IsSuccessStatusCode;
+
+            _memoryCache.Set(cacheKey,result,TimeSpan.FromMinutes(5));
+
+            _logger.LogInformation("Citizen validation response cached for NationalId: {NationalId}",request.NationalId);
+
+            return result;
         }
 
 
@@ -80,6 +95,11 @@ namespace Motor.Inquiry.Infrastructure.Clients
 
             return vehicle;
         }
+
+
+
+
+
 
 
 
