@@ -26,6 +26,7 @@ builder.Services.AddDbContext<MotorDbContext>(options => options.UseSqlServer( b
 builder.Services.AddHttpClient<IYaqeenHttpClient, YaqeenHttpClient>( client => { client.BaseAddress = new Uri(builder.Configuration["YaqeenApi:BaseUrl"]!);  }) .AddStandardResilienceHandler();
 
 builder.Services.AddMemoryCache();
+builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddControllers();
 
@@ -43,12 +44,14 @@ builder.Services.AddValidatorsFromAssemblyContaining<InquiryBySequenceRequestVal
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+
+// Configure the HTTP request pipeline.
+
 var app = builder.Build();
+app.UseMiddleware<CorrelationIdMiddleware>();
 
 app.UseMiddleware<ExceptionMiddleware>();
 
-
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

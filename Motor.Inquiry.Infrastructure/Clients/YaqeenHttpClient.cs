@@ -5,6 +5,7 @@ using Motor.Inquiry.Domain.Exceptions;
 using System.Net;
 using System.Net.Http.Json;
 using Microsoft.Extensions.Caching.Memory;
+using Microsoft.AspNetCore.Http;
 
 namespace Motor.Inquiry.Infrastructure.Clients
 {
@@ -13,24 +14,31 @@ namespace Motor.Inquiry.Infrastructure.Clients
 
 
         //private field
-        private readonly IMemoryCache _memoryCache;
-        private readonly ILogger<YaqeenHttpClient> _logger;
         private readonly HttpClient _httpClient;
 
+        private readonly ILogger<YaqeenHttpClient> _logger;
+        private readonly IMemoryCache _memoryCache;
+        private readonly IHttpContextAccessor _httpContextAccessor;
+
         //constructor
-        public YaqeenHttpClient(HttpClient httpClient, ILogger<YaqeenHttpClient> logger, IMemoryCache memoryCache)
+        public YaqeenHttpClient(HttpClient httpClient, ILogger<YaqeenHttpClient> logger, IMemoryCache memoryCache, IHttpContextAccessor httpContextAccessor)
         {
             _httpClient = httpClient;
             _logger = logger;
             _memoryCache = memoryCache;
+            _httpContextAccessor = httpContextAccessor;
         }
 
 
 
         //Action Method
+        
+
+
 
         public async Task<bool> ValidateCitizenAsync(CitizenValidationRequest request)
         {
+
             var cacheKey = $"citizen:{request.NationalId}:{request.DateOfBirth}";
 
             if (_memoryCache.TryGetValue(cacheKey, out bool cachedResult))
@@ -42,7 +50,16 @@ namespace Motor.Inquiry.Infrastructure.Clients
 
             _logger.LogInformation("Citizen validation not found in cache. Calling Yaqeen API for NationalId: {NationalId}",request.NationalId);
 
-            var response = await _httpClient.PostAsJsonAsync("/api/yaqeen/citizen/validate",request);
+            var correlationId =  _httpContextAccessor.HttpContext?.Request.Headers["X-Correlation-ID"].FirstOrDefault()?? Guid.NewGuid().ToString();
+
+            var httpRequest = new HttpRequestMessage(HttpMethod.Post, "/api/yaqeen/citizen/validate")
+            {
+                Content = JsonContent.Create(request)
+            };
+
+            httpRequest.Headers.Add("X-Correlation-ID", correlationId);
+            
+            var response = await _httpClient.SendAsync(httpRequest);
 
             _logger.LogInformation("Yaqeen API response: {StatusCode}, Success: {Success}",response.StatusCode,response.IsSuccessStatusCode);
 
@@ -73,7 +90,14 @@ namespace Motor.Inquiry.Infrastructure.Clients
 
             _logger.LogInformation("Vehicle not found in cache. Calling Yaqeen API for sequence number: {SequenceNumber}",sequenceNumber);
 
-            var response = await _httpClient.GetAsync($"/api/yaqeen/vehicle/sequence/{sequenceNumber}");
+            var correlationId =_httpContextAccessor.HttpContext?.Request.Headers["X-Correlation-ID"].FirstOrDefault()?? Guid.NewGuid().ToString();
+
+            var httpRequest = new HttpRequestMessage(HttpMethod.Get, $"/api/yaqeen/vehicle/sequence/{sequenceNumber}");
+
+            httpRequest.Headers.Add("X-Correlation-ID", correlationId);
+
+            var response = await _httpClient.SendAsync(httpRequest);
+
 
             if (response.StatusCode == HttpStatusCode.NotFound)
             {
@@ -120,9 +144,13 @@ namespace Motor.Inquiry.Infrastructure.Clients
 
             _logger.LogInformation("Vehicle not found in cache. Calling Yaqeen API for plate: {PlateNumber}-{PlateLetters}",plateNumber,plateLetters);
 
-            var response = await _httpClient.GetAsync(
-                $"/api/yaqeen/vehicle/plate?plateNumber={plateNumber}&plateLetters={plateLetters}");
+            var correlationId =_httpContextAccessor.HttpContext?.Request.Headers["X-Correlation-ID"].FirstOrDefault()?? Guid.NewGuid().ToString();
 
+            var httpRequest = new HttpRequestMessage(HttpMethod.Get, $"/api/yaqeen/vehicle/plate?plateNumber={plateNumber}&plateLetters={plateLetters}");
+
+            httpRequest.Headers.Add("X-Correlation-ID", correlationId);
+
+            var response = await _httpClient.SendAsync(httpRequest);
             if (response.StatusCode == HttpStatusCode.NotFound)
             {
                 throw new VehicleNotFoundException("Vehicle not found.");
@@ -140,7 +168,7 @@ namespace Motor.Inquiry.Infrastructure.Clients
             _memoryCache.Set(cacheKey,vehicle,TimeSpan.FromMinutes(5));
 
             _logger.LogInformation("Vehicle response cached for plate: {PlateNumber}-{PlateLetters}",plateNumber,plateLetters);
-
+            
             return vehicle;
         }
     }

@@ -1,3 +1,4 @@
+using Yaqeen.API.Middleware;
 using Yaqeen.Application.Interfaces;
 using Yaqeen.Application.Services;
 
@@ -16,7 +17,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
-
+app.UseMiddleware<CorrelationIdMiddleware>();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

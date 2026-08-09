@@ -2264,7 +2264,10 @@
         },
         "runtime": {
           "bin/placeholder/Motor.Inquiry.Infrastructure.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
