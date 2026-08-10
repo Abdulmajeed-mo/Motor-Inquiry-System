@@ -4,7 +4,7 @@ using Yaqeen.Application.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Service Registration for Dependency Injectionما
+// Service Registration for Dependency Injection
 builder.Services.AddScoped<ICitizenService, CitizenService>();
 builder.Services.AddScoped<IVehicleService, VehicleService>();
 

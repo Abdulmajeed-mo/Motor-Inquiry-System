@@ -1,4 +1,7 @@
 <Solution>
+  <Folder Name="/Docker/">
+    <File Path="docker-compose.yml" />
+  </Folder>
   <Project Path="Motor.Inquiry.API/Motor.Inquiry.API.csproj" />
   <Project Path="Motor.Inquiry.Application/Motor.Inquiry.Application.csproj" />
   <Project Path="Motor.Inquiry.Domain/Motor.Inquiry.Domain.csproj" />

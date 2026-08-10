@@ -3,13 +3,14 @@ using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
 using Motor.Inquiry.API.Middleware;
 using Motor.Inquiry.Application.Interfaces;
+using Motor.Inquiry.Application.Mapping;
 using Motor.Inquiry.Application.Services;
 using Motor.Inquiry.Application.Validators;
 using Motor.Inquiry.Infrastructure.Clients;
 using Motor.Inquiry.Infrastructure.Data;
 using Motor.Inquiry.Infrastructure.Services;
 using Serilog;
-using Motor.Inquiry.Application.Mapping;
+using System.Threading.RateLimiting;
 
 
 
@@ -39,7 +40,17 @@ builder.Services.AddAutoMapper(cfg =>{  cfg.AddProfile<InquiryMappingProfile>();
 //كنقطة مرجعية للـ Assembly
 builder.Services.AddValidatorsFromAssemblyContaining<InquiryBySequenceRequestValidator>();
 
+builder.Services.AddRateLimiter(options =>
+{
+    options.GlobalLimiter = PartitionedRateLimiter.Create<HttpContext, string>(httpContext =>RateLimitPartition.GetFixedWindowLimiter(partitionKey: httpContext.Connection.RemoteIpAddress?.ToString() ?? "unknown",factory: _ => new FixedWindowRateLimiterOptions
+                {
+                    PermitLimit = 5,
+                    Window = TimeSpan.FromMinutes(1),
+                    QueueLimit = 0
+                }));
 
+    options.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
+});
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -48,6 +59,9 @@ builder.Services.AddSwaggerGen();
 // Configure the HTTP request pipeline.
 
 var app = builder.Build();
+
+app.UseRateLimiter();
+
 app.UseMiddleware<CorrelationIdMiddleware>();
 
 app.UseMiddleware<ExceptionMiddleware>();
