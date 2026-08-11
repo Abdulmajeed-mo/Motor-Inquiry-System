@@ -5,10 +5,20 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/Inquiry/sequence": {
+    "/api/v{version}/Inquiry/sequence": {
       "post": {
         "tags": [
           "Inquiry"
+        ],
+        "parameters": [
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
         ],
         "requestBody": {
           "content": {
@@ -36,10 +46,20 @@
         }
       }
     },
-    "/api/Inquiry/plate": {
+    "/api/v{version}/Inquiry/plate": {
       "post": {
         "tags": [
           "Inquiry"
+        ],
+        "parameters": [
+          {
+            "name": "version",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
         ],
         "requestBody": {
           "content": {

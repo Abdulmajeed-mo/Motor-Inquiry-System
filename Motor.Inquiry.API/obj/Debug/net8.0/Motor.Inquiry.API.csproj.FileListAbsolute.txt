@@ -194,3 +194,6 @@ C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API\bin\Debu
 C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API\bin\Debug\net8.0\Polly.Core.dll
 C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API\bin\Debug\net8.0\Polly.Extensions.dll
 C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API\bin\Debug\net8.0\Polly.RateLimiting.dll
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API\bin\Debug\net8.0\Asp.Versioning.Abstractions.dll
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API\bin\Debug\net8.0\Asp.Versioning.Http.dll
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API\bin\Debug\net8.0\Asp.Versioning.Mvc.dll

@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "waZ9Pzb0Xes=",
+  "dgSpecHash": "kURalcJZUpU=",
   "success": true,
   "projectFilePath": "C:\\Abdulmajeed_Project\\ASP.NETCore\\MotorInquirySystem\\Motor.Inquiry.API\\Motor.Inquiry.API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\aalhasani\\.nuget\\packages\\asp.versioning.abstractions\\8.1.0\\asp.versioning.abstractions.8.1.0.nupkg.sha512",
+    "C:\\Users\\aalhasani\\.nuget\\packages\\asp.versioning.http\\8.1.0\\asp.versioning.http.8.1.0.nupkg.sha512",
+    "C:\\Users\\aalhasani\\.nuget\\packages\\asp.versioning.mvc\\8.1.0\\asp.versioning.mvc.8.1.0.nupkg.sha512",
     "C:\\Users\\aalhasani\\.nuget\\packages\\automapper\\16.2.0\\automapper.16.2.0.nupkg.sha512",
     "C:\\Users\\aalhasani\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\aalhasani\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

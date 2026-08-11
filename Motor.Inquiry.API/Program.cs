@@ -51,6 +51,11 @@ builder.Services.AddRateLimiter(options =>
 
     options.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
 });
+
+builder.Services.AddHealthChecks();
+
+builder.Services.AddApiVersioning();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -59,6 +64,7 @@ builder.Services.AddSwaggerGen();
 // Configure the HTTP request pipeline.
 
 var app = builder.Build();
+app.MapHealthChecks("/health");
 
 app.UseRateLimiter();
 

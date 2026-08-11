@@ -1,14 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Asp.Versioning;
+using Microsoft.AspNetCore.Mvc;
 using Motor.Inquiry.Application.DTOs;
 using Motor.Inquiry.Application.Interfaces;
 
 namespace Motor.Inquiry.API.Controllers
 {
 
-
     [ApiController]
-    [Route("api/[controller]")]
-
+    [ApiVersion(1.0)]
+    [Route("api/v{version:apiVersion}/[controller]")]
     public class InquiryController : ControllerBase
     {
 

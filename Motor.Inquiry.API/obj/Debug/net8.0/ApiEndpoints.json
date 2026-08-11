@@ -2,7 +2,7 @@
   {
     "ContainingType": "Motor.Inquiry.API.Controllers.InquiryController",
     "Method": "InquiryByPlateNumber",
-    "RelativePath": "api/Inquiry/plate",
+    "RelativePath": "api/v{version}/Inquiry/plate",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -11,6 +11,11 @@
         "Name": "request",
         "Type": "Motor.Inquiry.Application.DTOs.InquiryByPlateRequest",
         "IsRequired": true
+      },
+      {
+        "Name": "version",
+        "Type": "",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -18,7 +23,7 @@
   {
     "ContainingType": "Motor.Inquiry.API.Controllers.InquiryController",
     "Method": "InquiryBySequenceNumber",
-    "RelativePath": "api/Inquiry/sequence",
+    "RelativePath": "api/v{version}/Inquiry/sequence",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -26,6 +31,11 @@
       {
         "Name": "request",
         "Type": "Motor.Inquiry.Application.DTOs.InquiryBySequenceRequest",
+        "IsRequired": true
+      },
+      {
+        "Name": "version",
+        "Type": "",
         "IsRequired": true
       }
     ],
