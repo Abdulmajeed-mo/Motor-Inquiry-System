@@ -4,7 +4,8 @@
     "Projects": [
       {
         "Path": "Motor.Inquiry.API\\Motor.Inquiry.API.csproj",
-        "Action": "Start"
+        "Action": "Start",
+        "DebugTarget": "MotorInquiryAPI-Staging"
       },
       {
         "Path": "Yaqeen.API\\Yaqeen.API.csproj",

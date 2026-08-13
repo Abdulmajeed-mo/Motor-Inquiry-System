@@ -15,14 +15,13 @@ namespace Motor.Inquiry.Infrastructure.Services
 
         public async Task WriteAsync(InquiryHistory history)
         {
-            //AddCheckConstraintOperation Transaction
+            //Add Transaction
             await using var transaction = await _dbContext.Database.BeginTransactionAsync();
 
             try
             {
                 _dbContext.InquiryHistories.Add(history);
                 await _dbContext.SaveChangesAsync();
-                throw new Exception("Rollback test");
                 await transaction.CommitAsync();
             }
             catch (Exception)

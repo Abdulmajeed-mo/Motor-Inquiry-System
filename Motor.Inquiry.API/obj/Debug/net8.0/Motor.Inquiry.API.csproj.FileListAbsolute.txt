@@ -197,3 +197,4 @@ C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API\bin\Debu
 C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API\bin\Debug\net8.0\Asp.Versioning.Abstractions.dll
 C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API\bin\Debug\net8.0\Asp.Versioning.Http.dll
 C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API\bin\Debug\net8.0\Asp.Versioning.Mvc.dll
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API\bin\Debug\net8.0\appsettings.Staging.json

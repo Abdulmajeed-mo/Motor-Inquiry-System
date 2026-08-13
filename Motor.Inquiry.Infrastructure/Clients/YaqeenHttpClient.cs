@@ -43,12 +43,12 @@ namespace Motor.Inquiry.Infrastructure.Clients
 
             if (_memoryCache.TryGetValue(cacheKey, out bool cachedResult))
             {
-                _logger.LogInformation("Citizen validation found in cache for NationalId: {NationalId}",request.NationalId);
+                _logger.LogInformation("Citizen validation found in cache.");
 
                 return cachedResult;
             }
 
-            _logger.LogInformation("Citizen validation not found in cache. Calling Yaqeen API for NationalId: {NationalId}",request.NationalId);
+            _logger.LogInformation("Citizen validation not found in cache. Calling Yaqeen API.");
 
             var correlationId =  _httpContextAccessor.HttpContext?.Request.Headers["X-Correlation-ID"].FirstOrDefault()?? Guid.NewGuid().ToString();
 
@@ -67,7 +67,7 @@ namespace Motor.Inquiry.Infrastructure.Clients
 
             _memoryCache.Set(cacheKey,result,TimeSpan.FromMinutes(5));
 
-            _logger.LogInformation("Citizen validation response cached for NationalId: {NationalId}",request.NationalId);
+            _logger.LogInformation("Citizen validation response cached.");
 
             return result;
         }
@@ -83,12 +83,11 @@ namespace Motor.Inquiry.Infrastructure.Clients
 
             if (_memoryCache.TryGetValue(cacheKey, out VehicleInquiryDto? cachedVehicle))
             {
-                _logger.LogInformation("Vehicle found in cache for sequence number: {SequenceNumber}",sequenceNumber);
-
+                _logger.LogInformation("Vehicle found in cache.");
                 return cachedVehicle!;
             }
 
-            _logger.LogInformation("Vehicle not found in cache. Calling Yaqeen API for sequence number: {SequenceNumber}",sequenceNumber);
+            _logger.LogInformation("Vehicle not found in cache. Calling Yaqeen API.");
 
             var correlationId =_httpContextAccessor.HttpContext?.Request.Headers["X-Correlation-ID"].FirstOrDefault()?? Guid.NewGuid().ToString();
 
@@ -112,10 +111,10 @@ namespace Motor.Inquiry.Infrastructure.Clients
             {
                 throw new VehicleNotFoundException("Vehicle not found.");
             }
-
+                                                        //مدة التخزين محددة بـ 5 دقائق.
             _memoryCache.Set(cacheKey,vehicle,TimeSpan.FromMinutes(5));
 
-            _logger.LogInformation("Vehicle response cached for sequence number: {SequenceNumber}", sequenceNumber);
+            _logger.LogInformation("Vehicle response cached.");
 
             return vehicle;
         }
@@ -138,11 +137,12 @@ namespace Motor.Inquiry.Infrastructure.Clients
 
             if (_memoryCache.TryGetValue(cacheKey, out VehicleInquiryDto? cachedVehicle))
                  {
-                _logger.LogInformation("Vehicle found in cache for plate: {PlateNumber}-{PlateLetters}",plateNumber,plateLetters);
+                _logger.LogInformation("Vehicle found in cache.");
+                
                 return cachedVehicle!;
             }
 
-            _logger.LogInformation("Vehicle not found in cache. Calling Yaqeen API for plate: {PlateNumber}-{PlateLetters}",plateNumber,plateLetters);
+            _logger.LogInformation("Vehicle not found in cache. Calling Yaqeen API.");
 
             var correlationId =_httpContextAccessor.HttpContext?.Request.Headers["X-Correlation-ID"].FirstOrDefault()?? Guid.NewGuid().ToString();
 
@@ -164,11 +164,11 @@ namespace Motor.Inquiry.Infrastructure.Clients
             {
                 throw new VehicleNotFoundException("Vehicle not found.");
             }
-
+                                               //مدة التخزين محددة بـ 5 دقائق.
             _memoryCache.Set(cacheKey,vehicle,TimeSpan.FromMinutes(5));
 
-            _logger.LogInformation("Vehicle response cached for plate: {PlateNumber}-{PlateLetters}",plateNumber,plateLetters);
-            
+            _logger.LogInformation("Vehicle response cached.");
+
             return vehicle;
         }
     }

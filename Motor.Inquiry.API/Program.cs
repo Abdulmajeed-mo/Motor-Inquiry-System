@@ -15,6 +15,8 @@ using System.Threading.RateLimiting;
 
 
 var builder = WebApplication.CreateBuilder(args);
+
+
 builder.Host.UseSerilog((context, configuration) =>configuration.ReadFrom.Configuration(context.Configuration));
 
 builder.Services.AddScoped<IInquiryService , InquiryService >();
@@ -72,7 +74,7 @@ app.UseMiddleware<CorrelationIdMiddleware>();
 
 app.UseMiddleware<ExceptionMiddleware>();
 
-if (app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment() || app.Environment.IsStaging())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
@@ -85,3 +87,4 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
