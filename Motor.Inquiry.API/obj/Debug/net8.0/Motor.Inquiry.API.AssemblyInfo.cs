@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("e0be9934-5315-4706-8ff3-ee0994eac2aa")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("Motor.Inquiry.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0ff4a16636447ee404fb53caaddcd8778d0a9dea")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5e6a0a7e30b7acda1a32a168dc2bd8d2895a24ee")]
 [assembly: System.Reflection.AssemblyProductAttribute("Motor.Inquiry.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Motor.Inquiry.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
