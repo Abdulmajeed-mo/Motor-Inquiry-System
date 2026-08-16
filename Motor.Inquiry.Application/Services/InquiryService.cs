@@ -27,7 +27,7 @@ namespace Motor.Inquiry.Application.Services
         }
 
 
-        public async Task<InquiryResponse> GetInquiryByPlateNumber(InquiryByPlateRequest request)
+        public async Task<InquiryResponse> GetInquiryByPlateNumber(InquiryByPlateRequest request, CancellationToken cancellationToken)
         {
             var citizenRequest = new CitizenValidationRequest
             {
@@ -35,13 +35,13 @@ namespace Motor.Inquiry.Application.Services
                 DateOfBirth = request.DateOfBirth
             };
 
-            var isCitizenValid = await _yaqeenHttpClient.ValidateCitizenAsync(citizenRequest);
+            var isCitizenValid = await _yaqeenHttpClient.ValidateCitizenAsync(citizenRequest, cancellationToken);
 
             if (!isCitizenValid)
             {
                 throw new InvalidCitizenException("Invalid citizen.");
             }
-            var vehicle = await _yaqeenHttpClient.GetVehicleByPlateAsync(request.PlateNumber, request.PlateLetters);
+            var vehicle = await _yaqeenHttpClient.GetVehicleByPlateAsync(request.PlateNumber, request.PlateLetters, cancellationToken);
 
 
 
@@ -67,19 +67,18 @@ namespace Motor.Inquiry.Application.Services
 
 
 
-        public async Task<InquiryResponse> GetInquiryBySequenceNumber(InquiryBySequenceRequest request)
+        public async Task<InquiryResponse> GetInquiryBySequenceNumber(InquiryBySequenceRequest request,CancellationToken cancellationToken)
         {
             var citizenRequest = new CitizenValidationRequest {NationalId = request.NationalId, DateOfBirth = request.DateOfBirth };
 
-            var isCitizenValid = await _yaqeenHttpClient.ValidateCitizenAsync(citizenRequest);
+            var isCitizenValid = await _yaqeenHttpClient.ValidateCitizenAsync(citizenRequest, cancellationToken);
+            
             if (!isCitizenValid)
             {
                 throw new InvalidCitizenException("Invalid citizen.");
             }
 
-            var vehicle =
-                await _yaqeenHttpClient.GetVehicleBySequenceAsync(
-                    request.SequenceNumber);
+            var vehicle = await _yaqeenHttpClient.GetVehicleBySequenceAsync(request.SequenceNumber , cancellationToken);
 
             if (vehicle.OwnerNationalId != request.NationalId)
             {

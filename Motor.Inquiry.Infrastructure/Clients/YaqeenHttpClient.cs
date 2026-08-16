@@ -36,7 +36,7 @@ namespace Motor.Inquiry.Infrastructure.Clients
 
 
 
-        public async Task<bool> ValidateCitizenAsync(CitizenValidationRequest request)
+        public async Task<bool> ValidateCitizenAsync(CitizenValidationRequest request, CancellationToken cancellationToken)
         {
 
             var cacheKey = $"citizen:{request.NationalId}:{request.DateOfBirth}";
@@ -59,7 +59,7 @@ namespace Motor.Inquiry.Infrastructure.Clients
 
             httpRequest.Headers.Add("X-Correlation-ID", correlationId);
             
-            var response = await _httpClient.SendAsync(httpRequest);
+            var response = await _httpClient.SendAsync(httpRequest , cancellationToken);
 
             _logger.LogInformation("Yaqeen API response: {StatusCode}, Success: {Success}",response.StatusCode,response.IsSuccessStatusCode);
 
@@ -77,7 +77,7 @@ namespace Motor.Inquiry.Infrastructure.Clients
 
 
 
-        public async Task<VehicleInquiryDto> GetVehicleBySequenceAsync(int sequenceNumber)
+        public async Task<VehicleInquiryDto> GetVehicleBySequenceAsync(int sequenceNumber, CancellationToken cancellationToken)
         {
             var cacheKey = $"vehicle:sequence:{sequenceNumber}";
 
@@ -95,7 +95,7 @@ namespace Motor.Inquiry.Infrastructure.Clients
 
             httpRequest.Headers.Add("X-Correlation-ID", correlationId);
 
-            var response = await _httpClient.SendAsync(httpRequest);
+            var response = await _httpClient.SendAsync(httpRequest,cancellationToken);
 
 
             if (response.StatusCode == HttpStatusCode.NotFound)
@@ -130,8 +130,7 @@ namespace Motor.Inquiry.Infrastructure.Clients
 
 
 
-        public async Task<VehicleInquiryDto> GetVehicleByPlateAsync(
-         string plateNumber,string plateLetters)
+        public async Task<VehicleInquiryDto> GetVehicleByPlateAsync(string plateNumber,string plateLetters, CancellationToken cancellationToken)
         {
             var cacheKey = $"vehicle:plate:{plateNumber}:{plateLetters}";
 
@@ -150,7 +149,7 @@ namespace Motor.Inquiry.Infrastructure.Clients
 
             httpRequest.Headers.Add("X-Correlation-ID", correlationId);
 
-            var response = await _httpClient.SendAsync(httpRequest);
+            var response = await _httpClient.SendAsync(httpRequest, cancellationToken);
             if (response.StatusCode == HttpStatusCode.NotFound)
             {
                 throw new VehicleNotFoundException("Vehicle not found.");

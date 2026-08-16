@@ -26,9 +26,9 @@ namespace Motor.Inquiry.API.Controllers
 
         //Action Methods
         [HttpPost("sequence")]
-        public async Task<IActionResult> InquiryBySequenceNumber([FromBody] InquiryBySequenceRequest request)
+        public async Task<IActionResult> InquiryBySequenceNumber([FromBody] InquiryBySequenceRequest request, CancellationToken cancellationToken)
         {
-            var result = await _inquiryService.GetInquiryBySequenceNumber(request);
+            var result = await _inquiryService.GetInquiryBySequenceNumber(request ,cancellationToken);
 
             return Ok(new ApiResponse<InquiryResponse>
             {
@@ -42,9 +42,9 @@ namespace Motor.Inquiry.API.Controllers
 
 
         [HttpPost("plate")]
-        public async Task<IActionResult> InquiryByPlateNumber([FromBody] InquiryByPlateRequest request)
+        public async Task<IActionResult> InquiryByPlateNumber([FromBody] InquiryByPlateRequest request, CancellationToken cancellationToken)
         {
-            var result = await _inquiryService.GetInquiryByPlateNumber(request);
+            var result = await _inquiryService.GetInquiryByPlateNumber(request,cancellationToken);
            
             return Ok(new ApiResponse<InquiryResponse>
             {
