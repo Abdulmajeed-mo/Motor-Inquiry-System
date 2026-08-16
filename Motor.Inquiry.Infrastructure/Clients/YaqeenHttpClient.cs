@@ -6,6 +6,7 @@ using System.Net;
 using System.Net.Http.Json;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Configuration;
 
 namespace Motor.Inquiry.Infrastructure.Clients
 {
@@ -15,29 +16,32 @@ namespace Motor.Inquiry.Infrastructure.Clients
 
         //private field
         private readonly HttpClient _httpClient;
-
         private readonly ILogger<YaqeenHttpClient> _logger;
         private readonly IMemoryCache _memoryCache;
         private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly IConfiguration _configuration;
 
         //constructor
-        public YaqeenHttpClient(HttpClient httpClient, ILogger<YaqeenHttpClient> logger, IMemoryCache memoryCache, IHttpContextAccessor httpContextAccessor)
+        public YaqeenHttpClient(HttpClient httpClient, ILogger<YaqeenHttpClient> logger, IMemoryCache memoryCache, IHttpContextAccessor httpContextAccessor , IConfiguration configuration)
         {
             _httpClient = httpClient;
             _logger = logger;
             _memoryCache = memoryCache;
             _httpContextAccessor = httpContextAccessor;
+            _configuration = configuration;
         }
 
 
 
         //Action Method
-        
 
 
 
+        //Validate Citizen Method
         public async Task<bool> ValidateCitizenAsync(CitizenValidationRequest request, CancellationToken cancellationToken)
         {
+            var expirationMinutes = _configuration.GetValue<int>("CacheSettings:ExpirationMinutes");
+
 
             var cacheKey = $"citizen:{request.NationalId}:{request.DateOfBirth}";
 
@@ -65,7 +69,8 @@ namespace Motor.Inquiry.Infrastructure.Clients
 
             var result = response.IsSuccessStatusCode;
 
-            _memoryCache.Set(cacheKey,result,TimeSpan.FromMinutes(5));
+                                                                //مدة التخزين محددة بـ 5 دقائق.
+            _memoryCache.Set(cacheKey,result,TimeSpan.FromMinutes(expirationMinutes));
 
             _logger.LogInformation("Citizen validation response cached.");
 
@@ -76,9 +81,11 @@ namespace Motor.Inquiry.Infrastructure.Clients
 
 
 
-
+        //Get Vehicle By Sequence Method
         public async Task<VehicleInquiryDto> GetVehicleBySequenceAsync(int sequenceNumber, CancellationToken cancellationToken)
         {
+            var expirationMinutes = _configuration.GetValue<int>("CacheSettings:ExpirationMinutes");
+
             var cacheKey = $"vehicle:sequence:{sequenceNumber}";
 
             if (_memoryCache.TryGetValue(cacheKey, out VehicleInquiryDto? cachedVehicle))
@@ -112,7 +119,7 @@ namespace Motor.Inquiry.Infrastructure.Clients
                 throw new VehicleNotFoundException("Vehicle not found.");
             }
                                                         //مدة التخزين محددة بـ 5 دقائق.
-            _memoryCache.Set(cacheKey,vehicle,TimeSpan.FromMinutes(5));
+            _memoryCache.Set(cacheKey,vehicle,TimeSpan.FromMinutes(expirationMinutes));
 
             _logger.LogInformation("Vehicle response cached.");
 
@@ -129,9 +136,11 @@ namespace Motor.Inquiry.Infrastructure.Clients
 
 
 
-
+        //Get Vehicle By Plate Method
         public async Task<VehicleInquiryDto> GetVehicleByPlateAsync(string plateNumber,string plateLetters, CancellationToken cancellationToken)
         {
+            var expirationMinutes =_configuration.GetValue<int>("CacheSettings:ExpirationMinutes");
+          
             var cacheKey = $"vehicle:plate:{plateNumber}:{plateLetters}";
 
             if (_memoryCache.TryGetValue(cacheKey, out VehicleInquiryDto? cachedVehicle))
@@ -164,7 +173,7 @@ namespace Motor.Inquiry.Infrastructure.Clients
                 throw new VehicleNotFoundException("Vehicle not found.");
             }
                                                //مدة التخزين محددة بـ 5 دقائق.
-            _memoryCache.Set(cacheKey,vehicle,TimeSpan.FromMinutes(5));
+            _memoryCache.Set(cacheKey,vehicle,TimeSpan.FromMinutes(expirationMinutes));
 
             _logger.LogInformation("Vehicle response cached.");
 
