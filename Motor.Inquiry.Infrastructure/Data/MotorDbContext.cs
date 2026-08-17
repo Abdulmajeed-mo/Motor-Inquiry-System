@@ -17,6 +17,8 @@ namespace Motor.Inquiry.Infrastructure.Data
         {
             base.OnModelCreating(modelBuilder);
 
+            // Configure the InquiryHistory entity
+           
             modelBuilder.Entity<InquiryHistory>(entity =>
             {
                 entity.HasKey(e => e.InquiryHistoryId);

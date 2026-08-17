@@ -6,6 +6,9 @@ using Motor.Inquiry.Application.Interfaces;
 namespace Motor.Inquiry.API.Controllers
 {
 
+    //يستقبل الطلب ويستدعي الـ Service
+    
+
     [ApiController]
     [ApiVersion(1.0)]
     [Route("api/v{version:apiVersion}/[controller]")]
@@ -25,6 +28,8 @@ namespace Motor.Inquiry.API.Controllers
 
 
         //Action Methods
+
+        //search by sequence number
         [HttpPost("sequence")]
         public async Task<IActionResult> InquiryBySequenceNumber([FromBody] InquiryBySequenceRequest request, CancellationToken cancellationToken)
         {
@@ -41,6 +46,7 @@ namespace Motor.Inquiry.API.Controllers
         }
 
 
+        //search by plate number
         [HttpPost("plate")]
         public async Task<IActionResult> InquiryByPlateNumber([FromBody] InquiryByPlateRequest request, CancellationToken cancellationToken)
         {

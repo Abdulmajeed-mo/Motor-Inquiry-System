@@ -10,8 +10,12 @@ using Microsoft.Extensions.Configuration;
 
 namespace Motor.Inquiry.Infrastructure.Clients
 {
+
+    //contact with Yaqeen API to validate citizen and get vehicle information
+    //send request to Yaqeen API and get response
+  
     public class YaqeenHttpClient : IYaqeenHttpClient
-    {
+    {                               //Typed HttpClient
 
 
         //private field
@@ -40,11 +44,14 @@ namespace Motor.Inquiry.Infrastructure.Clients
         //Validate Citizen Method
         public async Task<bool> ValidateCitizenAsync(CitizenValidationRequest request, CancellationToken cancellationToken)
         {
+
+            //configuration 
             var expirationMinutes = _configuration.GetValue<int>("CacheSettings:ExpirationMinutes");
 
-
+            // Generate a unique cache key
             var cacheKey = $"citizen:{request.NationalId}:{request.DateOfBirth}";
 
+            
             if (_memoryCache.TryGetValue(cacheKey, out bool cachedResult))
             {
                 _logger.LogInformation("Citizen validation found in cache.");
@@ -54,8 +61,10 @@ namespace Motor.Inquiry.Infrastructure.Clients
 
             _logger.LogInformation("Citizen validation not found in cache. Calling Yaqeen API.");
 
+            // Get the correlation ID from the request headers or generate a new one if not present
             var correlationId =  _httpContextAccessor.HttpContext?.Request.Headers["X-Correlation-ID"].FirstOrDefault()?? Guid.NewGuid().ToString();
 
+            // Create the HTTP request to Yaqeen API
             var httpRequest = new HttpRequestMessage(HttpMethod.Post, "/api/yaqeen/citizen/validate")
             {
                 Content = JsonContent.Create(request)
@@ -125,11 +134,6 @@ namespace Motor.Inquiry.Infrastructure.Clients
 
             return vehicle;
         }
-
-
-
-
-
 
 
 

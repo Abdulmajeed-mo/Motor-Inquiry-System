@@ -5,10 +5,15 @@ using Motor.Inquiry.Domain.Exceptions;
 using Microsoft.Extensions.Logging;
 using AutoMapper;
 
+
 namespace Motor.Inquiry.Application.Services
 {
+
+    //Business logic layer
+
     public class InquiryService : IInquiryService
     {
+
         //حقن الانترفيس مع سيرفس الانكويري 
         //private field
         private readonly ILogger<InquiryService> _logger;
@@ -27,13 +32,12 @@ namespace Motor.Inquiry.Application.Services
         }
 
 
+        //Action Method
+        //search by plate number
         public async Task<InquiryResponse> GetInquiryByPlateNumber(InquiryByPlateRequest request, CancellationToken cancellationToken)
         {
-            var citizenRequest = new CitizenValidationRequest
-            {
-                NationalId = request.NationalId,
-                DateOfBirth = request.DateOfBirth
-            };
+            //citizen Validate
+            var citizenRequest = new CitizenValidationRequest {NationalId = request.NationalId,DateOfBirth = request.DateOfBirth};
 
             var isCitizenValid = await _yaqeenHttpClient.ValidateCitizenAsync(citizenRequest, cancellationToken);
 
@@ -44,13 +48,15 @@ namespace Motor.Inquiry.Application.Services
             var vehicle = await _yaqeenHttpClient.GetVehicleByPlateAsync(request.PlateNumber, request.PlateLetters, cancellationToken);
 
 
-
+            //يتأكد من الملكية
             if (vehicle.OwnerNationalId != request.NationalId)
             {
                 throw new OwnershipMismatchException("Vehicle ownership mismatch.");
             }
 
-
+            //automapper to map the vehicle entity to InquiryResponse DTO
+            //يسجلها في InquiryHistory
+            //convert the InquiryHistory entity to a DTO and write it to the database using the IInquiryHistoryWriter interface
             await _inquiryHistoryWriter.WriteAsync(new InquiryHistory
             {
                 NationalId = request.NationalId,
@@ -66,9 +72,11 @@ namespace Motor.Inquiry.Application.Services
         }
 
 
-
+        //search by sequence number
         public async Task<InquiryResponse> GetInquiryBySequenceNumber(InquiryBySequenceRequest request,CancellationToken cancellationToken)
         {
+            //citizen Validate
+
             var citizenRequest = new CitizenValidationRequest {NationalId = request.NationalId, DateOfBirth = request.DateOfBirth };
 
             var isCitizenValid = await _yaqeenHttpClient.ValidateCitizenAsync(citizenRequest, cancellationToken);
@@ -86,7 +94,8 @@ namespace Motor.Inquiry.Application.Services
             }
 
 
-
+            //automapper to map the vehicle entity to InquiryResponse DTO
+            //يسجلها في InquiryHistory
             await _inquiryHistoryWriter.WriteAsync(new InquiryHistory
             {
                 NationalId = request.NationalId,
