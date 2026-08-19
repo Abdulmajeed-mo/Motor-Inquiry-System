@@ -7,7 +7,7 @@ using Motor.Inquiry.Application.Mapping;
 using Motor.Inquiry.Application.Services;
 using Motor.Inquiry.Application.Validators;
 using Motor.Inquiry.Infrastructure.Clients;
-using Motor.Inquiry.Infrastructure.Data;
+using Motor.Inquiry.Infrastructure.Data.Context;
 using Motor.Inquiry.Infrastructure.Services;
 using Serilog;
 using System.Threading.RateLimiting;
@@ -25,7 +25,7 @@ builder.Services.AddScoped<IInquiryHistoryWriter, InquiryHistoryWriter>();
 
 builder.Services.AddDbContext<MotorDbContext>(options => options.UseSqlServer( builder.Configuration.GetConnectionString("DefaultConnection")  ));
 
-
+//Typed HttpClient for Yaqeen API 
 builder.Services.AddHttpClient<IYaqeenHttpClient, YaqeenHttpClient>( client => { client.BaseAddress = new Uri(builder.Configuration["YaqeenApi:BaseUrl"]!);  }) .AddStandardResilienceHandler();
 
 builder.Services.AddMemoryCache();

@@ -33,6 +33,7 @@ namespace Motor.Inquiry.Application.Services
 
 
         //Action Method
+
         //search by plate number
         public async Task<InquiryResponse> GetInquiryByPlateNumber(InquiryByPlateRequest request, CancellationToken cancellationToken)
         {

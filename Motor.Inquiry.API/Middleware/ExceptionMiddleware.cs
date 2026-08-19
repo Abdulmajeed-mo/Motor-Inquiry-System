@@ -18,6 +18,7 @@ public class ExceptionMiddleware
 
 
     //Action Method
+    //middleware to handle exceptions and return appropriate response
     public async Task InvokeAsync(HttpContext context)
     {
         try
@@ -37,7 +38,7 @@ public class ExceptionMiddleware
 
 
 
-
+    //private method to handle exceptions and return appropriate response
     private static async Task HandleExceptionAsync(HttpContext context, Exception ex)
     {
         context.Response.ContentType = "application/json";
@@ -56,7 +57,7 @@ public class ExceptionMiddleware
         var response = new ApiResponse<object>
         {
             Success = false,
-
+            
             Message = ex.Message,
             Data = null
         };

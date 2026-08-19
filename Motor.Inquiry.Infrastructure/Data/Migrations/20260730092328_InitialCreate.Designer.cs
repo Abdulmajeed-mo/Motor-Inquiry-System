@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Motor.Inquiry.Infrastructure.Data;
+using Motor.Inquiry.Infrastructure.Data.Context;
 
 #nullable disable
 

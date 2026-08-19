@@ -18,8 +18,6 @@ namespace Motor.Inquiry.API.Controllers
         //private field
         private readonly IInquiryService _inquiryService;
 
-
-
         //Constructor
         public InquiryController(IInquiryService inquiryService)
         {
@@ -38,8 +36,6 @@ namespace Motor.Inquiry.API.Controllers
             return Ok(new ApiResponse<InquiryResponse>
             {
                 Success = true,
-
-
                 Message = "Inquiry completed successfully.",
                 Data = result
             });

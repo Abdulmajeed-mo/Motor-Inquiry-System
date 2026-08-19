@@ -34,7 +34,6 @@ C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Yaqeen.API\obj\Debug\net8.
 C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Yaqeen.API\obj\Debug\net8.0\staticwebassets.development.json
 C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Yaqeen.API\obj\Debug\net8.0\staticwebassets.build.endpoints.json
 C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Yaqeen.API\obj\Debug\net8.0\swae.build.ex.cache
-C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Yaqeen.API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Yaqeen.API\obj\Debug\net8.0\Yaqeen.API.csproj.Up2Date
 C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Yaqeen.API\obj\Debug\net8.0\Yaqeen.API.dll
 C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Yaqeen.API\obj\Debug\net8.0\refint\Yaqeen.API.dll

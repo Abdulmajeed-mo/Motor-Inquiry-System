@@ -1,6 +1,6 @@
 ﻿using Motor.Inquiry.Application.Interfaces;
 using Motor.Inquiry.Domain.Entities;
-using Motor.Inquiry.Infrastructure.Data;
+using Motor.Inquiry.Infrastructure.Data.Context;
 
 namespace Motor.Inquiry.Infrastructure.Services
 {

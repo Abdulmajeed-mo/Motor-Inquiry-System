@@ -3,20 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Motor.Inquiry.Infrastructure.Data;
+using Motor.Inquiry.Infrastructure.Data.Context;
 
 #nullable disable
 
 namespace Motor.Inquiry.Infrastructure.Migrations
 {
     [DbContext(typeof(MotorDbContext))]
-    [Migration("20260812122725_AddInquiryHistoryIndexes")]
-    partial class AddInquiryHistoryIndexes
+    partial class MotorDbContextModelSnapshot : ModelSnapshot
     {
-        /// <inheritdoc />
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

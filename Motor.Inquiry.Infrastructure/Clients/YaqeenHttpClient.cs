@@ -78,7 +78,7 @@ namespace Motor.Inquiry.Infrastructure.Clients
 
             var result = response.IsSuccessStatusCode;
 
-                                                                //مدة التخزين محددة بـ 5 دقائق.
+             //CacheSettings: ExpirationMinutes          //مدة التخزين محددة بـ 5 دقائق.
             _memoryCache.Set(cacheKey,result,TimeSpan.FromMinutes(expirationMinutes));
 
             _logger.LogInformation("Citizen validation response cached.");

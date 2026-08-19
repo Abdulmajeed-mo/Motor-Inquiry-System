@@ -5,15 +5,15 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Motor.Inquiry.Infrastructure.Data;
+using Motor.Inquiry.Infrastructure.Data.Context;
 
 #nullable disable
 
 namespace Motor.Inquiry.Infrastructure.Migrations
 {
     [DbContext(typeof(MotorDbContext))]
-    [Migration("20260803105828_AddInquiryHistory")]
-    partial class AddInquiryHistory
+    [Migration("20260812122725_AddInquiryHistoryIndexes")]
+    partial class AddInquiryHistoryIndexes
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -42,18 +42,28 @@ namespace Motor.Inquiry.Infrastructure.Migrations
 
                     b.Property<string>("NationalId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<string>("PlateLetters")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(3)
+                        .HasColumnType("nvarchar(3)");
 
                     b.Property<string>("PlateNumber")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int?>("SequenceNumber")
                         .HasColumnType("int");
 
                     b.HasKey("InquiryHistoryId");
+
+                    b.HasIndex("CreatedAt");
+
+                    b.HasIndex("NationalId");
+
+                    b.HasIndex("SequenceNumber");
+
+                    b.HasIndex("PlateNumber", "PlateLetters");
 
                     b.ToTable("InquiryHistories");
                 });

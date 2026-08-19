@@ -3,17 +3,20 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Motor.Inquiry.Infrastructure.Data;
+using Motor.Inquiry.Infrastructure.Data.Context;
 
 #nullable disable
 
 namespace Motor.Inquiry.Infrastructure.Migrations
 {
     [DbContext(typeof(MotorDbContext))]
-    partial class MotorDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260803105828_AddInquiryHistory")]
+    partial class AddInquiryHistory
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -39,28 +42,18 @@ namespace Motor.Inquiry.Infrastructure.Migrations
 
                     b.Property<string>("NationalId")
                         .IsRequired()
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PlateLetters")
-                        .HasMaxLength(3)
-                        .HasColumnType("nvarchar(3)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PlateNumber")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("SequenceNumber")
                         .HasColumnType("int");
 
                     b.HasKey("InquiryHistoryId");
-
-                    b.HasIndex("CreatedAt");
-
-                    b.HasIndex("NationalId");
-
-                    b.HasIndex("SequenceNumber");
-
-                    b.HasIndex("PlateNumber", "PlateLetters");
 
                     b.ToTable("InquiryHistories");
                 });
