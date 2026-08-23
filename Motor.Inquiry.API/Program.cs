@@ -11,10 +11,20 @@ using Motor.Inquiry.Infrastructure.Data.Context;
 using Motor.Inquiry.Infrastructure.Services;
 using Serilog;
 using System.Threading.RateLimiting;
-
-
+using Microsoft.Extensions.Options;
+using Motor.Inquiry.API.Configuration;
+using Motor.Inquiry.Infrastructure.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
+// Add services to the container.
+
+builder.Services.Configure<YaqeenApiOptions>( builder.Configuration.GetSection(YaqeenApiOptions.SectionName));
+
+builder.Services.Configure<CacheSettingsOptions>( builder.Configuration.GetSection(CacheSettingsOptions.SectionName));
+
+
+//RateLimitOptions
+builder.Services.Configure<RateLimitOptions>(builder.Configuration.GetSection(RateLimitOptions.SectionName));
 
 
 builder.Host.UseSerilog((context, configuration) =>configuration.ReadFrom.Configuration(context.Configuration));
@@ -26,9 +36,17 @@ builder.Services.AddScoped<IInquiryHistoryWriter, InquiryHistoryWriter>();
 builder.Services.AddDbContext<MotorDbContext>(options => options.UseSqlServer( builder.Configuration.GetConnectionString("DefaultConnection")  ));
 
 //Typed HttpClient for Yaqeen API 
-builder.Services.AddHttpClient<IYaqeenHttpClient, YaqeenHttpClient>( client => { client.BaseAddress = new Uri(builder.Configuration["YaqeenApi:BaseUrl"]!);  }) .AddStandardResilienceHandler();
+builder.Services.AddHttpClient<IYaqeenHttpClient, YaqeenHttpClient>(
+(serviceProvider, client) =>
+    {
+        var options = serviceProvider.GetRequiredService<IOptions<YaqeenApiOptions>>().Value;
+        client.BaseAddress = new Uri(options.BaseUrl);
+    
+    }).AddStandardResilienceHandler();
+
 
 builder.Services.AddMemoryCache();
+
 builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddControllers();
@@ -42,17 +60,26 @@ builder.Services.AddAutoMapper(cfg =>{  cfg.AddProfile<InquiryMappingProfile>();
 //كنقطة مرجعية للـ Assembly
 builder.Services.AddValidatorsFromAssemblyContaining<InquiryBySequenceRequestValidator>();
 
-builder.Services.AddRateLimiter(options =>
-{
-    options.GlobalLimiter = PartitionedRateLimiter.Create<HttpContext, string>(httpContext =>RateLimitPartition.GetFixedWindowLimiter(partitionKey: httpContext.Connection.RemoteIpAddress?.ToString() ?? "unknown",factory: _ => new FixedWindowRateLimiterOptions
-                {
-                    PermitLimit = 5,
-                    Window = TimeSpan.FromMinutes(1),
-                    QueueLimit = 0
-                }));
+
+//Rate Limiting Configuration
+var rateLimitOptions = builder.Configuration
+    .GetSection(RateLimitOptions.SectionName)
+    .Get<RateLimitOptions>()!;
+
+
+builder.Services.AddRateLimiter(options =>{options.GlobalLimiter = PartitionedRateLimiter.Create<HttpContext, string>( httpContext => RateLimitPartition.GetFixedWindowLimiter(
+    partitionKey: httpContext.Connection.RemoteIpAddress?.ToString() ?? "unknown",
+    factory: _ => new FixedWindowRateLimiterOptions
+            {
+                PermitLimit = rateLimitOptions.PermitLimit, 
+                Window = TimeSpan.FromMinutes(rateLimitOptions.WindowMinutes),
+                QueueLimit = rateLimitOptions.QueueLimit
+            }));
 
     options.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
 });
+
+
 
 builder.Services.AddHealthChecks();
 

@@ -1,5 +1,6 @@
 ﻿using Asp.Versioning;
 using Microsoft.AspNetCore.Mvc;
+using Motor.Inquiry.Common.Responses;
 using Motor.Inquiry.Application.DTOs;
 using Motor.Inquiry.Application.Interfaces;
 

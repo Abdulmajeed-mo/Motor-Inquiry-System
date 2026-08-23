@@ -6,7 +6,8 @@ using System.Net;
 using System.Net.Http.Json;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Options;
+using Motor.Inquiry.Infrastructure.Configuration;
 
 namespace Motor.Inquiry.Infrastructure.Clients
 {
@@ -23,16 +24,20 @@ namespace Motor.Inquiry.Infrastructure.Clients
         private readonly ILogger<YaqeenHttpClient> _logger;
         private readonly IMemoryCache _memoryCache;
         private readonly IHttpContextAccessor _httpContextAccessor;
-        private readonly IConfiguration _configuration;
-
+        private readonly YaqeenApiOptions _yaqeenApiOptions;
+        private readonly CacheSettingsOptions _cacheSettingsOptions;
         //constructor
-        public YaqeenHttpClient(HttpClient httpClient, ILogger<YaqeenHttpClient> logger, IMemoryCache memoryCache, IHttpContextAccessor httpContextAccessor , IConfiguration configuration)
+        public YaqeenHttpClient(HttpClient httpClient, ILogger<YaqeenHttpClient> logger, IMemoryCache memoryCache, IHttpContextAccessor httpContextAccessor, IOptions<YaqeenApiOptions> yaqeenApiOptions, IOptions<CacheSettingsOptions> cacheSettingsOptions)
+
         {
             _httpClient = httpClient;
             _logger = logger;
             _memoryCache = memoryCache;
             _httpContextAccessor = httpContextAccessor;
-            _configuration = configuration;
+            _yaqeenApiOptions = yaqeenApiOptions.Value;
+            _cacheSettingsOptions = cacheSettingsOptions.Value;
+
+
         }
 
 
@@ -46,7 +51,7 @@ namespace Motor.Inquiry.Infrastructure.Clients
         {
 
             //configuration 
-            var expirationMinutes = _configuration.GetValue<int>("CacheSettings:ExpirationMinutes");
+            var expirationMinutes = _cacheSettingsOptions.ExpirationMinutes;
 
             // Generate a unique cache key
             var cacheKey = $"citizen:{request.NationalId}:{request.DateOfBirth}";
@@ -93,7 +98,7 @@ namespace Motor.Inquiry.Infrastructure.Clients
         //Get Vehicle By Sequence Method
         public async Task<VehicleInquiryDto> GetVehicleBySequenceAsync(int sequenceNumber, CancellationToken cancellationToken)
         {
-            var expirationMinutes = _configuration.GetValue<int>("CacheSettings:ExpirationMinutes");
+            var expirationMinutes = _cacheSettingsOptions.ExpirationMinutes;
 
             var cacheKey = $"vehicle:sequence:{sequenceNumber}";
 
@@ -143,8 +148,8 @@ namespace Motor.Inquiry.Infrastructure.Clients
         //Get Vehicle By Plate Method
         public async Task<VehicleInquiryDto> GetVehicleByPlateAsync(string plateNumber,string plateLetters, CancellationToken cancellationToken)
         {
-            var expirationMinutes =_configuration.GetValue<int>("CacheSettings:ExpirationMinutes");
-          
+            var expirationMinutes = _cacheSettingsOptions.ExpirationMinutes;
+
             var cacheKey = $"vehicle:plate:{plateNumber}:{plateLetters}";
 
             if (_memoryCache.TryGetValue(cacheKey, out VehicleInquiryDto? cachedVehicle))
