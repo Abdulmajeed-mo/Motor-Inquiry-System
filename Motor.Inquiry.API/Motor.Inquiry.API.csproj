@@ -27,8 +27,4 @@
     <ProjectReference Include="..\Motor.Inquiry.Infrastructure\Motor.Inquiry.Infrastructure.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Extensions\" />
-  </ItemGroup>
-
 </Project>
