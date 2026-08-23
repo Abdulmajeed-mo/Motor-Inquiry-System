@@ -11,7 +11,7 @@ namespace Yaqeen.Application.Services
 {
     public class CitizenService : ICitizenService
     {
-        public bool ValidateCitizen(CitizenValidationRequest request)
+        public bool ValidateCitizen(CitizenValidationRequest request, CancellationToken cancellationToken)
         {
           var isExist = MockData.Citizens.Any(c => c.NationalId == request.NationalId && c.DateOfBirth == request.DateOfBirth);
 

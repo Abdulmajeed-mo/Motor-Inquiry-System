@@ -10,4 +10,11 @@
     <ProjectReference Include="..\Yaqeen.Domain\Yaqeen.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Data\Configurations\" />
+    <Folder Include="Data\Migrations\" />
+    <Folder Include="Data\Context\" />
+    <Folder Include="Data\" />
+  </ItemGroup>
+
 </Project>

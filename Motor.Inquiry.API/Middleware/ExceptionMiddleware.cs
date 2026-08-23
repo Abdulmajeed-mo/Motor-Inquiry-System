@@ -1,5 +1,5 @@
 ﻿using Motor.Inquiry.Domain.Exceptions;
-using Motor.Inquiry.Application.DTOs;
+using Motor.Inquiry.Common.Responses;
 
 namespace Motor.Inquiry.API.Middleware;
 

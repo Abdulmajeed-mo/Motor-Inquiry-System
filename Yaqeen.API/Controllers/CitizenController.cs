@@ -1,6 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Yaqeen.Application.Interfaces;
 using Yaqeen.Application.DTOs;
+using Motor.Inquiry.Common.Responses;
+
+
 namespace Yaqeen.API.Controllers
 {
 
@@ -21,21 +24,28 @@ namespace Yaqeen.API.Controllers
 
         //Actions(Endpoints)
         [HttpPost("validate")]
-        public IActionResult ValidateCitizen([FromBody] CitizenValidationRequest request)
+        public IActionResult ValidateCitizen([FromBody] CitizenValidationRequest request, CancellationToken cancellationToken)
         {
-          var isValid = _citizenService.ValidateCitizen(request);
+          var isValid = _citizenService.ValidateCitizen(request, cancellationToken);
            
             
             if (!isValid)
             {
-                return BadRequest("Invalid national ID.");
+                return BadRequest(new ApiResponse<bool>
+                {
+                    Success = false,
+                    Message = "Invalid national ID.",
+                    Data = false
+                });
             }
 
 
-
-
-            return Ok("Citizen is valid.");
-
+            return Ok(new ApiResponse<bool>
+            {
+                Success = true,
+                Message = "Citizen is valid.",
+                Data = true
+            });
         }
 
     }

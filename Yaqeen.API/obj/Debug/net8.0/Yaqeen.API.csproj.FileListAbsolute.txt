@@ -40,3 +40,6 @@ C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Yaqeen.API\obj\Debug\net8.
 C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Yaqeen.API\obj\Debug\net8.0\Yaqeen.API.pdb
 C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Yaqeen.API\obj\Debug\net8.0\Yaqeen.API.genruntimeconfig.cache
 C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Yaqeen.API\obj\Debug\net8.0\ref\Yaqeen.API.dll
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Yaqeen.API\bin\Debug\net8.0\Motor.Inquiry.Common.dll
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Yaqeen.API\bin\Debug\net8.0\Motor.Inquiry.Common.pdb
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Yaqeen.API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

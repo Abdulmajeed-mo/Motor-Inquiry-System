@@ -66,13 +66,13 @@ builder.Services.AddSwaggerGen();
 // Configure the HTTP request pipeline.
 
 var app = builder.Build();
-app.MapHealthChecks("/health");
+
+app.UseMiddleware<ExceptionMiddleware>();
 
 app.UseRateLimiter();
 
 app.UseMiddleware<CorrelationIdMiddleware>();
 
-app.UseMiddleware<ExceptionMiddleware>();
 
 if (app.Environment.IsDevelopment() || app.Environment.IsStaging())
 {
@@ -85,6 +85,8 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.MapHealthChecks("/health");
 
 app.Run();
 

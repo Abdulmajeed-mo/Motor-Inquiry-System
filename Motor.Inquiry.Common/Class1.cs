@@ -1,7 +1,8 @@
-﻿namespace Motor.Inquiry.Common
-{
-    public class Class1
-    {
+﻿namespace Motor.Inquiry.Common.Responses;
 
-    }
+public class ApiResponse<T>
+{
+    public bool Success { get; set; }
+    public string Message { get; set; } = string.Empty;
+    public T? Data { get; set; }
 }

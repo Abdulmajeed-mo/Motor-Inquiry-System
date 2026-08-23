@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Motor.Inquiry.Common.Responses;
 using Yaqeen.Application.Interfaces;
+using Yaqeen.Domain.Entities;
 
 namespace Yaqeen.API.Controllers
 {
@@ -19,27 +21,37 @@ namespace Yaqeen.API.Controllers
         }
 
 
-        //Actions(Endpoints)
         [HttpGet("sequence/{sequenceNumber}")]
-        public IActionResult GetVehicleBySequenceNumber(int sequenceNumber)
+        public async Task<IActionResult> GetVehicleBySequenceNumber(int sequenceNumber,CancellationToken cancellationToken)
         {
-            var vehicle = _vehicleService.GetVehicleBySequenceNumber(sequenceNumber);
-            if (vehicle == null)
+            var vehicle = await _vehicleService.GetVehicleBySequenceNumberAsync(sequenceNumber,cancellationToken);
+
+            if (vehicle == null) return NotFound();
+
+            return Ok(new ApiResponse<Vehicle>
             {
-                return NotFound();
-            }
-            return Ok(vehicle);
+                Success = true,
+                Message = "Citizen is valid.",
+                Data = vehicle
+            });
         }
 
+
+
         [HttpGet("plate")]
-        public IActionResult GetVehicleByPlate(string plateNumber, string plateLetters)
+        public async Task<IActionResult> GetVehicleByPlate(string plateNumber,string plateLetters,CancellationToken cancellationToken)
         {
-            var vehicle = _vehicleService.GetVehicleByPlate(plateNumber, plateLetters);
+            var vehicle = await _vehicleService.GetVehicleByPlateAsync(plateNumber,plateLetters,cancellationToken);
+
             if (vehicle == null)
-            {
                 return NotFound();
-            }
-            return Ok(vehicle);
+
+            return Ok(new ApiResponse<Vehicle>
+            {
+                Success = true,
+                Message = "Citizen is valid.",
+                Data = vehicle
+            });
         }
 
 

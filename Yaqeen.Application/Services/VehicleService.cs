@@ -11,16 +11,18 @@ namespace Yaqeen.Application.Services
 {
     public class VehicleService : IVehicleService
     {
-        public Vehicle GetVehicleByPlate(string plateNumber, string plateLetters)
+        public async Task<Vehicle?> GetVehicleByPlateAsync(string plateNumber,string plateLetters,CancellationToken cancellationToken)
         {
-            var ByPlate = MockData.Vehicles.FirstOrDefault(v => v.PlateNumber == plateNumber && v.PlateLetters == plateLetters);
-            return ByPlate;
-        }
-        public Vehicle GetVehicleBySequenceNumber(int sequenceNumber)
-        {
+            var vehicle = MockData.Vehicles.FirstOrDefault(v =>v.PlateNumber == plateNumber &&v.PlateLetters == plateLetters);
 
-            var BySequenceNumber = MockData.Vehicles.FirstOrDefault(v => v.SequenceNumber == sequenceNumber);
-            return BySequenceNumber;
+            return await Task.FromResult(vehicle);
+        }
+
+        public async Task<Vehicle?> GetVehicleBySequenceNumberAsync(int sequenceNumber,CancellationToken cancellationToken)
+        {
+            var vehicle = MockData.Vehicles.FirstOrDefault(v =>v.SequenceNumber == sequenceNumber);
+
+            return await Task.FromResult(vehicle);
         }
     }
 }

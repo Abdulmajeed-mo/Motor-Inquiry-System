@@ -197,3 +197,6 @@ C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API\bin\Debu
 C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API\bin\Debug\net8.0\Asp.Versioning.Http.dll
 C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API\bin\Debug\net8.0\Asp.Versioning.Mvc.dll
 C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API\bin\Debug\net8.0\appsettings.Staging.json
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API\bin\Debug\net8.0\Motor.Inquiry.Common.dll
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API\bin\Debug\net8.0\Motor.Inquiry.Common.pdb
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

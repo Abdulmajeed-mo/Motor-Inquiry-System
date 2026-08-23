@@ -10,7 +10,7 @@ namespace Yaqeen.Application.Interfaces
 {
     public interface ICitizenService
     {
-        bool ValidateCitizen(CitizenValidationRequest request);
+        bool ValidateCitizen(CitizenValidationRequest request, CancellationToken cancellationToken);
     
     }
 }

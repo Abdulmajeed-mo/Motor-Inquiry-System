@@ -9,8 +9,8 @@ namespace Yaqeen.Application.Interfaces
 {
     public interface IVehicleService
     {
-        Vehicle GetVehicleByPlate(string plateNumber , string plateLetters);
+        Task<Vehicle?> GetVehicleByPlateAsync(string plateNumber,string plateLetters,CancellationToken cancellationToken);
 
-        Vehicle GetVehicleBySequenceNumber(int sequenceNumber);
+        Task<Vehicle?> GetVehicleBySequenceNumberAsync(int sequenceNumber,CancellationToken cancellationToken);
     }
 }

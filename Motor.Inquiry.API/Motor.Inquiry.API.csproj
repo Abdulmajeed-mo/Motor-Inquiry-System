@@ -23,7 +23,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Motor.Inquiry.Application\Motor.Inquiry.Application.csproj" />
+    <ProjectReference Include="..\Motor.Inquiry.Common\Motor.Inquiry.Common.csproj" />
     <ProjectReference Include="..\Motor.Inquiry.Infrastructure\Motor.Inquiry.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Extensions\" />
   </ItemGroup>
 
 </Project>

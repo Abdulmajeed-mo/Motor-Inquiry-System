@@ -2,12 +2,17 @@
   <Folder Name="/Docker/">
     <File Path="docker-compose.yml" />
   </Folder>
-  <Project Path="Motor.Inquiry.API/Motor.Inquiry.API.csproj" />
-  <Project Path="Motor.Inquiry.Application/Motor.Inquiry.Application.csproj" />
-  <Project Path="Motor.Inquiry.Domain/Motor.Inquiry.Domain.csproj" />
-  <Project Path="Motor.Inquiry.Infrastructure/Motor.Inquiry.Infrastructure.csproj" />
-  <Project Path="Yaqeen.API/Yaqeen.API.csproj" />
-  <Project Path="Yaqeen.Application/Yaqeen.Application.csproj" />
-  <Project Path="Yaqeen.Domain/Yaqeen.Domain.csproj" />
-  <Project Path="Yaqeen.Infrastructure/Yaqeen.Infrastructure.csproj" />
+  <Folder Name="/Motor/">
+    <Project Path="Motor.Inquiry.API/Motor.Inquiry.API.csproj" />
+    <Project Path="Motor.Inquiry.Application/Motor.Inquiry.Application.csproj" />
+    <Project Path="Motor.Inquiry.Domain/Motor.Inquiry.Domain.csproj" />
+    <Project Path="Motor.Inquiry.Infrastructure/Motor.Inquiry.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/Yaqeen/">
+    <Project Path="Yaqeen.API/Yaqeen.API.csproj" />
+    <Project Path="Yaqeen.Application/Yaqeen.Application.csproj" />
+    <Project Path="Yaqeen.Domain/Yaqeen.Domain.csproj" />
+    <Project Path="Yaqeen.Infrastructure/Yaqeen.Infrastructure.csproj" />
+  </Folder>
+  <Project Path="Motor.Inquiry.Common/Motor.Inquiry.Common.csproj" Id="4e1f1dc2-1d43-4024-9a26-37731743fa32" />
 </Solution>

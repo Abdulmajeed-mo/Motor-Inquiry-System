@@ -14,6 +14,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.19",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.19",
           "Motor.Inquiry.Application": "1.0.0",
+          "Motor.Inquiry.Common": "1.0.0",
           "Motor.Inquiry.Infrastructure": "1.0.0",
           "Serilog.AspNetCore": "10.0.0",
           "Serilog.Sinks.Console": "6.1.1",
@@ -1403,6 +1404,14 @@
           }
         }
       },
+      "Motor.Inquiry.Common/1.0.0": {
+        "runtime": {
+          "Motor.Inquiry.Common.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "Motor.Inquiry.Domain/1.0.0": {
         "runtime": {
           "Motor.Inquiry.Domain.dll": {
@@ -2129,6 +2138,11 @@
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
     },
     "Motor.Inquiry.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Motor.Inquiry.Common/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
