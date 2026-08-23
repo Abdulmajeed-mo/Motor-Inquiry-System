@@ -2,8 +2,9 @@
 
 public static class ApiServiceExtensions
 {
-    public static IServiceCollection AddApiServices(
-        this IServiceCollection services)
+
+    // Registers API services such as controllers, health checks, API versioning, and Swagger.
+    public static IServiceCollection AddApiServices(this IServiceCollection services)
     {
         services.AddControllers();
 

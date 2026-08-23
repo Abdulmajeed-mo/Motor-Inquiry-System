@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Motor.Inquiry.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+67bddda1c451d8e3e0a3341c55466b235e262cf0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5fcba40e1298854cb74548ceaaff083ea09c266a")]
 [assembly: System.Reflection.AssemblyProductAttribute("Motor.Inquiry.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Motor.Inquiry.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -6,8 +6,9 @@ namespace Motor.Inquiry.API.Extensions;
 
 public static class ApplicationBuilderExtensions
 {
-    public static WebApplication UseApplicationPipeline(
-        this WebApplication app)
+
+    // Configures the HTTP request pipeline, including middleware, security, Swagger, and endpoint mapping.
+    public static WebApplication UseApplicationPipeline(this WebApplication app)
     {
         app.UseMiddleware<ExceptionMiddleware>();
 

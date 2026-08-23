@@ -8,8 +8,12 @@ using Motor.Inquiry.Infrastructure.Services;
 
 namespace Motor.Inquiry.API.Extensions;
 
+
 public static class InfrastructureServiceExtensions
 {
+
+    // Registers infrastructure services, database context, external clients, and caching.
+
     public static IServiceCollection AddInfrastructureServices(this IServiceCollection services,IConfiguration configuration)
     {
 

@@ -9,6 +9,8 @@ namespace Motor.Inquiry.API.Extensions;
 
 public static class ServiceCollectionExtensions
 {
+
+    // Registers application services, validators, AutoMapper, and FluentValidation.
     public static IServiceCollection AddApplicationServices(this IServiceCollection services)
     {
         services.AddScoped<IInquiryService, InquiryService>();

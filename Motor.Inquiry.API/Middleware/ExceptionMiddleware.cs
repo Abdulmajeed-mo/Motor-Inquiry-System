@@ -23,16 +23,23 @@ public class ExceptionMiddleware
     {
         try
         {
-            _logger.LogInformation("Incoming Request: {Method} {Path}", context.Request.Method, context.Request.Path);
 
             await _next(context);
         }
 
         catch (Exception ex)
         {
-            _logger.LogError(ex, "Unhandled exception on {Path}: {Message}", context.Request.Path , ex.Message);
+            //التفاصيل الكاملة للخطأ
+            _logger.LogError(ex,"Unhandled exception on {Path}",context.Request.Path);
 
-            await HandleExceptionAsync(context, ex);
+            if (!context.Response.HasStarted)
+            {
+                await HandleExceptionAsync(context, ex);
+            }
+            else
+            {
+                _logger.LogWarning("The response has already started. The exception response cannot be modified.");
+            }
         }
     }
 
@@ -54,11 +61,21 @@ public class ExceptionMiddleware
             _ => StatusCodes.Status500InternalServerError
         };
 
+
+        //يكشف تفاصيل داخلية للـ Client.
+        var message = ex switch
+        {
+            InvalidCitizenException or
+            VehicleNotFoundException or
+            OwnershipMismatchException => ex.Message,
+
+            _ => "An unexpected error occurred."
+        };
+
         var response = new ApiResponse<object>
         {
             Success = false,
-            
-            Message = ex.Message,
+            Message = message,
             Data = null
         };
 

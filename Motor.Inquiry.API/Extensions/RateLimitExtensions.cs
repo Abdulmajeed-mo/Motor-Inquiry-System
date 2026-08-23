@@ -5,6 +5,8 @@ namespace Motor.Inquiry.API.Extensions;
 
 public static class RateLimitExtensions
 {
+
+    // Configures global API rate limiting using strongly typed settings.
     public static IServiceCollection AddRateLimiting(this IServiceCollection services,IConfiguration configuration)
     {
         var rateLimitOptions = configuration.GetSection(RateLimitOptions.SectionName).Get<RateLimitOptions>()!;

@@ -1,6 +1,8 @@
 using Motor.Inquiry.API.Extensions;
 using Serilog;
 
+// Configures the application by registering services and building the HTTP request pipeline.
+
 
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
