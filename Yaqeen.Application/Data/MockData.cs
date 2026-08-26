@@ -32,40 +32,42 @@ namespace Yaqeen.Application.Data
 
 
         public static List<Vehicle> Vehicles = new List<Vehicle>
-        {
-             new Vehicle{
-                SequenceNumber = 1,
-                PlateNumber = "1303",
-                PlateLetters = "MJD",
-                Make = "Toyota",
-                Model = "Crown Sedan",
-                ModelYear = 2023,
-                Color = "Black",
-                ChassisNumber = "XYZ1234567890",
-                OwnerNationalId = "1234567890"
-              },
-            new Vehicle{
-                SequenceNumber = 2,
-                PlateNumber = "5678",
-                PlateLetters = "DEF",
-                Make = "Haval",
-                Model = "V7",
-                ModelYear = 2019,
-                Color = "Blue",
-                ChassisNumber = "XYZ0987654321",
-                OwnerNationalId = "1028339274"
-            },
-            new Vehicle{
-                SequenceNumber = 3,
-                PlateNumber = "9012",
-                PlateLetters = "AAI",
-                Make = "Ford",
-                Model = "Mustang",
-                ModelYear = 2020,
-                Color = "Black",
-                ChassisNumber = "XYZ5678901234",
-                OwnerNationalId = "1920009789"
-            }
+        {new Vehicle
+{
+    SequenceNumber = 1,
+    PlateNumber = "1303",
+    PlateLetters = "MJD",
+    MakeId = 1,
+    ModelId = 1,
+    ModelYear = 2023,
+    Color = "Black",
+    ChassisNumber = "XYZ1234567890",
+    OwnerNationalId = "1234567890"
+},
+new Vehicle
+{
+    SequenceNumber = 2,
+    PlateNumber = "5678",
+    PlateLetters = "DEF",
+    MakeId = 2,
+    ModelId = 2,
+    ModelYear = 2019,
+    Color = "Blue",
+    ChassisNumber = "XYZ0987654321",
+    OwnerNationalId = "1028339274"
+},
+new Vehicle
+{
+    SequenceNumber = 3,
+    PlateNumber = "9012",
+    PlateLetters = "AAI",
+    MakeId = 3,
+    ModelId = 3,
+    ModelYear = 2020,
+    Color = "Black",
+    ChassisNumber = "XYZ5678901234",
+    OwnerNationalId = "1920009789"
+}
         };
     }
 

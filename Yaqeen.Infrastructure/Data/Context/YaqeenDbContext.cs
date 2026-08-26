@@ -14,11 +14,22 @@ public class YaqeenDbContext : DbContext
 
     public DbSet<Vehicle> Vehicles { get; set; }
 
+    public DbSet<Make> Makes { get; set; }
+
+    public DbSet<Model> Models { get; set; }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
 
+        modelBuilder.Entity<Model>().HasOne(x => x.Make).WithMany(x => x.Models).HasForeignKey(x => x.MakeId);
+
+        modelBuilder.Entity<Vehicle>().HasOne(x => x.Make).WithMany(x => x.Vehicles).HasForeignKey(x => x.MakeId);
+
+        modelBuilder.Entity<Vehicle>().HasOne(x => x.Model).WithMany(x => x.Vehicles).HasForeignKey(x => x.ModelId);
+
         modelBuilder.Entity<Citizen>().HasData(
+
             new Citizen
             {
                 NationalId = "1234567890",
@@ -45,14 +56,28 @@ public class YaqeenDbContext : DbContext
             }
         );
 
+
+        modelBuilder.Entity<Make>().HasData(
+        new Make { Id = 1, Name = "Toyota" },
+        new Make { Id = 2, Name = "Haval" },
+        new Make { Id = 3, Name = "Ford" }
+        );
+
+
+        modelBuilder.Entity<Model>().HasData(
+            new Model { Id = 1, Name = "Crown Sedan", MakeId = 1 },
+            new Model { Id = 2, Name = "V7", MakeId = 2 },
+            new Model { Id = 3, Name = "Mustang", MakeId = 3 }
+        );
+
         modelBuilder.Entity<Vehicle>().HasData(
             new Vehicle
             {
                 SequenceNumber = 1,
                 PlateNumber = "1303",
                 PlateLetters = "MJD",
-                Make = "Toyota",
-                Model = "Crown Sedan",
+                MakeId = 1,
+                ModelId = 1,
                 ModelYear = 2023,
                 Color = "Black",
                 ChassisNumber = "XYZ1234567890",
@@ -63,8 +88,8 @@ public class YaqeenDbContext : DbContext
                 SequenceNumber = 2,
                 PlateNumber = "5678",
                 PlateLetters = "DEF",
-                Make = "Haval",
-                Model = "V7",
+                MakeId = 2,
+                ModelId = 2,
                 ModelYear = 2019,
                 Color = "Blue",
                 ChassisNumber = "XYZ0987654321",
@@ -75,8 +100,8 @@ public class YaqeenDbContext : DbContext
                 SequenceNumber = 3,
                 PlateNumber = "9012",
                 PlateLetters = "AAI",
-                Make = "Ford",
-                Model = "Mustang",
+                MakeId = 3,
+                ModelId = 3,
                 ModelYear = 2020,
                 Color = "Black",
                 ChassisNumber = "XYZ5678901234",
