@@ -4,6 +4,7 @@ using Motor.Inquiry.Application.Interfaces;
 using Motor.Inquiry.Infrastructure.Clients;
 using Motor.Inquiry.Infrastructure.Configuration;
 using Motor.Inquiry.Infrastructure.Data.Context;
+using Motor.Inquiry.Infrastructure.Repositories;
 using Motor.Inquiry.Infrastructure.Services;
 
 namespace Motor.Inquiry.API.Extensions;
@@ -19,6 +20,10 @@ public static class InfrastructureServiceExtensions
 
         services.AddScoped<IInquiryHistoryWriter, InquiryHistoryWriter>();
 
+        // Registers the database cache repository for Yaqeen inquiry results.
+        services.AddScoped<IVehicleInquiryCacheRepository, VehicleInquiryCacheRepository>();
+
+
         services.AddDbContext<MotorDbContext>(options =>options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 
 
@@ -30,6 +35,7 @@ public static class InfrastructureServiceExtensions
                 client.BaseAddress = new Uri(options.BaseUrl);
             })
             .AddStandardResilienceHandler();
+
 
 
         services.AddMemoryCache();

@@ -13,15 +13,11 @@ namespace Motor.Inquiry.Infrastructure.Data.Configurations
         {
             entity.HasKey(e => e.InquiryHistoryId);
 
-            entity.Property(e => e.InquiryType)
-                .IsRequired();
+            entity.Property(e => e.InquiryType).IsRequired();
 
-            entity.Property(e => e.NationalId)
-                .IsRequired()
-                .HasMaxLength(10);
+            entity.Property(e => e.NationalId).IsRequired().HasMaxLength(10);
 
-            entity.Property(e => e.PlateLetters)
-                .HasMaxLength(3);
+            entity.Property(e => e.PlateLetters).HasMaxLength(3);
 
             entity.HasIndex(e => e.NationalId);
             entity.HasIndex(e => e.SequenceNumber);

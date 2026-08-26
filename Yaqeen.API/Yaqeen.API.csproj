@@ -21,8 +21,4 @@
     <ProjectReference Include="..\Yaqeen.Infrastructure\Yaqeen.Infrastructure.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Extensions\" />
-  </ItemGroup>
-
 </Project>

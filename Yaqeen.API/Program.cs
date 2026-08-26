@@ -1,24 +1,12 @@
-using Microsoft.EntityFrameworkCore;
 using Yaqeen.API.Middleware;
-using Yaqeen.Application.Interfaces;
-using Yaqeen.Application.Services;
-using Yaqeen.Infrastructure.Data.Context;
-using Yaqeen.Infrastructure.Repositories;
-using Yaqeen.Application.Interfaces;
-using Yaqeen.Infrastructure.Repositories;
+using Yaqeen.API.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
 
-builder.Services.AddDbContext<YaqeenDbContext>(options =>options.UseSqlServer(builder.Configuration.GetConnectionString("YaqeenConnection")));
+// Register Yaqeen application services and infrastructure dependencies.
+builder.Services.AddYaqeenServices(builder.Configuration);
 
-// Service Registration for Dependency Injection
-builder.Services.AddScoped<ICitizenService, CitizenService>();
-builder.Services.AddScoped<IVehicleService, VehicleService>();
-
-
-builder.Services.AddScoped<ICitizenRepository, CitizenRepository>();
-builder.Services.AddScoped<IVehicleRepository, VehicleRepository>();
 
 // Add services to the container.
 
@@ -27,8 +15,14 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+
+
 var app = builder.Build();
-app.UseMiddleware<CorrelationIdMiddleware>();
+
+// Configure Yaqeen custom middleware.
+app.UseYaqeenMiddleware();
+
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

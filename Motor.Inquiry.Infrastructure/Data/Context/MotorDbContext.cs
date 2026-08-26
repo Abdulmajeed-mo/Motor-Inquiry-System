@@ -12,6 +12,7 @@ namespace Motor.Inquiry.Infrastructure.Data.Context
 
         }
         public DbSet<InquiryHistory> InquiryHistories { get; set; }
+        public DbSet<VehicleInquiryCache> VehicleInquiryCaches { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
