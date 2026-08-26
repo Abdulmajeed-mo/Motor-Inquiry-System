@@ -24,9 +24,9 @@ namespace Yaqeen.API.Controllers
 
         //Actions(Endpoints)
         [HttpPost("validate")]
-        public IActionResult ValidateCitizen([FromBody] CitizenValidationRequest request, CancellationToken cancellationToken)
+        public async Task<IActionResult> ValidateCitizen([FromBody] CitizenValidationRequest request, CancellationToken cancellationToken)
         {
-          var isValid = _citizenService.ValidateCitizen(request, cancellationToken);
+          var isValid = await _citizenService.ValidateCitizen(request, cancellationToken);
            
             
             if (!isValid)

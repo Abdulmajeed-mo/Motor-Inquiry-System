@@ -14,6 +14,7 @@
           "Microsoft.Extensions.Caching.Memory": "10.0.10",
           "Microsoft.Extensions.Http.Resilience": "10.8.0",
           "Motor.Inquiry.Application": "1.0.0",
+          "Motor.Inquiry.Common": "1.0.0",
           "Motor.Inquiry.Domain": "1.0.0"
         },
         "runtime": {
@@ -1091,6 +1092,14 @@
           }
         }
       },
+      "Motor.Inquiry.Common/1.0.0": {
+        "runtime": {
+          "Motor.Inquiry.Common.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "Motor.Inquiry.Domain/1.0.0": {
         "runtime": {
           "Motor.Inquiry.Domain.dll": {
@@ -1626,6 +1635,11 @@
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
     },
     "Motor.Inquiry.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Motor.Inquiry.Common/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

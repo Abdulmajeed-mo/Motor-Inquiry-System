@@ -18,3 +18,5 @@ C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.Infrastructu
 C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.Infrastructure\bin\Debug\net8.0\Motor.Inquiry.Domain.pdb
 C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.Infrastructure\obj\Debug\net8.0\Motor.In.4ED40F1D.Up2Date
 C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.Infrastructure\obj\Debug\net8.0\Motor.Inquiry.Infrastructure.genruntimeconfig.cache
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.Infrastructure\bin\Debug\net8.0\Motor.Inquiry.Common.dll
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.Infrastructure\bin\Debug\net8.0\Motor.Inquiry.Common.pdb

@@ -1,19 +1,25 @@
-﻿using Motor.Inquiry.Domain.Exceptions;
+﻿using Microsoft.Extensions.Localization;
+using Motor.Inquiry.API.Resources;
 using Motor.Inquiry.Common.Responses;
+using Motor.Inquiry.Domain.Exceptions;
+using System.Globalization;
+
 
 namespace Motor.Inquiry.API.Middleware;
 
 public class ExceptionMiddleware
 {
     //private field
+    private readonly IStringLocalizer<SharedResourceMarker> _localizer;
     private readonly RequestDelegate _next;
     private readonly ILogger<ExceptionMiddleware> _logger;
 
     //constructor
-    public ExceptionMiddleware(RequestDelegate next, ILogger<ExceptionMiddleware> logger)
+    public ExceptionMiddleware(RequestDelegate next, ILogger<ExceptionMiddleware> logger , IStringLocalizer<SharedResourceMarker> localizer)
     {
         _next = next;
         _logger = logger;
+        _localizer = localizer;
     }
 
 
@@ -46,7 +52,7 @@ public class ExceptionMiddleware
 
 
     //private method to handle exceptions and return appropriate response
-    private static async Task HandleExceptionAsync(HttpContext context, Exception ex)
+    private  async Task HandleExceptionAsync(HttpContext context, Exception ex)
     {
         context.Response.ContentType = "application/json";
 
@@ -62,15 +68,19 @@ public class ExceptionMiddleware
         };
 
 
+        _logger.LogInformation("Localizer BaseName: {BaseName}, Assembly: {Assembly}", _localizer.GetType().FullName,typeof(SharedResourceMarker).Assembly.FullName);
+    
+        _logger.LogInformation("Localization: {Culture}, Key: {Key}, Value: {Value}",CultureInfo.CurrentUICulture.Name,"OwnershipMismatch",_localizer["OwnershipMismatch"].Value);
+
         //يكشف تفاصيل داخلية للـ Client.
         var message = ex switch
         {
-            InvalidCitizenException or
-            VehicleNotFoundException or
-            OwnershipMismatchException => ex.Message,
-
-            _ => "An unexpected error occurred."
+            InvalidCitizenException => _localizer["InvalidCitizen"],
+            VehicleNotFoundException => _localizer["VehicleNotFound"],
+            OwnershipMismatchException => _localizer["OwnershipMismatch"],
+            _ => _localizer["UnexpectedError"]
         };
+  
 
         var response = new ApiResponse<object>
         {

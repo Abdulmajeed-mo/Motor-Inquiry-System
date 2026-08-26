@@ -20,7 +20,6 @@ builder.Services.AddInfrastructureServices(builder.Configuration);
 
 // Register application layer services, validators, AutoMapper, and FluentValidation
 builder.Services.AddApplicationServices();
-
 //Rate Limiting
 // Register rate limiting configuration
 builder.Services.AddRateLimiting(builder.Configuration);

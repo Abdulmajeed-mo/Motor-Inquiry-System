@@ -1,13 +1,24 @@
+using Microsoft.EntityFrameworkCore;
 using Yaqeen.API.Middleware;
 using Yaqeen.Application.Interfaces;
 using Yaqeen.Application.Services;
+using Yaqeen.Infrastructure.Data.Context;
+using Yaqeen.Infrastructure.Repositories;
+using Yaqeen.Application.Interfaces;
+using Yaqeen.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
+
+
+builder.Services.AddDbContext<YaqeenDbContext>(options =>options.UseSqlServer(builder.Configuration.GetConnectionString("YaqeenConnection")));
 
 // Service Registration for Dependency Injection
 builder.Services.AddScoped<ICitizenService, CitizenService>();
 builder.Services.AddScoped<IVehicleService, VehicleService>();
 
+
+builder.Services.AddScoped<ICitizenRepository, CitizenRepository>();
+builder.Services.AddScoped<IVehicleRepository, VehicleRepository>();
 
 // Add services to the container.
 

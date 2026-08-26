@@ -2318,6 +2318,7 @@
           "Microsoft.Extensions.Caching.Memory": "10.0.10",
           "Microsoft.Extensions.Http.Resilience": "10.8.0",
           "Motor.Inquiry.Application": "1.0.0",
+          "Motor.Inquiry.Common": "1.0.0",
           "Motor.Inquiry.Domain": "1.0.0"
         },
         "compile": {
@@ -5995,6 +5996,7 @@
       "Motor.Inquiry.Infrastructure >= 1.0.0",
       "Serilog.AspNetCore >= 10.0.0",
       "Serilog.Sinks.Console >= 6.1.1",
+      "Serilog.Sinks.File >= 7.0.0",
       "Swashbuckle.AspNetCore >= 6.6.2"
     ]
   },
@@ -6089,6 +6091,10 @@
           "Serilog.Sinks.Console": {
             "target": "Package",
             "version": "[6.1.1, )"
+          },
+          "Serilog.Sinks.File": {
+            "target": "Package",
+            "version": "[7.0.0, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",

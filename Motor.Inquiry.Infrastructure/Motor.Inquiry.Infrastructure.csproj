@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Motor.Inquiry.Application\Motor.Inquiry.Application.csproj" />
+    <ProjectReference Include="..\Motor.Inquiry.Common\Motor.Inquiry.Common.csproj" />
     <ProjectReference Include="..\Motor.Inquiry.Domain\Motor.Inquiry.Domain.csproj" />
 	  <FrameworkReference Include="Microsoft.AspNetCore.App" />
 

@@ -19,4 +19,5 @@ COPY --from=build /app/publish .
 
 EXPOSE 8080
 
-ENTRYPOINT ["dotnet", "Motor.Inquiry.API.dll"]
+EN
+POINT ["dotnet", "Motor.Inquiry.API.dll"]

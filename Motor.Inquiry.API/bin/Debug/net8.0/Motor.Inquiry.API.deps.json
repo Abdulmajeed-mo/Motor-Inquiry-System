@@ -18,10 +18,19 @@
           "Motor.Inquiry.Infrastructure": "1.0.0",
           "Serilog.AspNetCore": "10.0.0",
           "Serilog.Sinks.Console": "6.1.1",
+          "Serilog.Sinks.File": "7.0.0",
           "Swashbuckle.AspNetCore": "6.6.2"
         },
         "runtime": {
           "Motor.Inquiry.API.dll": {}
+        },
+        "resources": {
+          "ar/Motor.Inquiry.API.resources.dll": {
+            "locale": "ar"
+          },
+          "en/Motor.Inquiry.API.resources.dll": {
+            "locale": "en"
+          }
         }
       },
       "Asp.Versioning.Abstractions/8.1.0": {
@@ -1427,6 +1436,7 @@
           "Microsoft.Extensions.Caching.Memory": "10.0.10",
           "Microsoft.Extensions.Http.Resilience": "10.8.0",
           "Motor.Inquiry.Application": "1.0.0",
+          "Motor.Inquiry.Common": "1.0.0",
           "Motor.Inquiry.Domain": "1.0.0"
         },
         "runtime": {

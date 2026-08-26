@@ -5,16 +5,24 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Yaqeen.Domain\Yaqeen.Domain.csproj" />
-  </ItemGroup>
+	
+	
+	<ItemGroup>
+		<ProjectReference Include="..\Yaqeen.Domain\Yaqeen.Domain.csproj" />
+		<ProjectReference Include="..\Yaqeen.Application\Yaqeen.Application.csproj" />
+	</ItemGroup>
 
   <ItemGroup>
     <Folder Include="Data\Configurations\" />
-    <Folder Include="Data\Migrations\" />
-    <Folder Include="Data\Context\" />
-    <Folder Include="Data\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.19" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.19" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.19">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
 </Project>

@@ -8,6 +8,7 @@ using Microsoft.Extensions.Caching.Memory;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Options;
 using Motor.Inquiry.Infrastructure.Configuration;
+using Motor.Inquiry.Common.Responses;
 
 namespace Motor.Inquiry.Infrastructure.Clients
 {
@@ -126,13 +127,15 @@ namespace Motor.Inquiry.Infrastructure.Clients
 
             response.EnsureSuccessStatusCode();
 
-            var vehicle =await response.Content.ReadFromJsonAsync<VehicleInquiryDto>();
+            var result = await response.Content.ReadFromJsonAsync<ApiResponse<VehicleInquiryDto>>();
 
-            if (vehicle is null)
+            if (result?.Data is null)
             {
                 throw new VehicleNotFoundException("Vehicle not found.");
             }
-                                                        //مدة التخزين محددة بـ 5 دقائق.
+
+            var vehicle = result.Data;
+            //مدة التخزين محددة بـ 5 دقائق.
             _memoryCache.Set(cacheKey,vehicle,TimeSpan.FromMinutes(expirationMinutes));
 
             _logger.LogInformation("Vehicle response cached.");
@@ -175,13 +178,17 @@ namespace Motor.Inquiry.Infrastructure.Clients
 
             response.EnsureSuccessStatusCode();
 
-            var vehicle =await response.Content.ReadFromJsonAsync<VehicleInquiryDto>();
+            var result = await response.Content.ReadFromJsonAsync<ApiResponse<VehicleInquiryDto>>();
 
-            if (vehicle is null)
+            if (result?.Data is null)
             {
                 throw new VehicleNotFoundException("Vehicle not found.");
             }
-                                               //مدة التخزين محددة بـ 5 دقائق.
+
+            var vehicle = result.Data;
+
+
+            //مدة التخزين محددة بـ 5 دقائق.
             _memoryCache.Set(cacheKey,vehicle,TimeSpan.FromMinutes(expirationMinutes));
 
             _logger.LogInformation("Vehicle response cached.");

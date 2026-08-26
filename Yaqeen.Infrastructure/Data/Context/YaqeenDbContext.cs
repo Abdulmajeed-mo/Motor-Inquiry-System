@@ -1,0 +1,87 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Yaqeen.Domain.Entities;
+
+namespace Yaqeen.Infrastructure.Data.Context;
+
+public class YaqeenDbContext : DbContext
+{
+    public YaqeenDbContext(DbContextOptions<YaqeenDbContext> options)
+        : base(options)
+    {
+    }
+
+    public DbSet<Citizen> Citizens { get; set; }
+
+    public DbSet<Vehicle> Vehicles { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        base.OnModelCreating(modelBuilder);
+
+        modelBuilder.Entity<Citizen>().HasData(
+            new Citizen
+            {
+                NationalId = "1234567890",
+                DateOfBirth = new DateOnly(2003, 3, 3),
+                FullName = "Abdulmajeed Mohammed Alhasani",
+                Gender = "Male",
+                Nationality = "Saudi"
+            },
+            new Citizen
+            {
+                NationalId = "1028339274",
+                DateOfBirth = new DateOnly(1990, 11, 15),
+                FullName = "Alhasan Mustafa Alharbi",
+                Gender = "Male",
+                Nationality = "Saudi"
+            },
+            new Citizen
+            {
+                NationalId = "1920009789",
+                DateOfBirth = new DateOnly(2005, 2, 28),
+                FullName = "Hamad Ahmed Al Sabah",
+                Gender = "Male",
+                Nationality = "Saudi"
+            }
+        );
+
+        modelBuilder.Entity<Vehicle>().HasData(
+            new Vehicle
+            {
+                SequenceNumber = 1,
+                PlateNumber = "1303",
+                PlateLetters = "MJD",
+                Make = "Toyota",
+                Model = "Crown Sedan",
+                ModelYear = 2023,
+                Color = "Black",
+                ChassisNumber = "XYZ1234567890",
+                OwnerNationalId = "1234567890"
+            },
+            new Vehicle
+            {
+                SequenceNumber = 2,
+                PlateNumber = "5678",
+                PlateLetters = "DEF",
+                Make = "Haval",
+                Model = "V7",
+                ModelYear = 2019,
+                Color = "Blue",
+                ChassisNumber = "XYZ0987654321",
+                OwnerNationalId = "1028339274"
+            },
+            new Vehicle
+            {
+                SequenceNumber = 3,
+                PlateNumber = "9012",
+                PlateLetters = "AAI",
+                Make = "Ford",
+                Model = "Mustang",
+                ModelYear = 2020,
+                Color = "Black",
+                ChassisNumber = "XYZ5678901234",
+                OwnerNationalId = "1920009789"
+            }
+        );
+    }
+}

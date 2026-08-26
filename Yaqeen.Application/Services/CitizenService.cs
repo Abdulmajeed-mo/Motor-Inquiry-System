@@ -1,23 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Yaqeen.Application.DTOs;
 using Yaqeen.Application.Interfaces;
-using Yaqeen.Application.Data;
-using Yaqeen.Application.DTOs;
 
-namespace Yaqeen.Application.Services
+namespace Yaqeen.Application.Services;
+
+public class CitizenService : ICitizenService
 {
-    public class CitizenService : ICitizenService
+    private readonly ICitizenRepository _citizenRepository;
+
+    public CitizenService(ICitizenRepository citizenRepository)
     {
-        public bool ValidateCitizen(CitizenValidationRequest request, CancellationToken cancellationToken)
-        {
-          var isExist = MockData.Citizens.Any(c => c.NationalId == request.NationalId && c.DateOfBirth == request.DateOfBirth);
+        _citizenRepository = citizenRepository;
+    }
 
+    public async Task<bool> ValidateCitizen(
+        CitizenValidationRequest request,
+        CancellationToken cancellationToken)
+    {
+        var citizen = await _citizenRepository
+            .GetByNationalIdAndDateOfBirthAsync(
+                request.NationalId,
+                request.DateOfBirth,
+                cancellationToken);
 
-            return isExist ; 
-        }
+        return citizen is not null;
     }
 }
-

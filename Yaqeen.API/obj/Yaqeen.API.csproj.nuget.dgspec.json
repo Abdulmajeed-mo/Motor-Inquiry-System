@@ -119,6 +119,9 @@
               },
               "C:\\Abdulmajeed_Project\\ASP.NETCore\\MotorInquirySystem\\Yaqeen.Application\\Yaqeen.Application.csproj": {
                 "projectPath": "C:\\Abdulmajeed_Project\\ASP.NETCore\\MotorInquirySystem\\Yaqeen.Application\\Yaqeen.Application.csproj"
+              },
+              "C:\\Abdulmajeed_Project\\ASP.NETCore\\MotorInquirySystem\\Yaqeen.Infrastructure\\Yaqeen.Infrastructure.csproj": {
+                "projectPath": "C:\\Abdulmajeed_Project\\ASP.NETCore\\MotorInquirySystem\\Yaqeen.Infrastructure\\Yaqeen.Infrastructure.csproj"
               }
             }
           }
@@ -140,6 +143,12 @@
           "framework": "net8.0",
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.19, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.6.2, )"
@@ -217,9 +226,6 @@
             "projectReferences": {
               "C:\\Abdulmajeed_Project\\ASP.NETCore\\MotorInquirySystem\\Yaqeen.Domain\\Yaqeen.Domain.csproj": {
                 "projectPath": "C:\\Abdulmajeed_Project\\ASP.NETCore\\MotorInquirySystem\\Yaqeen.Domain\\Yaqeen.Domain.csproj"
-              },
-              "C:\\Abdulmajeed_Project\\ASP.NETCore\\MotorInquirySystem\\Yaqeen.Infrastructure\\Yaqeen.Infrastructure.csproj": {
-                "projectPath": "C:\\Abdulmajeed_Project\\ASP.NETCore\\MotorInquirySystem\\Yaqeen.Infrastructure\\Yaqeen.Infrastructure.csproj"
               }
             }
           }
@@ -384,6 +390,9 @@
             "framework": "net8.0",
             "targetAlias": "net8.0",
             "projectReferences": {
+              "C:\\Abdulmajeed_Project\\ASP.NETCore\\MotorInquirySystem\\Yaqeen.Application\\Yaqeen.Application.csproj": {
+                "projectPath": "C:\\Abdulmajeed_Project\\ASP.NETCore\\MotorInquirySystem\\Yaqeen.Application\\Yaqeen.Application.csproj"
+              },
               "C:\\Abdulmajeed_Project\\ASP.NETCore\\MotorInquirySystem\\Yaqeen.Domain\\Yaqeen.Domain.csproj": {
                 "projectPath": "C:\\Abdulmajeed_Project\\ASP.NETCore\\MotorInquirySystem\\Yaqeen.Domain\\Yaqeen.Domain.csproj"
               }
@@ -406,6 +415,22 @@
         "net8.0": {
           "framework": "net8.0",
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.19, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.19, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.19, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

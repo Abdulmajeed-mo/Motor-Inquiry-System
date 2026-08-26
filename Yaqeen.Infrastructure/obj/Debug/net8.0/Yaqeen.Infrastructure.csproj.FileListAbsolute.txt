@@ -14,3 +14,7 @@ C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Yaqeen.Infrastructure\obj\
 C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Yaqeen.Infrastructure\obj\Debug\net8.0\refint\Yaqeen.Infrastructure.dll
 C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Yaqeen.Infrastructure\obj\Debug\net8.0\Yaqeen.Infrastructure.pdb
 C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Yaqeen.Infrastructure\obj\Debug\net8.0\ref\Yaqeen.Infrastructure.dll
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Yaqeen.Infrastructure\bin\Debug\net8.0\Yaqeen.Infrastructure.runtimeconfig.json
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Yaqeen.Infrastructure\obj\Debug\net8.0\Yaqeen.Infrastructure.genruntimeconfig.cache
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Yaqeen.Infrastructure\bin\Debug\net8.0\Yaqeen.Application.dll
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Yaqeen.Infrastructure\bin\Debug\net8.0\Yaqeen.Application.pdb

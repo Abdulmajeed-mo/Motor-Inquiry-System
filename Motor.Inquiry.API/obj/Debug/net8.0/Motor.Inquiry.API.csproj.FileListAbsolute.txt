@@ -200,3 +200,10 @@ C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API\bin\Debu
 C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API\bin\Debug\net8.0\Motor.Inquiry.Common.dll
 C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API\bin\Debug\net8.0\Motor.Inquiry.Common.pdb
 C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API\bin\Debug\net8.0\ar\Motor.Inquiry.API.resources.dll
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API\bin\Debug\net8.0\en\Motor.Inquiry.API.resources.dll
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API\obj\Debug\net8.0\Motor.Inquiry.API.csproj.GenerateResource.cache
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API\obj\Debug\net8.0\ar\Motor.Inquiry.API.resources.dll
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API\obj\Debug\net8.0\en\Motor.Inquiry.API.resources.dll
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API\obj\Debug\net8.0\Motor.Inquiry.API.Resources.SharedResourceMarker.ar.resources
+C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API\obj\Debug\net8.0\Motor.Inquiry.API.Resources.SharedResourceMarker.en.resources

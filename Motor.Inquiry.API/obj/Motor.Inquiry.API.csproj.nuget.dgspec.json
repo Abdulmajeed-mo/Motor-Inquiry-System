@@ -92,6 +92,10 @@
               "target": "Package",
               "version": "[6.1.1, )"
             },
+            "Serilog.Sinks.File": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.6.2, )"
@@ -430,6 +434,9 @@
             "projectReferences": {
               "C:\\Abdulmajeed_Project\\ASP.NETCore\\MotorInquirySystem\\Motor.Inquiry.Application\\Motor.Inquiry.Application.csproj": {
                 "projectPath": "C:\\Abdulmajeed_Project\\ASP.NETCore\\MotorInquirySystem\\Motor.Inquiry.Application\\Motor.Inquiry.Application.csproj"
+              },
+              "C:\\Abdulmajeed_Project\\ASP.NETCore\\MotorInquirySystem\\Motor.Inquiry.Common\\Motor.Inquiry.Common.csproj": {
+                "projectPath": "C:\\Abdulmajeed_Project\\ASP.NETCore\\MotorInquirySystem\\Motor.Inquiry.Common\\Motor.Inquiry.Common.csproj"
               },
               "C:\\Abdulmajeed_Project\\ASP.NETCore\\MotorInquirySystem\\Motor.Inquiry.Domain\\Motor.Inquiry.Domain.csproj": {
                 "projectPath": "C:\\Abdulmajeed_Project\\ASP.NETCore\\MotorInquirySystem\\Motor.Inquiry.Domain\\Motor.Inquiry.Domain.csproj"
