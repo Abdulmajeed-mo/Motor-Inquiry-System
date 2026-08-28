@@ -57,6 +57,11 @@ public class YaqeenDbContext : DbContext
         );
 
 
+
+
+
+        //EF Core Seed Data.
+
         modelBuilder.Entity<Make>().HasData(
         new Make { Id = 1, Name = "Toyota" },
         new Make { Id = 2, Name = "Haval" },
@@ -70,6 +75,7 @@ public class YaqeenDbContext : DbContext
             new Model { Id = 3, Name = "Mustang", MakeId = 3 }
         );
 
+       
         modelBuilder.Entity<Vehicle>().HasData(
             new Vehicle
             {

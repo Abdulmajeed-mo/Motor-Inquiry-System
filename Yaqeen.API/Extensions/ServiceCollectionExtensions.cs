@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Yaqeen.Application.Interfaces;
+using Yaqeen.Application.Interfaces.Repositories;
+using Yaqeen.Application.Interfaces.Services;
 using Yaqeen.Application.Services;
 using Yaqeen.Infrastructure.Data.Context;
 using Yaqeen.Infrastructure.Repositories;
@@ -15,6 +17,11 @@ public static class ServiceCollectionExtensions
 
 
         // Registers Yaqeen services, repositories, and database context for dependency injection.
+        services.AddSingleton<IMakeService, MakeService>();
+        services.AddSingleton<IModelService, ModelService>();
+
+        services.AddScoped<IMakeRepository, MakeRepository>();
+        services.AddScoped<IModelRepository, ModelRepository>();
 
         services.AddDbContext<YaqeenDbContext>(options =>options.UseSqlServer(configuration.GetConnectionString("YaqeenConnection")));
 

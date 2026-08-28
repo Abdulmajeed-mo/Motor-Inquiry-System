@@ -836,6 +836,7 @@
       },
       "Yaqeen.Application/1.0.0": {
         "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.2",
           "Yaqeen.Domain": "1.0.0"
         },
         "runtime": {
