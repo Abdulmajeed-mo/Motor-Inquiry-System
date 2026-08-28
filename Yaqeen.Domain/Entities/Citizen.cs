@@ -14,4 +14,6 @@ public class Citizen
     public string Gender { get; set; }
 
     public string Nationality { get; set; }
+
+    public ICollection<Address> Addresses { get; set; } = new List<Address>();
 }

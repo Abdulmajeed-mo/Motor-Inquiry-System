@@ -18,6 +18,10 @@ public class YaqeenDbContext : DbContext
 
     public DbSet<Model> Models { get; set; }
 
+    public DbSet<Address> Addresses { get; set; }
+
+
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
@@ -26,7 +30,14 @@ public class YaqeenDbContext : DbContext
 
         modelBuilder.Entity<Vehicle>().HasOne(x => x.Make).WithMany(x => x.Vehicles).HasForeignKey(x => x.MakeId);
 
-        modelBuilder.Entity<Vehicle>().HasOne(x => x.Model).WithMany(x => x.Vehicles).HasForeignKey(x => x.ModelId);
+modelBuilder.Entity<Vehicle>().HasOne(x => x.Model).WithMany(x => x.Vehicles).HasForeignKey(x => x.ModelId).OnDelete(DeleteBehavior.NoAction);
+   
+        
+        modelBuilder.Entity<Address>().HasOne(x => x.Citizen).WithMany(x => x.Addresses).HasForeignKey(x => x.CitizenId).OnDelete(DeleteBehavior.Cascade);
+
+
+
+        //EF Core Seed Data.
 
         modelBuilder.Entity<Citizen>().HasData(
 
@@ -57,6 +68,28 @@ public class YaqeenDbContext : DbContext
         );
 
 
+        //EF Core Seed Data.
+
+        modelBuilder.Entity<Address>().HasData(
+    new Address
+    {
+        Id = 1,
+        AddressLine = "Riyadh",
+        CitizenId = "1234567890"
+    },
+    new Address
+    {
+        Id = 2,
+        AddressLine = "Jeddah",
+        CitizenId = "1028339274"
+    },
+    new Address
+    {
+        Id = 3,
+        AddressLine = "Abha",
+        CitizenId = "1920009789"
+    }
+);
 
 
 
