@@ -31,7 +31,7 @@ namespace Yaqeen.API.Controllers
             return Ok(new ApiResponse<Vehicle>
             {
                 Success = true,
-                Message = "Citizen is valid.",
+                Message = "Vehicle retrieved successfully.",
                 Data = vehicle
             });
         }
@@ -49,7 +49,7 @@ namespace Yaqeen.API.Controllers
             return Ok(new ApiResponse<Vehicle>
             {
                 Success = true,
-                Message = "Citizen is valid.",
+                Message = "Vehicle retrieved successfully.",
                 Data = vehicle
             });
         }

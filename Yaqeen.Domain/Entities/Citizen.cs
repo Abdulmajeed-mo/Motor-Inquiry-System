@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Yaqeen.Domain.Enums;
 
 namespace Yaqeen.Domain.Entities;
 
@@ -11,7 +12,7 @@ public class Citizen
 
     public string FullName { get; set; }
 
-    public string Gender { get; set; }
+    public Gender Gender { get; set; }
 
     public string Nationality { get; set; }
 

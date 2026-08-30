@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Yaqeen.Domain.Entities;
+using Yaqeen.Domain.Enums;
 
 namespace Yaqeen.Infrastructure.Data.Context;
 
@@ -46,7 +47,7 @@ modelBuilder.Entity<Vehicle>().HasOne(x => x.Model).WithMany(x => x.Vehicles).Ha
                 NationalId = "1234567890",
                 DateOfBirth = new DateOnly(2003, 3, 3),
                 FullName = "Abdulmajeed Mohammed Alhasani",
-                Gender = "Male",
+                Gender = Gender.Male,
                 Nationality = "Saudi"
             },
             new Citizen
@@ -54,7 +55,7 @@ modelBuilder.Entity<Vehicle>().HasOne(x => x.Model).WithMany(x => x.Vehicles).Ha
                 NationalId = "1028339274",
                 DateOfBirth = new DateOnly(1990, 11, 15),
                 FullName = "Alhasan Mustafa Alharbi",
-                Gender = "Male",
+                Gender = Gender.Male,
                 Nationality = "Saudi"
             },
             new Citizen
@@ -62,7 +63,7 @@ modelBuilder.Entity<Vehicle>().HasOne(x => x.Model).WithMany(x => x.Vehicles).Ha
                 NationalId = "1920009789",
                 DateOfBirth = new DateOnly(2005, 2, 28),
                 FullName = "Hamad Ahmed Al Sabah",
-                Gender = "Male",
+                Gender = Gender.Male ,
                 Nationality = "Saudi"
             }
         );
