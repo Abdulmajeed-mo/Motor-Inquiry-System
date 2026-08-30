@@ -1,0 +1,28 @@
+2026-08-30 11:23:52.923 +03:00 [INF] Now listening on: http://localhost:5006
+2026-08-30 11:23:53.143 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5006/swagger/index.html - null null
+2026-08-30 11:23:53.232 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-08-30 11:23:53.234 +03:00 [INF] Hosting environment: Development
+2026-08-30 11:23:53.235 +03:00 [INF] Content root path: C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API
+2026-08-30 11:23:53.301 +03:00 [INF] Incoming Request: GET /swagger/index.html with Correlation ID: c69fe75f-b071-4f37-b9e2-d5ac7e1d6eee
+2026-08-30 11:23:53.411 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5006/swagger/index.html - 200 null text/html;charset=utf-8 281.2592ms
+2026-08-30 11:23:53.450 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5006/_framework/aspnetcore-browser-refresh.js - null null
+2026-08-30 11:23:53.456 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5006/_framework/aspnetcore-browser-refresh.js - 200 14939 application/javascript; charset=utf-8 6.8011ms
+2026-08-30 11:23:53.459 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5006/_vs/browserLink - null null
+2026-08-30 11:23:53.518 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5006/_vs/browserLink - 200 null text/javascript; charset=UTF-8 59.0447ms
+2026-08-30 11:23:53.720 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5006/swagger/v1/swagger.json - null null
+2026-08-30 11:23:53.728 +03:00 [INF] Incoming Request: GET /swagger/v1/swagger.json with Correlation ID: 9507149e-05bb-416a-8921-d0c5f386127c
+2026-08-30 11:23:53.747 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5006/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 27.2639ms
+2026-08-30 11:28:30.721 +03:00 [INF] Now listening on: http://localhost:5006
+2026-08-30 11:28:30.896 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-08-30 11:28:30.898 +03:00 [INF] Hosting environment: Development
+2026-08-30 11:28:30.899 +03:00 [INF] Content root path: C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API
+2026-08-30 11:28:31.051 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5006/swagger/index.html - null null
+2026-08-30 11:28:31.197 +03:00 [INF] Incoming Request: GET /swagger/index.html with Correlation ID: c4e1e71e-a44f-458e-93b8-2eb3874262a8
+2026-08-30 11:28:31.297 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5006/swagger/index.html - 200 null text/html;charset=utf-8 257.3123ms
+2026-08-30 11:28:31.347 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5006/_framework/aspnetcore-browser-refresh.js - null null
+2026-08-30 11:28:31.353 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5006/_framework/aspnetcore-browser-refresh.js - 200 14939 application/javascript; charset=utf-8 5.8566ms
+2026-08-30 11:28:31.360 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5006/_vs/browserLink - null null
+2026-08-30 11:28:31.398 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5006/_vs/browserLink - 200 null text/javascript; charset=UTF-8 37.9303ms
+2026-08-30 11:28:31.551 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5006/swagger/v1/swagger.json - null null
+2026-08-30 11:28:31.557 +03:00 [INF] Incoming Request: GET /swagger/v1/swagger.json with Correlation ID: 6e10a0fa-2708-4a51-8225-8cfb23764307
+2026-08-30 11:28:31.572 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5006/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 20.6347ms

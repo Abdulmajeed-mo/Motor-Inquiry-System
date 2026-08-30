@@ -48,5 +48,35 @@ namespace Yaqeen.API.Controllers
             });
         }
 
+
+
+
+
+        [HttpGet("{nationalId}/addresses")]
+        public async Task<IActionResult> GetCitizenAddresses(string nationalId,CancellationToken cancellationToken)
+        {
+            var result = await _citizenService.GetCitizenWithAddressesAsync(nationalId,cancellationToken);
+
+            if (result is null)
+            {
+                return NotFound(new ApiResponse<CitizenAddressResponse>
+                {
+                    Success = false,
+                    Message = "Citizen not found.",
+                    Data = null
+                });
+            }
+            
+
+
+
+            return Ok(new ApiResponse<CitizenAddressResponse>
+            {
+                Success = true,
+                Message = "Citizen addresses retrieved successfully.",
+                Data = result
+            });
+        }
+
     }
 }

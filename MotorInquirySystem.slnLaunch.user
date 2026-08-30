@@ -9,7 +9,8 @@
       },
       {
         "Path": "Yaqeen.API\\Yaqeen.API.csproj",
-        "Action": "Start"
+        "Action": "Start",
+        "DebugTarget": "YaqeenAPI"
       }
     ]
   }

@@ -1,6 +1,22 @@
 [
   {
     "ContainingType": "Yaqeen.API.Controllers.CitizenController",
+    "Method": "GetCitizenAddresses",
+    "RelativePath": "api/yaqeen/citizen/{nationalId}/addresses",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nationalId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Yaqeen.API.Controllers.CitizenController",
     "Method": "ValidateCitizen",
     "RelativePath": "api/yaqeen/citizen/validate",
     "HttpMethod": "POST",

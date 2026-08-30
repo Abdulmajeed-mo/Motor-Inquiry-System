@@ -18,5 +18,12 @@ public class CitizenRepository : ICitizenRepository
     {
         return await _context.Citizens.FirstOrDefaultAsync(c => c.NationalId == nationalId && c.DateOfBirth == dateOfBirth,cancellationToken);
     }
+
+        public async Task<Citizen?> GetCitizenWithAddressesAsync(string nationalId,CancellationToken cancellationToken)
+    {
+
+                                     //عشان EF Core يرجع المواطن ومعه عناوينه.
+        return await _context.Citizens.Include(c => c.Addresses).FirstOrDefaultAsync(c => c.NationalId == nationalId,cancellationToken);
+    }
 }
 

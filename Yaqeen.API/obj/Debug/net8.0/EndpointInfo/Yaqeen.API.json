@@ -36,6 +36,28 @@
         }
       }
     },
+    "/api/yaqeen/citizen/{nationalId}/addresses": {
+      "get": {
+        "tags": [
+          "Citizen"
+        ],
+        "parameters": [
+          {
+            "name": "nationalId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/yaqeen/vehicle/sequence/{sequenceNumber}": {
       "get": {
         "tags": [

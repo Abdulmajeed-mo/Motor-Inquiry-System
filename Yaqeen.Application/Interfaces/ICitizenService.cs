@@ -11,6 +11,10 @@ namespace Yaqeen.Application.Interfaces
     public interface ICitizenService
     {
         Task<bool> ValidateCitizen(CitizenValidationRequest request, CancellationToken cancellationToken);
-    
+
+
+
+        //أي سيرفس للمواطن لازم يوفر عملية يجلب المواطن مع عناوينه.
+        Task<CitizenAddressResponse?> GetCitizenWithAddressesAsync(string nationalId,CancellationToken cancellationToken);
     }
 }
