@@ -117,16 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="InquiryCompletedSuccessfully" xml:space="preserve">
+    <value>تم الاستعلام بنجاح.</value>
+  </data>
   <data name="InvalidCitizen" xml:space="preserve">
-    <value>المواطن غير صالح.</value>
+    <value>رقم الهوية الوطنية غير صالح.</value>
   </data>
   <data name="OwnershipMismatch" xml:space="preserve">
-    <value>المركبة لا تخص المواطن.</value>
+    <value>ملكية المركبة لا تتطابق مع بيانات المواطن.</value>
   </data>
   <data name="UnexpectedError" xml:space="preserve">
-    <value>حدث خطأ غير متوقع.</value>
+    <value> حدث خطأ غير متوقع.</value>
   </data>
   <data name="VehicleNotFound" xml:space="preserve">
     <value>المركبة غير موجودة.</value>
+  </data>
+  <data name="VehicleRetrievedSuccessfully" xml:space="preserve">
+    <value> تم استرجاع بيانات المركبة بنجاح.</value>
   </data>
 </root>

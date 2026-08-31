@@ -117,16 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="InquiryCompletedSuccessfully" xml:space="preserve">
+    <value>Inquiry completed successfully.</value>
+  </data>
   <data name="InvalidCitizen" xml:space="preserve">
-    <value>Invalid citizen.</value>
+    <value>Invalid national ID.</value>
   </data>
   <data name="OwnershipMismatch" xml:space="preserve">
-    <value>Vehicle ownership mismatch.</value>
+    <value>Ownership mismatch.</value>
   </data>
   <data name="UnexpectedError" xml:space="preserve">
     <value>An unexpected error occurred.</value>
   </data>
   <data name="VehicleNotFound" xml:space="preserve">
     <value>Vehicle not found.</value>
+  </data>
+  <data name="VehicleRetrievedSuccessfully" xml:space="preserve">
+    <value>Vehicle retrieved successfully.</value>
   </data>
 </root>

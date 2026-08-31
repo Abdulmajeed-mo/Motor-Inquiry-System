@@ -1,6 +1,22 @@
 [
   {
     "ContainingType": "Motor.Inquiry.API.Controllers.InquiryController",
+    "Method": "LocalizationTest",
+    "RelativePath": "api/v{version}/Inquiry/localization-test",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "version",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Motor.Inquiry.API.Controllers.InquiryController",
     "Method": "InquiryByPlateNumber",
     "RelativePath": "api/v{version}/Inquiry/plate",
     "HttpMethod": "POST",

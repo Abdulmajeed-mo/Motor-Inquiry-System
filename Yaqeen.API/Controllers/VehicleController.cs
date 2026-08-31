@@ -28,11 +28,22 @@ namespace Yaqeen.API.Controllers
 
             if (vehicle == null) return NotFound();
 
-            return Ok(new ApiResponse<Vehicle>
+            return Ok(new ApiResponse<object>
             {
                 Success = true,
                 Message = "Vehicle retrieved successfully.",
-                Data = vehicle
+                Data = new
+                {
+                    vehicle.SequenceNumber,
+                    vehicle.PlateNumber,
+                    vehicle.PlateLetters,
+                    Make = vehicle.Make.Name,
+                    Model = vehicle.Model.Name,
+                    vehicle.ModelYear,
+                    vehicle.Color,
+                    vehicle.ChassisNumber,
+                    vehicle.OwnerNationalId
+                }
             });
         }
 
@@ -46,11 +57,22 @@ namespace Yaqeen.API.Controllers
             if (vehicle == null)
                 return NotFound();
 
-            return Ok(new ApiResponse<Vehicle>
+            return Ok(new ApiResponse<object>
             {
                 Success = true,
                 Message = "Vehicle retrieved successfully.",
-                Data = vehicle
+                Data = new
+                {
+                    vehicle.SequenceNumber,
+                    vehicle.PlateNumber,
+                    vehicle.PlateLetters,
+                    Make = vehicle.Make.Name,
+                    Model = vehicle.Model.Name,
+                    vehicle.ModelYear,
+                    vehicle.Color,
+                    vehicle.ChassisNumber,
+                    vehicle.OwnerNationalId
+                }
             });
         }
 

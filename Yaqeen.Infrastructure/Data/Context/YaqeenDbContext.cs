@@ -31,13 +31,15 @@ public class YaqeenDbContext : DbContext
 
         modelBuilder.Entity<Vehicle>().HasOne(x => x.Make).WithMany(x => x.Vehicles).HasForeignKey(x => x.MakeId);
 
-modelBuilder.Entity<Vehicle>().HasOne(x => x.Model).WithMany(x => x.Vehicles).HasForeignKey(x => x.ModelId).OnDelete(DeleteBehavior.NoAction);
+        modelBuilder.Entity<Vehicle>().HasOne(x => x.Model).WithMany(x => x.Vehicles).HasForeignKey(x => x.ModelId).OnDelete(DeleteBehavior.NoAction);
    
         
         modelBuilder.Entity<Address>().HasOne(x => x.Citizen).WithMany(x => x.Addresses).HasForeignKey(x => x.CitizenId).OnDelete(DeleteBehavior.Cascade);
 
-
-
+        modelBuilder.Entity<Citizen>().Property(x => x.Gender).HasConversion<string>();
+      
+        
+        
         //EF Core Seed Data.
 
         modelBuilder.Entity<Citizen>().HasData(

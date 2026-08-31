@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.Localization;
-using Motor.Inquiry.API.Resources;
+using Motor.Inquiry.API.Controllers;
 using Motor.Inquiry.Common.Responses;
 using Motor.Inquiry.Domain.Exceptions;
 using System.Globalization;
@@ -10,12 +10,12 @@ namespace Motor.Inquiry.API.Middleware;
 public class ExceptionMiddleware
 {
     //private field
-    private readonly IStringLocalizer<SharedResourceMarker> _localizer;
+    private readonly IStringLocalizer<InquiryController> _localizer;
     private readonly RequestDelegate _next;
     private readonly ILogger<ExceptionMiddleware> _logger;
 
     //constructor
-    public ExceptionMiddleware(RequestDelegate next, ILogger<ExceptionMiddleware> logger , IStringLocalizer<SharedResourceMarker> localizer)
+    public ExceptionMiddleware(RequestDelegate next, ILogger<ExceptionMiddleware> logger , IStringLocalizer<InquiryController> localizer )
     {
         _next = next;
         _logger = logger;
@@ -68,7 +68,6 @@ public class ExceptionMiddleware
         };
 
 
-        _logger.LogInformation("Localizer BaseName: {BaseName}, Assembly: {Assembly}", _localizer.GetType().FullName,typeof(SharedResourceMarker).Assembly.FullName);
     
         _logger.LogInformation("Localization: {Culture}, Key: {Key}, Value: {Value}",CultureInfo.CurrentUICulture.Name,"OwnershipMismatch",_localizer["OwnershipMismatch"].Value);
 

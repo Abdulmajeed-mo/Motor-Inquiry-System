@@ -10,7 +10,6 @@ public static class ApplicationBuilderExtensions
     // Configures the HTTP request pipeline, including middleware, security, Swagger, and endpoint mapping.
     public static WebApplication UseApplicationPipeline(this WebApplication app)
     {
-        app.UseRequestLocalization();
 
         app.UseMiddleware<ExceptionMiddleware>();
 
@@ -27,7 +26,7 @@ public static class ApplicationBuilderExtensions
 
         app.UseHttpsRedirection();
 
-        app.UseAuthorization();
+        app.UseAuthorization();   
 
         app.MapControllers();
 

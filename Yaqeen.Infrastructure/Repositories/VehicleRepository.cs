@@ -16,11 +16,13 @@ public class VehicleRepository : IVehicleRepository
 
     public async Task<Vehicle?> GetByPlateAsync(string plateNumber,string plateLetters,CancellationToken cancellationToken)
     {
-        return await _context.Vehicles.FirstOrDefaultAsync(v => v.PlateNumber == plateNumber &&v.PlateLetters == plateLetters,cancellationToken);
+        return await _context.Vehicles.Include(v => v.Make).Include(v => v.Model).FirstOrDefaultAsync(v => v.PlateNumber == plateNumber &&v.PlateLetters == plateLetters,cancellationToken);
     }
 
-    public async Task<Vehicle?> GetBySequenceNumberAsync(int sequenceNumber,CancellationToken cancellationToken)
+    public async Task<Vehicle?> GetBySequenceNumberAsync(
+     int sequenceNumber,
+     CancellationToken cancellationToken)
     {
-        return await _context.Vehicles .FirstOrDefaultAsync(v => v.SequenceNumber == sequenceNumber,cancellationToken);
+        return await _context.Vehicles.Include(v => v.Make).Include(v => v.Model).FirstOrDefaultAsync(v => v.SequenceNumber == sequenceNumber,cancellationToken);
     }
 }

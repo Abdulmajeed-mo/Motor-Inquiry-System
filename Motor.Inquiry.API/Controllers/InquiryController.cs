@@ -1,8 +1,11 @@
 ﻿using Asp.Versioning;
 using Microsoft.AspNetCore.Mvc;
-using Motor.Inquiry.Common.Responses;
+using Microsoft.Extensions.Localization;
 using Motor.Inquiry.Application.DTOs;
 using Motor.Inquiry.Application.Interfaces;
+using Motor.Inquiry.Common.Responses;
+using System.Globalization;
+
 
 namespace Motor.Inquiry.API.Controllers
 {
@@ -19,10 +22,14 @@ namespace Motor.Inquiry.API.Controllers
         //private field
         private readonly IInquiryService _inquiryService;
 
+        private readonly IStringLocalizer<InquiryController> _localizer;
+
+
         //Constructor
-        public InquiryController(IInquiryService inquiryService)
+        public InquiryController(IInquiryService inquiryService , IStringLocalizer<InquiryController> localizer)
         {
             _inquiryService = inquiryService;
+            _localizer = localizer;
         }
 
 
@@ -32,12 +39,18 @@ namespace Motor.Inquiry.API.Controllers
         [HttpPost("sequence")]
         public async Task<IActionResult> InquiryBySequenceNumber([FromBody] InquiryBySequenceRequest request, CancellationToken cancellationToken)
         {
+
+
+            Console.WriteLine($"Current Culture: {CultureInfo.CurrentCulture.Name}");
+            Console.WriteLine($"Current UI Culture: {CultureInfo.CurrentUICulture.Name}");
+
+
             var result = await _inquiryService.GetInquiryBySequenceNumber(request ,cancellationToken);
 
             return Ok(new ApiResponse<InquiryResponse>
             {
                 Success = true,
-                Message = "Inquiry completed successfully.",
+                Message = _localizer["InquiryCompletedSuccessfully"] ,
                 Data = result
             });
         }
@@ -52,9 +65,18 @@ namespace Motor.Inquiry.API.Controllers
             return Ok(new ApiResponse<InquiryResponse>
             {
                 Success = true,
-                Message = "Inquiry completed successfully.",
-                Data = result
+                Message = _localizer["InquiryCompletedSuccessfully"],
+                
+               Data = result
             });
+        }
+
+        [HttpGet("localization-test")]
+        public IActionResult LocalizationTest()
+        {
+            var test = _localizer["Welcome"];
+
+            return Ok(test);
         }
 
     }
