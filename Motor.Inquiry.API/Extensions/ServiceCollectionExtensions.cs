@@ -20,6 +20,7 @@ public static class ServiceCollectionExtensions
         services.AddAutoMapper(cfg =>{cfg.AddProfile<InquiryMappingProfile>();});
 
 
+        services.AddScoped<IAuthService, AuthService>();
         //ليس معناها أننا نسجل الـ Sequence Validator فقط.
         //كنقطة مرجعية للـ Assembly
         services.AddValidatorsFromAssemblyContaining<InquiryBySequenceRequestValidator>();

@@ -1,4 +1,5 @@
 ﻿using Asp.Versioning;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
 using Motor.Inquiry.Application.DTOs;
@@ -11,8 +12,8 @@ namespace Motor.Inquiry.API.Controllers
 {
 
     //يستقبل الطلب ويستدعي الـ Service
-    
 
+    [Authorize]
     [ApiController]
     [ApiVersion(1.0)]
     [Route("api/v{version:apiVersion}/[controller]")]

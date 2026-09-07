@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "NWTLFZDmObs=",
+  "dgSpecHash": "4M6ockJNL+Q=",
   "success": true,
   "projectFilePath": "C:\\Abdulmajeed_Project\\ASP.NETCore\\MotorInquirySystem\\Motor.Inquiry.Infrastructure\\Motor.Inquiry.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -80,7 +80,7 @@
     "C:\\Users\\aalhasani\\.nuget\\packages\\system.diagnostics.diagnosticsource\\10.0.10\\system.diagnostics.diagnosticsource.10.0.10.nupkg.sha512",
     "C:\\Users\\aalhasani\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512",
     "C:\\Users\\aalhasani\\.nuget\\packages\\system.formats.asn1\\8.0.2\\system.formats.asn1.8.0.2.nupkg.sha512",
-    "C:\\Users\\aalhasani\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.35.0\\system.identitymodel.tokens.jwt.6.35.0.nupkg.sha512",
+    "C:\\Users\\aalhasani\\.nuget\\packages\\system.identitymodel.tokens.jwt\\8.14.0\\system.identitymodel.tokens.jwt.8.14.0.nupkg.sha512",
     "C:\\Users\\aalhasani\\.nuget\\packages\\system.io.pipelines\\8.0.0\\system.io.pipelines.8.0.0.nupkg.sha512",
     "C:\\Users\\aalhasani\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
     "C:\\Users\\aalhasani\\.nuget\\packages\\system.memory.data\\1.0.2\\system.memory.data.1.0.2.nupkg.sha512",

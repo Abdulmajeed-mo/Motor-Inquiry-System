@@ -56,5 +56,21 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Motor.Inquiry.API.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/v1/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Motor.Inquiry.Application.DTOs.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

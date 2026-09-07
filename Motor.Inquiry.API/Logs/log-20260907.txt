@@ -1,0 +1,246 @@
+2026-09-07 13:15:16.285 +03:00 [INF] User profile is available. Using 'C:\Users\aalhasani\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-09-07 13:15:16.628 +03:00 [INF] Now listening on: http://localhost:5006
+2026-09-07 13:15:16.837 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-07 13:15:16.838 +03:00 [INF] Hosting environment: Development
+2026-09-07 13:15:16.839 +03:00 [INF] Content root path: C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API
+2026-09-07 13:15:18.274 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5006/swagger/index.html - null null
+2026-09-07 13:15:18.483 +03:00 [INF] Incoming Request: GET /swagger/index.html with Correlation ID: 8c644645-1200-4a22-9844-6aef6433409a
+2026-09-07 13:15:18.575 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5006/swagger/index.html - 200 null text/html;charset=utf-8 314.8152ms
+2026-09-07 13:15:18.595 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5006/_framework/aspnetcore-browser-refresh.js - null null
+2026-09-07 13:15:18.602 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5006/_framework/aspnetcore-browser-refresh.js - 200 14939 application/javascript; charset=utf-8 8.4791ms
+2026-09-07 13:15:18.614 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5006/_vs/browserLink - null null
+2026-09-07 13:15:18.659 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5006/_vs/browserLink - 200 null text/javascript; charset=UTF-8 45.0194ms
+2026-09-07 13:15:18.772 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5006/swagger/v1/swagger.json - null null
+2026-09-07 13:15:18.777 +03:00 [INF] Incoming Request: GET /swagger/v1/swagger.json with Correlation ID: b72f32cf-d8a9-4386-bc29-4a11c70e717a
+2026-09-07 13:15:18.787 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5006/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 15.4628ms
+2026-09-07 13:15:18.791 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5006/swagger/favicon-32x32.png - null null
+2026-09-07 13:15:18.796 +03:00 [INF] Incoming Request: GET /swagger/favicon-32x32.png with Correlation ID: 19083fd8-f1d1-4b68-9c5c-4cc36923ce29
+2026-09-07 13:15:18.809 +03:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2026-09-07 13:15:18.811 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5006/swagger/favicon-32x32.png - 200 628 image/png 19.885ms
+2026-09-07 13:15:48.209 +03:00 [INF] User profile is available. Using 'C:\Users\aalhasani\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-09-07 13:15:48.428 +03:00 [INF] Now listening on: http://localhost:5006
+2026-09-07 13:15:48.628 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-07 13:15:48.629 +03:00 [INF] Hosting environment: Development
+2026-09-07 13:15:48.630 +03:00 [INF] Content root path: C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API
+2026-09-07 13:15:48.688 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5006/swagger/index.html - null null
+2026-09-07 13:15:48.893 +03:00 [INF] Incoming Request: GET /swagger/index.html with Correlation ID: 8dd29f48-dcd3-42f9-b4bf-db6ab293b834
+2026-09-07 13:15:48.993 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5006/swagger/index.html - 200 null text/html;charset=utf-8 315.52ms
+2026-09-07 13:15:49.016 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5006/_framework/aspnetcore-browser-refresh.js - null null
+2026-09-07 13:15:49.041 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5006/_vs/browserLink - null null
+2026-09-07 13:15:49.046 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5006/_framework/aspnetcore-browser-refresh.js - 200 14939 application/javascript; charset=utf-8 32.7444ms
+2026-09-07 13:15:49.086 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5006/_vs/browserLink - 200 null text/javascript; charset=UTF-8 45.3932ms
+2026-09-07 13:15:49.221 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5006/swagger/v1/swagger.json - null null
+2026-09-07 13:15:49.226 +03:00 [INF] Incoming Request: GET /swagger/v1/swagger.json with Correlation ID: 20c974d3-3b11-403a-8b0a-416b4871ddee
+2026-09-07 13:15:49.237 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5006/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 15.6875ms
+2026-09-07 13:17:01.407 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5006/api/v1.0/Inquiry/sequence - application/json 82
+2026-09-07 13:17:01.415 +03:00 [INF] Incoming Request: POST /api/v1.0/Inquiry/sequence with Correlation ID: 69fb4fa1-d3ec-42de-b270-b94ec82caeb6
+2026-09-07 13:17:01.419 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-09-07 13:17:01.422 +03:00 [INF] Executing endpoint 'Motor.Inquiry.API.Controllers.InquiryController.InquiryBySequenceNumber (Motor.Inquiry.API)'
+2026-09-07 13:17:01.444 +03:00 [INF] Route matched with {action = "InquiryBySequenceNumber", controller = "Inquiry"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] InquiryBySequenceNumber(Motor.Inquiry.Application.DTOs.InquiryBySequenceRequest, System.Threading.CancellationToken) on controller Motor.Inquiry.API.Controllers.InquiryController (Motor.Inquiry.API).
+2026-09-07 13:17:01.675 +03:00 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-07 13:17:01.758 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2026-09-07 13:17:01.779 +03:00 [INF] Executed action Motor.Inquiry.API.Controllers.InquiryController.InquiryBySequenceNumber (Motor.Inquiry.API) in 328.5068ms
+2026-09-07 13:17:01.780 +03:00 [INF] Executed endpoint 'Motor.Inquiry.API.Controllers.InquiryController.InquiryBySequenceNumber (Motor.Inquiry.API)'
+2026-09-07 13:17:01.783 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5006/api/v1.0/Inquiry/sequence - 400 null application/problem+json; charset=utf-8 375.9042ms
+2026-09-07 13:18:40.182 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5006/api/v1.0/Inquiry/sequence - application/json 86
+2026-09-07 13:18:40.186 +03:00 [INF] Incoming Request: POST /api/v1.0/Inquiry/sequence with Correlation ID: e98dcf5e-4578-4821-a488-a216a4dd204d
+2026-09-07 13:18:40.187 +03:00 [INF] Executing endpoint 'Motor.Inquiry.API.Controllers.InquiryController.InquiryBySequenceNumber (Motor.Inquiry.API)'
+2026-09-07 13:18:40.188 +03:00 [INF] Route matched with {action = "InquiryBySequenceNumber", controller = "Inquiry"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] InquiryBySequenceNumber(Motor.Inquiry.Application.DTOs.InquiryBySequenceRequest, System.Threading.CancellationToken) on controller Motor.Inquiry.API.Controllers.InquiryController (Motor.Inquiry.API).
+2026-09-07 13:18:42.380 +03:00 [INF] Executed DbCommand (55ms) [Parameters=[@__cacheKey_0='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [v].[Id], [v].[CacheKey], [v].[CachedAt], [v].[ChassisNumber], [v].[Color], [v].[Make], [v].[Model], [v].[ModelYear], [v].[NationalId], [v].[OwnerNationalId], [v].[PlateLetters], [v].[PlateNumber], [v].[SequenceNumber]
+FROM [VehicleInquiryCaches] AS [v]
+WHERE [v].[CacheKey] = @__cacheKey_0
+2026-09-07 13:18:42.456 +03:00 [INF] Executing OkObjectResult, writing value of type 'Motor.Inquiry.Common.Responses.ApiResponse`1[[Motor.Inquiry.Application.DTOs.InquiryResponse, Motor.Inquiry.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-07 13:18:42.461 +03:00 [INF] Executed action Motor.Inquiry.API.Controllers.InquiryController.InquiryBySequenceNumber (Motor.Inquiry.API) in 2271.8921ms
+2026-09-07 13:18:42.463 +03:00 [INF] Executed endpoint 'Motor.Inquiry.API.Controllers.InquiryController.InquiryBySequenceNumber (Motor.Inquiry.API)'
+2026-09-07 13:18:42.471 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5006/api/v1.0/Inquiry/sequence - 200 null application/json; charset=utf-8 2288.544ms
+2026-09-07 13:18:50.229 +03:00 [INF] User profile is available. Using 'C:\Users\aalhasani\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-09-07 13:18:50.467 +03:00 [INF] Now listening on: http://localhost:5006
+2026-09-07 13:18:50.595 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-07 13:18:50.596 +03:00 [INF] Hosting environment: Development
+2026-09-07 13:18:50.599 +03:00 [INF] Content root path: C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API
+2026-09-07 13:18:51.041 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5006/swagger/index.html - null null
+2026-09-07 13:18:51.221 +03:00 [INF] Incoming Request: GET /swagger/index.html with Correlation ID: f53892f0-1d17-43e9-80df-ca9e589eb86a
+2026-09-07 13:18:51.312 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5006/swagger/index.html - 200 null text/html;charset=utf-8 289.086ms
+2026-09-07 13:18:51.337 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5006/_framework/aspnetcore-browser-refresh.js - null null
+2026-09-07 13:18:51.349 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5006/_vs/browserLink - null null
+2026-09-07 13:18:51.354 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5006/_framework/aspnetcore-browser-refresh.js - 200 14939 application/javascript; charset=utf-8 18.7733ms
+2026-09-07 13:18:51.391 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5006/_vs/browserLink - 200 null text/javascript; charset=UTF-8 42.5882ms
+2026-09-07 13:18:51.434 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5006/swagger/v1/swagger.json - null null
+2026-09-07 13:18:51.438 +03:00 [INF] Incoming Request: GET /swagger/v1/swagger.json with Correlation ID: 3def5d9c-068e-4d1d-a65c-b2f19582db2d
+2026-09-07 13:18:51.448 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5006/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 13.8043ms
+2026-09-07 13:19:06.001 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5006/api/v1.0/Inquiry/sequence - application/json 86
+2026-09-07 13:19:06.008 +03:00 [INF] Incoming Request: POST /api/v1.0/Inquiry/sequence with Correlation ID: 36d86947-a2ca-415c-84de-197cdfabf642
+2026-09-07 13:19:06.013 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-09-07 13:19:06.015 +03:00 [INF] Executing endpoint 'Motor.Inquiry.API.Controllers.InquiryController.InquiryBySequenceNumber (Motor.Inquiry.API)'
+2026-09-07 13:19:06.039 +03:00 [INF] Route matched with {action = "InquiryBySequenceNumber", controller = "Inquiry"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] InquiryBySequenceNumber(Motor.Inquiry.Application.DTOs.InquiryBySequenceRequest, System.Threading.CancellationToken) on controller Motor.Inquiry.API.Controllers.InquiryController (Motor.Inquiry.API).
+2026-09-07 13:19:06.260 +03:00 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-07 13:19:07.295 +03:00 [INF] Executed DbCommand (50ms) [Parameters=[@__cacheKey_0='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [v].[Id], [v].[CacheKey], [v].[CachedAt], [v].[ChassisNumber], [v].[Color], [v].[Make], [v].[Model], [v].[ModelYear], [v].[NationalId], [v].[OwnerNationalId], [v].[PlateLetters], [v].[PlateNumber], [v].[SequenceNumber]
+FROM [VehicleInquiryCaches] AS [v]
+WHERE [v].[CacheKey] = @__cacheKey_0
+2026-09-07 13:19:07.379 +03:00 [INF] Executing OkObjectResult, writing value of type 'Motor.Inquiry.Common.Responses.ApiResponse`1[[Motor.Inquiry.Application.DTOs.InquiryResponse, Motor.Inquiry.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-07 13:19:07.389 +03:00 [INF] Executed action Motor.Inquiry.API.Controllers.InquiryController.InquiryBySequenceNumber (Motor.Inquiry.API) in 1346.0575ms
+2026-09-07 13:19:07.391 +03:00 [INF] Executed endpoint 'Motor.Inquiry.API.Controllers.InquiryController.InquiryBySequenceNumber (Motor.Inquiry.API)'
+2026-09-07 13:19:07.402 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5006/api/v1.0/Inquiry/sequence - 200 null application/json; charset=utf-8 1400.9091ms
+2026-09-07 13:25:19.729 +03:00 [INF] User profile is available. Using 'C:\Users\aalhasani\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-09-07 13:25:19.956 +03:00 [INF] Now listening on: http://localhost:5006
+2026-09-07 13:25:20.076 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-07 13:25:20.077 +03:00 [INF] Hosting environment: Development
+2026-09-07 13:25:20.078 +03:00 [INF] Content root path: C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API
+2026-09-07 13:25:20.494 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5006/swagger/index.html - null null
+2026-09-07 13:25:20.678 +03:00 [INF] Incoming Request: GET /swagger/index.html with Correlation ID: a0d09383-d900-45b2-8299-ffc6f76e2bf0
+2026-09-07 13:25:20.762 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5006/swagger/index.html - 200 null text/html;charset=utf-8 281.3725ms
+2026-09-07 13:25:20.780 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5006/_framework/aspnetcore-browser-refresh.js - null null
+2026-09-07 13:25:20.786 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5006/_framework/aspnetcore-browser-refresh.js - 200 14939 application/javascript; charset=utf-8 6.7341ms
+2026-09-07 13:25:20.794 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5006/_vs/browserLink - null null
+2026-09-07 13:25:20.827 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5006/_vs/browserLink - 200 null text/javascript; charset=UTF-8 32.7909ms
+2026-09-07 13:25:20.877 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5006/swagger/v1/swagger.json - null null
+2026-09-07 13:25:20.882 +03:00 [INF] Incoming Request: GET /swagger/v1/swagger.json with Correlation ID: f8f54718-d4d4-4fb7-bae4-b467e3c71cc7
+2026-09-07 13:25:20.908 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5006/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 30.9554ms
+2026-09-07 13:25:44.076 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5006/api/v1.0/Inquiry/sequence - application/json 86
+2026-09-07 13:25:44.084 +03:00 [INF] Incoming Request: POST /api/v1.0/Inquiry/sequence with Correlation ID: a7245c6e-0221-4586-b0ff-14d21235e06b
+2026-09-07 13:25:44.089 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-09-07 13:25:44.094 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-09-07 13:25:44.097 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-09-07 13:25:44.098 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5006/api/v1.0/Inquiry/sequence - 401 0 null 22.123ms
+2026-09-07 13:38:30.190 +03:00 [INF] User profile is available. Using 'C:\Users\aalhasani\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-09-07 13:38:30.397 +03:00 [INF] Now listening on: http://localhost:5006
+2026-09-07 13:38:30.468 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-07 13:38:30.470 +03:00 [INF] Hosting environment: Development
+2026-09-07 13:38:30.471 +03:00 [INF] Content root path: C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API
+2026-09-07 13:38:30.800 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5006/swagger/index.html - null null
+2026-09-07 13:38:30.972 +03:00 [INF] Incoming Request: GET /swagger/index.html with Correlation ID: 58d4a650-658b-4cf1-a979-c4f61568c593
+2026-09-07 13:38:31.055 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5006/swagger/index.html - 200 null text/html;charset=utf-8 271.9524ms
+2026-09-07 13:38:31.075 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5006/_framework/aspnetcore-browser-refresh.js - null null
+2026-09-07 13:38:31.082 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5006/_framework/aspnetcore-browser-refresh.js - 200 14939 application/javascript; charset=utf-8 8.2088ms
+2026-09-07 13:38:31.089 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5006/_vs/browserLink - null null
+2026-09-07 13:38:31.126 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5006/_vs/browserLink - 200 null text/javascript; charset=UTF-8 36.7247ms
+2026-09-07 13:38:31.169 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5006/swagger/v1/swagger.json - null null
+2026-09-07 13:38:31.175 +03:00 [INF] Incoming Request: GET /swagger/v1/swagger.json with Correlation ID: 7ded1418-910f-4b2c-af2d-1238ab2f66bf
+2026-09-07 13:38:31.187 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5006/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 17.5597ms
+2026-09-07 13:38:50.114 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5006/api/v1/Auth/login - application/json 52
+2026-09-07 13:38:50.120 +03:00 [INF] Incoming Request: POST /api/v1/Auth/login with Correlation ID: c67faefb-fa6d-4137-ba56-33b8a514b593
+2026-09-07 13:38:50.125 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-09-07 13:38:50.128 +03:00 [INF] Executing endpoint 'Motor.Inquiry.API.Controllers.AuthController.Login (Motor.Inquiry.API)'
+2026-09-07 13:38:50.150 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Motor.Inquiry.Application.DTOs.LoginRequest) on controller Motor.Inquiry.API.Controllers.AuthController (Motor.Inquiry.API).
+2026-09-07 13:38:50.219 +03:00 [INF] Executing OkObjectResult, writing value of type 'Motor.Inquiry.Application.DTOs.LoginResponse'.
+2026-09-07 13:38:50.225 +03:00 [INF] Executed action Motor.Inquiry.API.Controllers.AuthController.Login (Motor.Inquiry.API) in 70.3222ms
+2026-09-07 13:38:50.228 +03:00 [INF] Executed endpoint 'Motor.Inquiry.API.Controllers.AuthController.Login (Motor.Inquiry.API)'
+2026-09-07 13:38:50.229 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5006/api/v1/Auth/login - 200 null application/json; charset=utf-8 115.0816ms
+2026-09-07 13:40:56.719 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5006/api/v1.0/Inquiry/sequence - application/json 86
+2026-09-07 13:40:56.725 +03:00 [INF] Incoming Request: POST /api/v1.0/Inquiry/sequence with Correlation ID: 8bde3576-d6db-4f18-a989-c7f5d541c4ee
+2026-09-07 13:40:56.732 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-09-07 13:40:56.736 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-09-07 13:40:56.737 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5006/api/v1.0/Inquiry/sequence - 401 0 null 18.3254ms
+2026-09-07 13:45:56.870 +03:00 [INF] User profile is available. Using 'C:\Users\aalhasani\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-09-07 13:45:57.091 +03:00 [INF] Now listening on: http://localhost:5006
+2026-09-07 13:45:57.321 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-07 13:45:57.322 +03:00 [INF] Hosting environment: Development
+2026-09-07 13:45:57.324 +03:00 [INF] Content root path: C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API
+2026-09-07 13:45:57.322 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5006/swagger/index.html - null null
+2026-09-07 13:45:57.507 +03:00 [INF] Incoming Request: GET /swagger/index.html with Correlation ID: 1a29c9bd-1062-41ff-b21a-df553da69add
+2026-09-07 13:45:57.597 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5006/swagger/index.html - 200 null text/html;charset=utf-8 291.0863ms
+2026-09-07 13:45:57.622 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5006/_framework/aspnetcore-browser-refresh.js - null null
+2026-09-07 13:45:57.630 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5006/_framework/aspnetcore-browser-refresh.js - 200 14939 application/javascript; charset=utf-8 9.6443ms
+2026-09-07 13:45:57.633 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5006/_vs/browserLink - null null
+2026-09-07 13:45:57.672 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5006/_vs/browserLink - 200 null text/javascript; charset=UTF-8 38.1017ms
+2026-09-07 13:45:57.714 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5006/swagger/v1/swagger.json - null null
+2026-09-07 13:45:57.718 +03:00 [INF] Incoming Request: GET /swagger/v1/swagger.json with Correlation ID: 89eaba42-40d4-4e7d-9e73-eb8095f00f69
+2026-09-07 13:45:57.730 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5006/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 15.2267ms
+2026-09-07 13:46:02.388 +03:00 [INF] User profile is available. Using 'C:\Users\aalhasani\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-09-07 13:46:02.616 +03:00 [INF] Now listening on: http://localhost:5006
+2026-09-07 13:46:02.799 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-07 13:46:02.800 +03:00 [INF] Hosting environment: Development
+2026-09-07 13:46:02.801 +03:00 [INF] Content root path: C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API
+2026-09-07 13:46:03.038 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5006/swagger/index.html - null null
+2026-09-07 13:46:03.214 +03:00 [INF] Incoming Request: GET /swagger/index.html with Correlation ID: 9ea18743-f111-45e2-a3d5-1a39dfd2e517
+2026-09-07 13:46:03.356 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5006/swagger/index.html - 200 null text/html;charset=utf-8 328.8606ms
+2026-09-07 13:46:03.377 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5006/_framework/aspnetcore-browser-refresh.js - null null
+2026-09-07 13:46:03.383 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5006/_framework/aspnetcore-browser-refresh.js - 200 14939 application/javascript; charset=utf-8 7.8735ms
+2026-09-07 13:46:03.388 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5006/_vs/browserLink - null null
+2026-09-07 13:46:03.429 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5006/_vs/browserLink - 200 null text/javascript; charset=UTF-8 41.3448ms
+2026-09-07 13:46:03.469 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5006/swagger/v1/swagger.json - null null
+2026-09-07 13:46:03.473 +03:00 [INF] Incoming Request: GET /swagger/v1/swagger.json with Correlation ID: a67f198f-71d5-4b43-9e5d-85e486418963
+2026-09-07 13:46:03.483 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5006/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 13.1327ms
+2026-09-07 13:46:11.616 +03:00 [INF] User profile is available. Using 'C:\Users\aalhasani\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-09-07 13:46:11.821 +03:00 [INF] Now listening on: http://localhost:5006
+2026-09-07 13:46:11.924 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-07 13:46:11.925 +03:00 [INF] Hosting environment: Development
+2026-09-07 13:46:11.926 +03:00 [INF] Content root path: C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API
+2026-09-07 13:46:12.074 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5006/swagger/index.html - null null
+2026-09-07 13:46:12.356 +03:00 [INF] Incoming Request: GET /swagger/index.html with Correlation ID: a8c0c940-25a5-461c-ad7b-e6641fbdc097
+2026-09-07 13:46:12.449 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5006/swagger/index.html - 200 null text/html;charset=utf-8 388.1612ms
+2026-09-07 13:46:12.473 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5006/_framework/aspnetcore-browser-refresh.js - null null
+2026-09-07 13:46:12.480 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5006/_framework/aspnetcore-browser-refresh.js - 200 14939 application/javascript; charset=utf-8 7.2506ms
+2026-09-07 13:46:12.488 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5006/_vs/browserLink - null null
+2026-09-07 13:46:12.527 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5006/_vs/browserLink - 200 null text/javascript; charset=UTF-8 39.2101ms
+2026-09-07 13:46:12.579 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5006/swagger/v1/swagger.json - null null
+2026-09-07 13:46:12.584 +03:00 [INF] Incoming Request: GET /swagger/v1/swagger.json with Correlation ID: 8a25f4a8-5a93-42a6-b02c-d4ccbfb9fbdc
+2026-09-07 13:46:12.595 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5006/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 16.1898ms
+2026-09-07 13:46:37.238 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5006/api/v1/Auth/login - application/json 52
+2026-09-07 13:46:37.245 +03:00 [INF] Incoming Request: POST /api/v1/Auth/login with Correlation ID: 2f4f5579-9a61-4e8c-968d-f60884202e5d
+2026-09-07 13:46:37.249 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-09-07 13:46:37.251 +03:00 [INF] Executing endpoint 'Motor.Inquiry.API.Controllers.AuthController.Login (Motor.Inquiry.API)'
+2026-09-07 13:46:37.270 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Motor.Inquiry.Application.DTOs.LoginRequest) on controller Motor.Inquiry.API.Controllers.AuthController (Motor.Inquiry.API).
+2026-09-07 13:46:37.340 +03:00 [INF] Executing OkObjectResult, writing value of type 'Motor.Inquiry.Application.DTOs.LoginResponse'.
+2026-09-07 13:46:37.347 +03:00 [INF] Executed action Motor.Inquiry.API.Controllers.AuthController.Login (Motor.Inquiry.API) in 71.8934ms
+2026-09-07 13:46:37.348 +03:00 [INF] Executed endpoint 'Motor.Inquiry.API.Controllers.AuthController.Login (Motor.Inquiry.API)'
+2026-09-07 13:46:37.349 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5006/api/v1/Auth/login - 200 null application/json; charset=utf-8 110.6564ms
+2026-09-07 13:47:07.504 +03:00 [INF] User profile is available. Using 'C:\Users\aalhasani\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-09-07 13:47:07.775 +03:00 [INF] Now listening on: http://localhost:5006
+2026-09-07 13:47:07.995 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-07 13:47:07.997 +03:00 [INF] Hosting environment: Development
+2026-09-07 13:47:07.998 +03:00 [INF] Content root path: C:\Abdulmajeed_Project\ASP.NETCore\MotorInquirySystem\Motor.Inquiry.API
+2026-09-07 13:47:08.147 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5006/swagger/index.html - null null
+2026-09-07 13:47:08.322 +03:00 [INF] Incoming Request: GET /swagger/index.html with Correlation ID: a395d3ca-ca99-4a65-8160-5970933a9615
+2026-09-07 13:47:08.408 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5006/swagger/index.html - 200 null text/html;charset=utf-8 272.748ms
+2026-09-07 13:47:08.428 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5006/_framework/aspnetcore-browser-refresh.js - null null
+2026-09-07 13:47:08.436 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5006/_framework/aspnetcore-browser-refresh.js - 200 14939 application/javascript; charset=utf-8 8.8335ms
+2026-09-07 13:47:08.442 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5006/_vs/browserLink - null null
+2026-09-07 13:47:08.486 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5006/_vs/browserLink - 200 null text/javascript; charset=UTF-8 44.7587ms
+2026-09-07 13:47:08.532 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5006/swagger/v1/swagger.json - null null
+2026-09-07 13:47:08.536 +03:00 [INF] Incoming Request: GET /swagger/v1/swagger.json with Correlation ID: 925aae80-bf8b-48d7-81f4-752c67898158
+2026-09-07 13:47:08.549 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5006/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 17.1398ms
+2026-09-07 13:51:50.503 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5006/api/v1/Auth/login - application/json 55
+2026-09-07 13:51:50.511 +03:00 [INF] Incoming Request: POST /api/v1/Auth/login with Correlation ID: 4a452271-84c9-4e84-ac61-1d43bf75ccea
+2026-09-07 13:51:50.516 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-09-07 13:51:50.519 +03:00 [INF] Executing endpoint 'Motor.Inquiry.API.Controllers.AuthController.Login (Motor.Inquiry.API)'
+2026-09-07 13:51:50.548 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Motor.Inquiry.Application.DTOs.LoginRequest) on controller Motor.Inquiry.API.Controllers.AuthController (Motor.Inquiry.API).
+2026-09-07 13:51:50.629 +03:00 [INF] Executing OkObjectResult, writing value of type 'Motor.Inquiry.Application.DTOs.LoginResponse'.
+2026-09-07 13:51:50.636 +03:00 [INF] Executed action Motor.Inquiry.API.Controllers.AuthController.Login (Motor.Inquiry.API) in 81.8764ms
+2026-09-07 13:51:50.637 +03:00 [INF] Executed endpoint 'Motor.Inquiry.API.Controllers.AuthController.Login (Motor.Inquiry.API)'
+2026-09-07 13:51:50.638 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5006/api/v1/Auth/login - 200 null application/json; charset=utf-8 137.4213ms
+2026-09-07 13:53:32.165 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5006/api/v1.0/Inquiry/sequence - application/json 90
+2026-09-07 13:53:32.176 +03:00 [INF] Incoming Request: POST /api/v1.0/Inquiry/sequence with Correlation ID: b90dece0-0278-41ad-9fbf-06e33c62f015
+2026-09-07 13:53:32.181 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-09-07 13:53:32.185 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-09-07 13:53:32.186 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5006/api/v1.0/Inquiry/sequence - 401 0 null 21.7543ms
+2026-09-07 13:55:04.607 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5006/api/v1.0/Inquiry/sequence - application/json 90
+2026-09-07 13:55:04.650 +03:00 [INF] Incoming Request: POST /api/v1.0/Inquiry/sequence with Correlation ID: 21e06303-bba0-4134-8cf0-65c3c9659519
+2026-09-07 13:55:04.653 +03:00 [INF] Executing endpoint 'Motor.Inquiry.API.Controllers.InquiryController.InquiryBySequenceNumber (Motor.Inquiry.API)'
+2026-09-07 13:55:04.663 +03:00 [INF] Route matched with {action = "InquiryBySequenceNumber", controller = "Inquiry"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] InquiryBySequenceNumber(Motor.Inquiry.Application.DTOs.InquiryBySequenceRequest, System.Threading.CancellationToken) on controller Motor.Inquiry.API.Controllers.InquiryController (Motor.Inquiry.API).
+2026-09-07 13:55:04.922 +03:00 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-09-07 13:55:07.005 +03:00 [INF] Executed DbCommand (65ms) [Parameters=[@__cacheKey_0='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [v].[Id], [v].[CacheKey], [v].[CachedAt], [v].[ChassisNumber], [v].[Color], [v].[Make], [v].[Model], [v].[ModelYear], [v].[NationalId], [v].[OwnerNationalId], [v].[PlateLetters], [v].[PlateNumber], [v].[SequenceNumber]
+FROM [VehicleInquiryCaches] AS [v]
+WHERE [v].[CacheKey] = @__cacheKey_0
+2026-09-07 13:55:07.106 +03:00 [INF] Executing OkObjectResult, writing value of type 'Motor.Inquiry.Common.Responses.ApiResponse`1[[Motor.Inquiry.Application.DTOs.InquiryResponse, Motor.Inquiry.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-07 13:55:07.112 +03:00 [INF] Executed action Motor.Inquiry.API.Controllers.InquiryController.InquiryBySequenceNumber (Motor.Inquiry.API) in 2446.9387ms
+2026-09-07 13:55:07.115 +03:00 [INF] Executed endpoint 'Motor.Inquiry.API.Controllers.InquiryController.InquiryBySequenceNumber (Motor.Inquiry.API)'
+2026-09-07 13:55:07.124 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5006/api/v1.0/Inquiry/sequence - 200 null application/json; charset=utf-8 2517.1629ms
+2026-09-07 13:56:30.614 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5006/api/v1.0/Inquiry/sequence - application/json 90
+2026-09-07 13:56:30.620 +03:00 [INF] Incoming Request: POST /api/v1.0/Inquiry/sequence with Correlation ID: 2cd55fd2-d5cc-413c-ae58-cc69c92eb8a3
+2026-09-07 13:56:30.622 +03:00 [INF] Executing endpoint 'Motor.Inquiry.API.Controllers.InquiryController.InquiryBySequenceNumber (Motor.Inquiry.API)'
+2026-09-07 13:56:30.623 +03:00 [INF] Route matched with {action = "InquiryBySequenceNumber", controller = "Inquiry"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] InquiryBySequenceNumber(Motor.Inquiry.Application.DTOs.InquiryBySequenceRequest, System.Threading.CancellationToken) on controller Motor.Inquiry.API.Controllers.InquiryController (Motor.Inquiry.API).
+2026-09-07 13:56:30.649 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__cacheKey_0='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [v].[Id], [v].[CacheKey], [v].[CachedAt], [v].[ChassisNumber], [v].[Color], [v].[Make], [v].[Model], [v].[ModelYear], [v].[NationalId], [v].[OwnerNationalId], [v].[PlateLetters], [v].[PlateNumber], [v].[SequenceNumber]
+FROM [VehicleInquiryCaches] AS [v]
+WHERE [v].[CacheKey] = @__cacheKey_0
+2026-09-07 13:56:30.659 +03:00 [INF] Executing OkObjectResult, writing value of type 'Motor.Inquiry.Common.Responses.ApiResponse`1[[Motor.Inquiry.Application.DTOs.InquiryResponse, Motor.Inquiry.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-09-07 13:56:30.660 +03:00 [INF] Executed action Motor.Inquiry.API.Controllers.InquiryController.InquiryBySequenceNumber (Motor.Inquiry.API) in 35.7331ms
+2026-09-07 13:56:30.661 +03:00 [INF] Executed endpoint 'Motor.Inquiry.API.Controllers.InquiryController.InquiryBySequenceNumber (Motor.Inquiry.API)'
+2026-09-07 13:56:30.662 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5006/api/v1.0/Inquiry/sequence - 200 null application/json; charset=utf-8 49.5784ms

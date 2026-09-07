@@ -2,6 +2,7 @@ using Motor.Inquiry.API.Extensions;
 using Serilog;
 using Microsoft.AspNetCore.Localization;
 using System.Globalization;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 // Configures the application by registering services and building the HTTP request pipeline.
 
 
@@ -36,10 +37,10 @@ builder.Services.AddRateLimiting(builder.Configuration);
 
 //API Services
 // Register API services such as controllers, health checks, versioning, and Swagger
-builder.Services.AddApiServices();
+builder.Services.AddApiServices(builder.Configuration);
 
 builder.Services.AddControllers();
-builder.Services.AddAuthorization();
+
 
 
 // Configure the HTTP request pipeline.
@@ -57,6 +58,8 @@ var localizationOptions = new RequestLocalizationOptions
     SupportedCultures = supportedCultures,
     SupportedUICultures = supportedCultures
 };
+
+
 
 app.UseRequestLocalization(localizationOptions);
 
